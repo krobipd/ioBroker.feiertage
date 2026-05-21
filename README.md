@@ -118,11 +118,11 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 ## Changelog
 
-### **WORK IN PROGRESS**
+### 0.1.0 (2026-05-21)
 
 - Initial release — offline holiday detection for 206 countries with bridge day support
 
-Older entries have been moved to [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
+Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
 ## Support Development
 

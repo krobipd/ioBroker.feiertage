@@ -3,7 +3,7 @@
     "name": "feiertage",
     "version": "0.1.0",
     "news": {
-      "NEXT": {
+      "0.1.0": {
         "en": "Initial release — offline holiday detection for 206 countries with bridge day support",
         "de": "Erstveröffentlichung — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Unterstützung",
         "ru": "Первый релиз — офлайн-определение праздников для 206 стран с поддержкой промежуточных дней",
