@@ -8,46 +8,48 @@ import type { AdapterConfig } from "./lib/types";
 class FeiertageAdapter extends utils.Adapter {
   constructor(options: Partial<utils.AdapterOptions> = {}) {
     super({ ...options, name: "feiertage" });
-    this.on("ready", () => {
-      this.onReady().catch((err: unknown) => this.log.error(`onReady failed: ${errText(err)}`));
-    });
+    this.on("ready", this.onReady.bind(this));
     this.on("unload", this.onUnload.bind(this));
   }
 
   private async onReady(): Promise<void> {
-    const config = this.validateConfig();
-    if (!config) {
-      this.log.warn("No country configured — open adapter settings");
-      this.terminate?.("No country configured", 0);
-      return;
-    }
-
-    const systemLang = await getSystemLanguage(this);
-    const languages = resolveLanguages(systemLang, config.country);
-    this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
-
-    if (!config.state && !config.region) {
-      const sysCountry = await getSystemCountry(this);
-      if (sysCountry && !config.country) {
-        config.country = sysCountry.toUpperCase();
-        this.log.info(`Using system country: ${config.country}`);
+    try {
+      const config = this.validateConfig();
+      if (!config) {
+        this.log.warn("No country configured — open adapter settings");
+        this.terminate?.("No country configured", 0);
+        return;
       }
+
+      const systemLang = await getSystemLanguage(this);
+      const languages = resolveLanguages(systemLang, config.country);
+      this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
+
+      if (!config.state && !config.region) {
+        const sysCountry = await getSystemCountry(this);
+        if (sysCountry && !config.country) {
+          config.country = sysCountry.toUpperCase();
+          this.log.info(`Using system country: ${config.country}`);
+        }
+      }
+
+      const computed = computeHolidays(config, languages);
+
+      logAvailableHolidays(config, languages, msg => this.log.info(msg));
+
+      this.log.info(
+        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, ` +
+          `next: ${computed.next.name} in ${computed.next.duration} days`,
+      );
+
+      await ensureObjects(this);
+      await publishStates(this, computed);
+
+      this.log.debug("All holidays computed and published");
+      this.terminate?.("All holidays computed and published", 0);
+    } catch (err: unknown) {
+      this.log.error(`onReady failed: ${errText(err)}`);
     }
-
-    const computed = computeHolidays(config, languages);
-
-    logAvailableHolidays(config, languages, msg => this.log.info(msg));
-
-    this.log.info(
-      `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, ` +
-        `next: ${computed.next.name} in ${computed.next.duration} days`,
-    );
-
-    await ensureObjects(this);
-    await publishStates(this, computed);
-
-    this.log.debug("All holidays computed and published");
-    this.terminate?.("All holidays computed and published", 0);
   }
 
   private validateConfig(): AdapterConfig | null {
