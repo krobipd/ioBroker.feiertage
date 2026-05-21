@@ -1,0 +1,205 @@
+import Holidays from "date-holidays";
+import type { AdapterConfig, ComputedHolidays, DayInfo, NextHoliday } from "./types";
+
+interface RawHoliday {
+  date: string;
+  start: Date;
+  end: Date;
+  name: string;
+  type: string;
+  rule?: string;
+  substitute?: boolean;
+  note?: string;
+}
+
+const EMPTY_DAY: DayInfo = { name: "", id: "", isHoliday: false, region: "", type: "" };
+
+export function computeHolidays(config: AdapterConfig, languages: string[], referenceDate?: Date): ComputedHolidays {
+  const now = referenceDate ?? new Date();
+  const hd = createHolidaysInstance(config, languages);
+  const filtered = getFilteredHolidays(hd, now, config);
+
+  const yesterday = getDayInfo(filtered, addDays(now, -1));
+  const today = getDayInfo(filtered, now);
+  const tomorrow = getDayInfo(filtered, addDays(now, 1));
+  const dayAfterTomorrow = getDayInfo(filtered, addDays(now, 2));
+  const next = getNextHoliday(filtered, now);
+
+  return { yesterday, today, tomorrow, dayAfterTomorrow, next };
+}
+
+function createHolidaysInstance(config: AdapterConfig, languages: string[]): Holidays {
+  let hd: Holidays;
+  if (config.state && config.region) {
+    hd = new Holidays(config.country, config.state, config.region);
+  } else if (config.state) {
+    hd = new Holidays(config.country, config.state);
+  } else {
+    hd = new Holidays(config.country);
+  }
+  hd.setLanguages(languages);
+  return hd;
+}
+
+function getFilteredHolidays(hd: Holidays, referenceDate: Date, config: AdapterConfig): Map<string, RawHoliday> {
+  const year = referenceDate.getFullYear();
+  const years = [year - 1, year, year + 1];
+  const result = new Map<string, RawHoliday>();
+
+  for (const y of years) {
+    const holidays = hd.getHolidays(y) as RawHoliday[];
+    for (const h of holidays) {
+      if (!config.holidayTypes.includes(h.type)) {
+        continue;
+      }
+      const id = toHolidayId(h.name, h.rule);
+      if (config.excludeHolidays.includes(id)) {
+        continue;
+      }
+      const dateKey = toDateKey(h.start);
+      if (!result.has(dateKey)) {
+        result.set(dateKey, h);
+      }
+    }
+  }
+
+  if (config.includeBridgeDays) {
+    addBridgeDays(result, year, hd, config);
+  }
+
+  return result;
+}
+
+function getDayInfo(holidays: Map<string, RawHoliday>, date: Date): DayInfo {
+  const key = toDateKey(date);
+  const h = holidays.get(key);
+  if (!h) {
+    return { ...EMPTY_DAY };
+  }
+  return {
+    name: h.name,
+    id: toHolidayId(h.name, h.rule),
+    isHoliday: true,
+    region: extractRegion(h.rule),
+    type: h.type,
+  };
+}
+
+function getNextHoliday(holidays: Map<string, RawHoliday>, referenceDate: Date): NextHoliday {
+  const refKey = toDateKey(referenceDate);
+  let nearest: RawHoliday | null = null;
+  let nearestDate: Date | null = null;
+
+  for (const [dateKey, h] of holidays) {
+    if (dateKey <= refKey) {
+      continue;
+    }
+    const d = new Date(`${dateKey}T00:00:00`);
+    if (!nearest || d < nearestDate!) {
+      nearest = h;
+      nearestDate = d;
+    }
+  }
+
+  if (!nearest || !nearestDate) {
+    return { ...EMPTY_DAY, date: "", duration: 0 };
+  }
+
+  const refMidnight = new Date(referenceDate);
+  refMidnight.setHours(0, 0, 0, 0);
+  const duration = Math.round((nearestDate.getTime() - refMidnight.getTime()) / 86400000);
+
+  return {
+    name: nearest.name,
+    id: toHolidayId(nearest.name, nearest.rule),
+    isHoliday: true,
+    region: extractRegion(nearest.rule),
+    type: nearest.type,
+    date: toDateKey(nearestDate),
+    duration,
+  };
+}
+
+export function detectBridgeDays(holidays: Map<string, RawHoliday>, year: number): Date[] {
+  const bridgeDays: Date[] = [];
+  for (const [dateKey] of holidays) {
+    if (!dateKey.startsWith(String(year))) {
+      continue;
+    }
+    const holidayDate = new Date(`${dateKey}T00:00:00`);
+    const dow = holidayDate.getDay();
+
+    if (dow === 4) {
+      const friday = addDays(holidayDate, 1);
+      const fridayKey = toDateKey(friday);
+      if (!holidays.has(fridayKey) && friday.getDay() === 5) {
+        bridgeDays.push(friday);
+      }
+    }
+
+    if (dow === 2) {
+      const monday = addDays(holidayDate, -1);
+      const mondayKey = toDateKey(monday);
+      if (!holidays.has(mondayKey) && monday.getDay() === 1) {
+        bridgeDays.push(monday);
+      }
+    }
+  }
+  return bridgeDays;
+}
+
+function addBridgeDays(holidays: Map<string, RawHoliday>, year: number, _hd: Holidays, _config: AdapterConfig): void {
+  const bridgeDays = detectBridgeDays(holidays, year);
+  for (const bd of bridgeDays) {
+    const key = toDateKey(bd);
+    if (!holidays.has(key)) {
+      holidays.set(key, {
+        date: key,
+        start: bd,
+        end: addDays(bd, 1),
+        name: "Bridge day",
+        type: "bridge",
+        rule: "",
+      });
+    }
+  }
+}
+
+export function toHolidayId(name: string, rule?: string): string {
+  if (rule) {
+    const clean = rule
+      .replace(/\s+/g, "_")
+      .replace(/[^a-zA-Z0-9_-]/g, "")
+      .toLowerCase();
+    if (clean.length > 3) {
+      return clean;
+    }
+  }
+  return name
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .replace(/\s+/g, "_")
+    .toLowerCase();
+}
+
+function extractRegion(rule?: string): string {
+  if (!rule) {
+    return "";
+  }
+  const match = rule.match(/\b([A-Z]{2}-[A-Z0-9]{1,3})\b/);
+  return match ? match[1] : "";
+}
+
+export function toDateKey(date: Date): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function addDays(date: Date, days: number): Date {
+  const result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}

@@ -1,0 +1,103 @@
+{
+  "common": {
+    "name": "feiertage",
+    "version": "0.1.0",
+    "news": {
+      "NEXT": {
+        "en": "Initial release — offline holiday detection for 206 countries with bridge day support",
+        "de": "Erstveröffentlichung — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Unterstützung",
+        "ru": "Первый релиз — офлайн-определение праздников для 206 стран с поддержкой промежуточных дней",
+        "pt": "Lançamento inicial — detecção offline de feriados para 206 países com suporte a dias ponte",
+        "nl": "Eerste release — offline feestdagdetectie voor 206 landen met brugdagondersteuning",
+        "fr": "Version initiale — détection hors ligne des jours fériés pour 206 pays avec support des jours de pont",
+        "it": "Rilascio iniziale — rilevamento offline dei giorni festivi per 206 paesi con supporto giorni ponte",
+        "es": "Lanzamiento inicial — detección offline de festivos para 206 países con soporte de días puente",
+        "pl": "Pierwsze wydanie — wykrywanie świąt offline dla 206 krajów z obsługą dni pomostowych",
+        "uk": "Перший реліз — офлайн-визначення свят для 206 країн із підтримкою перехідних днів",
+        "zh-cn": "首次发布——支持206个国家的离线节假日检测及桥接日功能"
+      }
+    },
+    "titleLang": {
+      "en": "Public Holidays",
+      "de": "Feiertage",
+      "ru": "Государственные праздники",
+      "pt": "Feriados",
+      "nl": "Feestdagen",
+      "fr": "Jours fériés",
+      "it": "Giorni festivi",
+      "es": "Días festivos",
+      "pl": "Święta",
+      "uk": "Святкові дні",
+      "zh-cn": "公共假日"
+    },
+    "desc": {
+      "en": "Detects public holidays for 206 countries — runs offline, updates daily at midnight",
+      "de": "Erkennt Feiertage für 206 Länder — läuft offline, aktualisiert täglich um Mitternacht",
+      "ru": "Определяет государственные праздники для 206 стран — работает офлайн, обновляется ежедневно в полночь",
+      "pt": "Detecta feriados para 206 países — funciona offline, atualiza diariamente à meia-noite",
+      "nl": "Detecteert feestdagen voor 206 landen — werkt offline, vernieuwt dagelijks om middernacht",
+      "fr": "Détecte les jours fériés pour 206 pays — fonctionne hors ligne, mise à jour quotidienne à minuit",
+      "it": "Rileva i giorni festivi per 206 paesi — funziona offline, aggiornamento giornaliero a mezzanotte",
+      "es": "Detecta festivos para 206 países — funciona offline, se actualiza diariamente a medianoche",
+      "pl": "Wykrywa święta dla 206 krajów — działa offline, aktualizacja codziennie o północy",
+      "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
+      "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
+    },
+    "authors": [
+      "krobi <krobi@power-dreams.com>"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "feiertage.svg",
+    "extIcon": "https://cdn.jsdelivr.net/gh/krobipd/ioBroker.feiertage@main/admin/feiertage.svg",
+    "readme": "https://github.com/krobipd/ioBroker.feiertage/blob/main/README.md",
+    "enabled": true,
+    "tier": 2,
+    "loglevel": "info",
+    "mode": "schedule",
+    "schedule": "0 0 * * *",
+    "type": "date-and-time",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "supportedMessages": {
+      "stopInstance": true
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=7.0.7"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.8.23"
+      }
+    ],
+    "keywords": [
+      "holidays",
+      "feiertage",
+      "public holidays",
+      "bank holidays",
+      "bridge days",
+      "calendar",
+      "date-holidays"
+    ]
+  },
+  "native": {
+    "country": "",
+    "state": "",
+    "region": "",
+    "holidayTypes": [
+      "public"
+    ],
+    "excludeHolidays": [],
+    "includeBridgeDays": false
+  },
+  "instanceObjects": []
+}
