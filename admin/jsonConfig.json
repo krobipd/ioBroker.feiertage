@@ -843,9 +843,11 @@
               "value": "HK"
             }
           ],
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 4
+          "lg": 4,
+          "xl": 4
         },
         "state": {
           "type": "text",
@@ -853,9 +855,11 @@
           "help": "help_state",
           "trim": true,
           "hidden": "![\"AD\",\"AG\",\"AT\",\"AU\",\"BA\",\"BE\",\"BO\",\"BQ\",\"BR\",\"CA\",\"CH\",\"CK\",\"CL\",\"CV\",\"DE\",\"EC\",\"ES\",\"FR\",\"GB\",\"GT\",\"HR\",\"IC\",\"IN\",\"IT\",\"MD\",\"MY\",\"NL\",\"NZ\",\"PE\",\"PK\",\"SH\",\"SO\",\"SV\",\"US\",\"VE\"].includes(data.country)",
+          "xs": 12,
           "sm": 12,
-          "md": 3,
-          "lg": 4
+          "md": 4,
+          "lg": 4,
+          "xl": 4
         },
         "region": {
           "type": "text",
@@ -863,9 +867,11 @@
           "help": "help_region",
           "trim": true,
           "hidden": "![\"AD\",\"AG\",\"AT\",\"AU\",\"BA\",\"BE\",\"BO\",\"BQ\",\"BR\",\"CA\",\"CH\",\"CK\",\"CL\",\"CV\",\"DE\",\"EC\",\"ES\",\"FR\",\"GB\",\"GT\",\"HR\",\"IC\",\"IN\",\"IT\",\"MD\",\"MY\",\"NL\",\"NZ\",\"PE\",\"PK\",\"SH\",\"SO\",\"SV\",\"US\",\"VE\"].includes(data.country) || !data.state",
+          "xs": 12,
           "sm": 12,
-          "md": 3,
-          "lg": 4
+          "md": 4,
+          "lg": 4,
+          "xl": 4
         }
       }
     },
