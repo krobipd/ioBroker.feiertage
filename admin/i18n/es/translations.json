@@ -1,0 +1,22 @@
+{
+  "tab_region": "Región",
+  "tab_holidays": "Festivos",
+  "label_country": "País",
+  "help_country": "Seleccione el país para la detección de festivos",
+  "label_state": "Estado / Provincia",
+  "help_state": "Introduzca el código del estado o provincia (ej. BY para Baviera, ZH para Zúrich). Los códigos disponibles están en el registro del adaptador.",
+  "label_region": "Región",
+  "help_region": "Introduzca el código de la región si aplica. Los códigos disponibles están en el registro del adaptador.",
+  "header_types": "Tipos de festivos",
+  "label_typePublic": "Festivos nacionales",
+  "label_typeBank": "Festivos bancarios",
+  "label_typeSchool": "Vacaciones escolares",
+  "label_typeOptional": "Festivos opcionales",
+  "label_typeObservance": "Días conmemorativos",
+  "header_bridge": "Días puente",
+  "label_includeBridgeDays": "Detectar días puente",
+  "help_includeBridgeDays": "Un día puente es un día laborable entre un festivo y el fin de semana (ej. viernes después de un festivo en jueves)",
+  "header_exclude": "Excluir festivos",
+  "help_exclude": "Introduzca los ID de festivos a excluir de la detección. Inicie el adaptador una vez y consulte el registro para ver todos los ID disponibles.",
+  "label_excludeHolidays": "IDs de festivos excluidos"
+}

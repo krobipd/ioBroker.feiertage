@@ -1,0 +1,22 @@
+{
+  "tab_region": "Regio",
+  "tab_holidays": "Feestdagen",
+  "label_country": "Land",
+  "help_country": "Selecteer het land voor feestdagdetectie",
+  "label_state": "Provincie / Deelstaat",
+  "help_state": "Voer de provincie- of deelstaatcode in (bijv. BY voor Beieren, ZH voor Zürich). Beschikbare codes staan in het adapterlog.",
+  "label_region": "Regio",
+  "help_region": "Voer de regiocode in indien van toepassing. Beschikbare codes staan in het adapterlog.",
+  "header_types": "Soorten feestdagen",
+  "label_typePublic": "Officiële feestdagen",
+  "label_typeBank": "Bankfeestdagen",
+  "label_typeSchool": "Schoolvakanties",
+  "label_typeOptional": "Optionele feestdagen",
+  "label_typeObservance": "Herdenkingsdagen",
+  "header_bridge": "Brugdagen",
+  "label_includeBridgeDays": "Brugdagen detecteren",
+  "help_includeBridgeDays": "Een brugdag is een werkdag tussen een feestdag en het weekend (bijv. vrijdag na een feestdag op donderdag)",
+  "header_exclude": "Feestdagen uitsluiten",
+  "help_exclude": "Voer feestdag-ID's in om uit te sluiten van detectie. Start de adapter eenmaal en controleer het log voor alle beschikbare ID's.",
+  "label_excludeHolidays": "Uitgesloten feestdag-ID's"
+}

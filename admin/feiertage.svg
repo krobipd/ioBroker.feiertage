@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Calendar body -->
+  <rect x="28" y="48" width="200" height="180" rx="16" ry="16" fill="#fff" stroke="#2196F3" stroke-width="8"/>
+  <!-- Calendar header -->
+  <rect x="28" y="48" width="200" height="52" rx="16" ry="16" fill="#2196F3"/>
+  <rect x="28" y="84" width="200" height="16" fill="#2196F3"/>
+  <!-- Calendar rings -->
+  <rect x="80" y="32" width="12" height="36" rx="6" fill="#1565C0"/>
+  <rect x="164" y="32" width="12" height="36" rx="6" fill="#1565C0"/>
+  <!-- Grid lines -->
+  <line x1="28" y1="148" x2="228" y2="148" stroke="#E3F2FD" stroke-width="2"/>
+  <line x1="28" y1="188" x2="228" y2="188" stroke="#E3F2FD" stroke-width="2"/>
+  <line x1="95" y1="100" x2="95" y2="228" stroke="#E3F2FD" stroke-width="2"/>
+  <line x1="162" y1="100" x2="162" y2="228" stroke="#E3F2FD" stroke-width="2"/>
+  <!-- Day numbers -->
+  <text x="62" y="135" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">1</text>
+  <text x="128" y="135" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">2</text>
+  <text x="195" y="135" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">3</text>
+  <text x="62" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">4</text>
+  <text x="195" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">6</text>
+  <text x="62" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">7</text>
+  <text x="128" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">8</text>
+  <text x="195" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#546E7A">9</text>
+  <!-- Holiday star on day 5 -->
+  <circle cx="128" cy="170" r="22" fill="#FFC107" opacity="0.2"/>
+  <text x="128" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#F57F17">5</text>
+  <!-- Star accent -->
+  <polygon points="208,20 214,38 233,38 218,50 223,68 208,56 193,68 198,50 183,38 202,38" fill="#FFC107" stroke="#F9A825" stroke-width="1"/>
+</svg>

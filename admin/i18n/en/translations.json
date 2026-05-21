@@ -1,0 +1,22 @@
+{
+  "tab_region": "Region",
+  "tab_holidays": "Holidays",
+  "label_country": "Country",
+  "help_country": "Select the country for holiday detection",
+  "label_state": "State / Province",
+  "help_state": "Enter the state or province code (e.g. BY for Bayern, ZH for Zürich). Check adapter log for available codes.",
+  "label_region": "Region",
+  "help_region": "Enter the region code if applicable. Check adapter log for available codes.",
+  "header_types": "Holiday types",
+  "label_typePublic": "Public holidays",
+  "label_typeBank": "Bank holidays",
+  "label_typeSchool": "School holidays",
+  "label_typeOptional": "Optional holidays",
+  "label_typeObservance": "Observance days",
+  "header_bridge": "Bridge days",
+  "label_includeBridgeDays": "Detect bridge days",
+  "help_includeBridgeDays": "A bridge day is a working day between a holiday and a weekend (e.g. Friday after a Thursday holiday)",
+  "header_exclude": "Exclude holidays",
+  "help_exclude": "Enter holiday IDs to exclude from detection. Start the adapter once and check the log to see all available holiday IDs.",
+  "label_excludeHolidays": "Excluded holiday IDs"
+}

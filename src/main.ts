@@ -1,6 +1,6 @@
 import * as utils from "@iobroker/adapter-core";
 import { errText } from "./lib/coerce";
-import { computeHolidays } from "./lib/holiday-engine";
+import { computeHolidays, logAvailableHolidays } from "./lib/holiday-engine";
 import { getSystemCountry, getSystemLanguage, resolveLanguages } from "./lib/i18n";
 import { ensureObjects, publishStates } from "./lib/state-publisher";
 import type { AdapterConfig } from "./lib/types";
@@ -35,6 +35,8 @@ class FeiertageAdapter extends utils.Adapter {
 
     const computed = computeHolidays(config, languages);
 
+    logAvailableHolidays(config, languages, msg => this.log.info(msg));
+
     this.log.info(
       `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, ` +
         `next: ${computed.next.name} in ${computed.next.duration} days`,
@@ -54,11 +56,28 @@ class FeiertageAdapter extends utils.Adapter {
       return null;
     }
 
+    const holidayTypes: string[] = [];
+    if (raw.typePublic !== false) {
+      holidayTypes.push("public");
+    }
+    if (raw.typeBank === true) {
+      holidayTypes.push("bank");
+    }
+    if (raw.typeSchool === true) {
+      holidayTypes.push("school");
+    }
+    if (raw.typeOptional === true) {
+      holidayTypes.push("optional");
+    }
+    if (raw.typeObservance === true) {
+      holidayTypes.push("observance");
+    }
+
     return {
       country,
       state: typeof raw.state === "string" ? raw.state.trim() : "",
       region: typeof raw.region === "string" ? raw.region.trim() : "",
-      holidayTypes: Array.isArray(raw.holidayTypes) ? (raw.holidayTypes as string[]) : ["public"],
+      holidayTypes,
       excludeHolidays: Array.isArray(raw.excludeHolidays) ? (raw.excludeHolidays as string[]) : [],
       includeBridgeDays: raw.includeBridgeDays === true,
     };

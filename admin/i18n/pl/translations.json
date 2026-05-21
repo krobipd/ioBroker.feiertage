@@ -1,0 +1,22 @@
+{
+  "tab_region": "Region",
+  "tab_holidays": "Święta",
+  "label_country": "Kraj",
+  "help_country": "Wybierz kraj do wykrywania świąt",
+  "label_state": "Województwo / Prowincja",
+  "help_state": "Wprowadź kod województwa lub prowincji (np. BY dla Bawarii, ZH dla Zurychu). Dostępne kody znajdziesz w logu adaptera.",
+  "label_region": "Region",
+  "help_region": "Wprowadź kod regionu, jeśli dotyczy. Dostępne kody znajdziesz w logu adaptera.",
+  "header_types": "Rodzaje świąt",
+  "label_typePublic": "Święta ustawowe",
+  "label_typeBank": "Święta bankowe",
+  "label_typeSchool": "Ferie szkolne",
+  "label_typeOptional": "Święta opcjonalne",
+  "label_typeObservance": "Dni pamięci",
+  "header_bridge": "Dni pomostowe",
+  "label_includeBridgeDays": "Wykrywaj dni pomostowe",
+  "help_includeBridgeDays": "Dzień pomostowy to dzień roboczy między świętem a weekendem (np. piątek po święcie w czwartek)",
+  "header_exclude": "Wyklucz święta",
+  "help_exclude": "Wprowadź identyfikatory świąt do wykluczenia z wykrywania. Uruchom adapter raz i sprawdź log, aby zobaczyć wszystkie dostępne identyfikatory.",
+  "label_excludeHolidays": "Wykluczone identyfikatory świąt"
+}

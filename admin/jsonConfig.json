@@ -1,0 +1,952 @@
+{
+  "i18n": true,
+  "type": "tabs",
+  "items": {
+    "tab_region": {
+      "type": "panel",
+      "label": "tab_region",
+      "items": {
+        "country": {
+          "type": "select",
+          "label": "label_country",
+          "help": "help_country",
+          "options": [
+            {
+              "label": {
+                "en": "— Select country —",
+                "de": "— Land wählen —"
+              },
+              "value": ""
+            },
+            {
+              "label": "\\'Muso oa Lesotho (LS)",
+              "value": "LS"
+            },
+            {
+              "label": "American Samoa (AS)",
+              "value": "AS"
+            },
+            {
+              "label": "Andorra (AD)",
+              "value": "AD"
+            },
+            {
+              "label": "Angola (AO)",
+              "value": "AO"
+            },
+            {
+              "label": "Anguilla (AI)",
+              "value": "AI"
+            },
+            {
+              "label": "Antigua & Barbuda (AG)",
+              "value": "AG"
+            },
+            {
+              "label": "Argentina (AR)",
+              "value": "AR"
+            },
+            {
+              "label": "Aruba (AW)",
+              "value": "AW"
+            },
+            {
+              "label": "Australia (AU)",
+              "value": "AU"
+            },
+            {
+              "label": "Azərbaycan Respublikası (AZ)",
+              "value": "AZ"
+            },
+            {
+              "label": "Bahamas (BS)",
+              "value": "BS"
+            },
+            {
+              "label": "Barbados (BB)",
+              "value": "BB"
+            },
+            {
+              "label": "Belgique (BE)",
+              "value": "BE"
+            },
+            {
+              "label": "Belize (BZ)",
+              "value": "BZ"
+            },
+            {
+              "label": "Bermuda (BM)",
+              "value": "BM"
+            },
+            {
+              "label": "Bolivia (BO)",
+              "value": "BO"
+            },
+            {
+              "label": "Bosna i Hercegovina (BA)",
+              "value": "BA"
+            },
+            {
+              "label": "Botswana (BW)",
+              "value": "BW"
+            },
+            {
+              "label": "Brasil (BR)",
+              "value": "BR"
+            },
+            {
+              "label": "British Virgin Islands (VG)",
+              "value": "VG"
+            },
+            {
+              "label": "Burkina Faso (BF)",
+              "value": "BF"
+            },
+            {
+              "label": "Cameroun (CM)",
+              "value": "CM"
+            },
+            {
+              "label": "Canada (CA)",
+              "value": "CA"
+            },
+            {
+              "label": "Caribisch Nederland (BQ)",
+              "value": "BQ"
+            },
+            {
+              "label": "Cayman Islands (KY)",
+              "value": "KY"
+            },
+            {
+              "label": "Česká republika (CZ)",
+              "value": "CZ"
+            },
+            {
+              "label": "Chile (CL)",
+              "value": "CL"
+            },
+            {
+              "label": "Christmas Island (CX)",
+              "value": "CX"
+            },
+            {
+              "label": "Cocos (Keeling) Islands (CC)",
+              "value": "CC"
+            },
+            {
+              "label": "Colombia (CO)",
+              "value": "CO"
+            },
+            {
+              "label": "Cộng hòa Xã hội chủ nghĩa Việt Nam (VN)",
+              "value": "VN"
+            },
+            {
+              "label": "Cook Islands (CK)",
+              "value": "CK"
+            },
+            {
+              "label": "Costa Rica (CR)",
+              "value": "CR"
+            },
+            {
+              "label": "Crna Gora (ME)",
+              "value": "ME"
+            },
+            {
+              "label": "Cuba (CU)",
+              "value": "CU"
+            },
+            {
+              "label": "Curaçao (CW)",
+              "value": "CW"
+            },
+            {
+              "label": "Danmark (DK)",
+              "value": "DK"
+            },
+            {
+              "label": "Deutschland (DE)",
+              "value": "DE"
+            },
+            {
+              "label": "Dominica (DM)",
+              "value": "DM"
+            },
+            {
+              "label": "Ecuador (EC)",
+              "value": "EC"
+            },
+            {
+              "label": "Eesti (EE)",
+              "value": "EE"
+            },
+            {
+              "label": "El Salvador (SV)",
+              "value": "SV"
+            },
+            {
+              "label": "Eritrea (ER)",
+              "value": "ER"
+            },
+            {
+              "label": "España (ES)",
+              "value": "ES"
+            },
+            {
+              "label": "Eswatini (SZ)",
+              "value": "SZ"
+            },
+            {
+              "label": "Føroyar (FO)",
+              "value": "FO"
+            },
+            {
+              "label": "France (FR)",
+              "value": "FR"
+            },
+            {
+              "label": "Gabon (GA)",
+              "value": "GA"
+            },
+            {
+              "label": "Ghana (GH)",
+              "value": "GH"
+            },
+            {
+              "label": "Gibraltar (GI)",
+              "value": "GI"
+            },
+            {
+              "label": "Grenada (GD)",
+              "value": "GD"
+            },
+            {
+              "label": "Guadeloupe (GP)",
+              "value": "GP"
+            },
+            {
+              "label": "Guam (GU)",
+              "value": "GU"
+            },
+            {
+              "label": "Guatemala (GT)",
+              "value": "GT"
+            },
+            {
+              "label": "Guernsey (GG)",
+              "value": "GG"
+            },
+            {
+              "label": "Guiné-Bissau (GW)",
+              "value": "GW"
+            },
+            {
+              "label": "Guinée (GN)",
+              "value": "GN"
+            },
+            {
+              "label": "Guyana (GY)",
+              "value": "GY"
+            },
+            {
+              "label": "Guyane (GF)",
+              "value": "GF"
+            },
+            {
+              "label": "Haïti (HT)",
+              "value": "HT"
+            },
+            {
+              "label": "Honduras (HN)",
+              "value": "HN"
+            },
+            {
+              "label": "Hrvatska (HR)",
+              "value": "HR"
+            },
+            {
+              "label": "India (IN)",
+              "value": "IN"
+            },
+            {
+              "label": "Indonesia (ID)",
+              "value": "ID"
+            },
+            {
+              "label": "Ireland (IE)",
+              "value": "IE"
+            },
+            {
+              "label": "Ísland (IS)",
+              "value": "IS"
+            },
+            {
+              "label": "Islas Canarias (IC)",
+              "value": "IC"
+            },
+            {
+              "label": "Isle of Man (IM)",
+              "value": "IM"
+            },
+            {
+              "label": "Italia (IT)",
+              "value": "IT"
+            },
+            {
+              "label": "Jamaica (JM)",
+              "value": "JM"
+            },
+            {
+              "label": "Jamhuuriyadda Federaalka Soomaaliya (SO)",
+              "value": "SO"
+            },
+            {
+              "label": "Jersey (JE)",
+              "value": "JE"
+            },
+            {
+              "label": "Kalaallit Nunaat (GL)",
+              "value": "GL"
+            },
+            {
+              "label": "Kenya (KE)",
+              "value": "KE"
+            },
+            {
+              "label": "Landskapet Åland (AX)",
+              "value": "AX"
+            },
+            {
+              "label": "Latvija (LV)",
+              "value": "LV"
+            },
+            {
+              "label": "Liberia (LR)",
+              "value": "LR"
+            },
+            {
+              "label": "Liechtenstein (LI)",
+              "value": "LI"
+            },
+            {
+              "label": "Lietuva (LT)",
+              "value": "LT"
+            },
+            {
+              "label": "Luxembourg (LU)",
+              "value": "LU"
+            },
+            {
+              "label": "Magyarország (HU)",
+              "value": "HU"
+            },
+            {
+              "label": "Malawi (MW)",
+              "value": "MW"
+            },
+            {
+              "label": "Malaysia (MY)",
+              "value": "MY"
+            },
+            {
+              "label": "Malta (MT)",
+              "value": "MT"
+            },
+            {
+              "label": "Martinique (MQ)",
+              "value": "MQ"
+            },
+            {
+              "label": "Matanitu Tugalala o Viti (FJ)",
+              "value": "FJ"
+            },
+            {
+              "label": "Mauritius (MU)",
+              "value": "MU"
+            },
+            {
+              "label": "Mayotte (YT)",
+              "value": "YT"
+            },
+            {
+              "label": "México (MX)",
+              "value": "MX"
+            },
+            {
+              "label": "Moçambique (MZ)",
+              "value": "MZ"
+            },
+            {
+              "label": "Monaco (MC)",
+              "value": "MC"
+            },
+            {
+              "label": "Montserrat (MS)",
+              "value": "MS"
+            },
+            {
+              "label": "Namibia (NA)",
+              "value": "NA"
+            },
+            {
+              "label": "Nederland (NL)",
+              "value": "NL"
+            },
+            {
+              "label": "Negara Brunei Darussalam (BN)",
+              "value": "BN"
+            },
+            {
+              "label": "New Zealand (NZ)",
+              "value": "NZ"
+            },
+            {
+              "label": "Nicaragua (NI)",
+              "value": "NI"
+            },
+            {
+              "label": "Nigeria (NG)",
+              "value": "NG"
+            },
+            {
+              "label": "Norfolk Island (NF)",
+              "value": "NF"
+            },
+            {
+              "label": "Norge (NO)",
+              "value": "NO"
+            },
+            {
+              "label": "Nouvelle-Calédonie (NC)",
+              "value": "NC"
+            },
+            {
+              "label": "Österreich (AT)",
+              "value": "AT"
+            },
+            {
+              "label": "Panamá (PA)",
+              "value": "PA"
+            },
+            {
+              "label": "Paraguay (PY)",
+              "value": "PY"
+            },
+            {
+              "label": "Perú (PE)",
+              "value": "PE"
+            },
+            {
+              "label": "Philippines (PH)",
+              "value": "PH"
+            },
+            {
+              "label": "Polska (PL)",
+              "value": "PL"
+            },
+            {
+              "label": "Polynésie française (PF)",
+              "value": "PF"
+            },
+            {
+              "label": "Portugal (PT)",
+              "value": "PT"
+            },
+            {
+              "label": "Puerto Rico (PR)",
+              "value": "PR"
+            },
+            {
+              "label": "Puleʻanga Fakatuʻi ʻo Tonga (TO)",
+              "value": "TO"
+            },
+            {
+              "label": "Repoblikan'i Madagasikara (MG)",
+              "value": "MG"
+            },
+            {
+              "label": "República de Cabo Verde (CV)",
+              "value": "CV"
+            },
+            {
+              "label": "República de Guinea Ecuatorial (GQ)",
+              "value": "GQ"
+            },
+            {
+              "label": "República Dominicana (DO)",
+              "value": "DO"
+            },
+            {
+              "label": "Republica Moldova (MD)",
+              "value": "MD"
+            },
+            {
+              "label": "Republika e Kosovës (XK)",
+              "value": "XK"
+            },
+            {
+              "label": "Republika Slovenija (SI)",
+              "value": "SI"
+            },
+            {
+              "label": "République centrafricaine (CF)",
+              "value": "CF"
+            },
+            {
+              "label": "République de Côte d'Ivoire (CI)",
+              "value": "CI"
+            },
+            {
+              "label": "République de Djibouti (DJ)",
+              "value": "DJ"
+            },
+            {
+              "label": "République de Vanuatu (VU)",
+              "value": "VU"
+            },
+            {
+              "label": "République démocratique du Congo (CD)",
+              "value": "CD"
+            },
+            {
+              "label": "République du Bénin (BJ)",
+              "value": "BJ"
+            },
+            {
+              "label": "République du Burundi (BI)",
+              "value": "BI"
+            },
+            {
+              "label": "République du Congo (CG)",
+              "value": "CG"
+            },
+            {
+              "label": "République du Mali (ML)",
+              "value": "ML"
+            },
+            {
+              "label": "République du Niger (NE)",
+              "value": "NE"
+            },
+            {
+              "label": "République du Sénégal (SN)",
+              "value": "SN"
+            },
+            {
+              "label": "République togolaise (TG)",
+              "value": "TG"
+            },
+            {
+              "label": "Réunion (RE)",
+              "value": "RE"
+            },
+            {
+              "label": "Romania (RO)",
+              "value": "RO"
+            },
+            {
+              "label": "Rwanda (RW)",
+              "value": "RW"
+            },
+            {
+              "label": "Saint Martin (MF)",
+              "value": "MF"
+            },
+            {
+              "label": "San Marino (SM)",
+              "value": "SM"
+            },
+            {
+              "label": "São Tomé & Príncipe (ST)",
+              "value": "ST"
+            },
+            {
+              "label": "Schweiz (CH)",
+              "value": "CH"
+            },
+            {
+              "label": "Seychelles (SC)",
+              "value": "SC"
+            },
+            {
+              "label": "Shqipëri (AL)",
+              "value": "AL"
+            },
+            {
+              "label": "Sierra Leone (SL)",
+              "value": "SL"
+            },
+            {
+              "label": "Singapore (SG)",
+              "value": "SG"
+            },
+            {
+              "label": "Sint Maarten (SX)",
+              "value": "SX"
+            },
+            {
+              "label": "Slovenská republika (SK)",
+              "value": "SK"
+            },
+            {
+              "label": "South Africa (ZA)",
+              "value": "ZA"
+            },
+            {
+              "label": "South Sudan (SS)",
+              "value": "SS"
+            },
+            {
+              "label": "St. Barthélemy (BL)",
+              "value": "BL"
+            },
+            {
+              "label": "St. Helena (SH)",
+              "value": "SH"
+            },
+            {
+              "label": "St. Kitts & Nevis (KN)",
+              "value": "KN"
+            },
+            {
+              "label": "St. Lucia (LC)",
+              "value": "LC"
+            },
+            {
+              "label": "St. Pierre & Miquelon (PM)",
+              "value": "PM"
+            },
+            {
+              "label": "St. Vincent & Grenadines (VC)",
+              "value": "VC"
+            },
+            {
+              "label": "Stato della Città del Vaticano (VA)",
+              "value": "VA"
+            },
+            {
+              "label": "Suomi (FI)",
+              "value": "FI"
+            },
+            {
+              "label": "Suriname (SR)",
+              "value": "SR"
+            },
+            {
+              "label": "Svalbard & Jan Mayen (SJ)",
+              "value": "SJ"
+            },
+            {
+              "label": "Sverige (SE)",
+              "value": "SE"
+            },
+            {
+              "label": "Tanzania (TZ)",
+              "value": "TZ"
+            },
+            {
+              "label": "Thailand (TH)",
+              "value": "TH"
+            },
+            {
+              "label": "The Gambia (GM)",
+              "value": "GM"
+            },
+            {
+              "label": "Trinidad & Tobago (TT)",
+              "value": "TT"
+            },
+            {
+              "label": "Türkiye (TR)",
+              "value": "TR"
+            },
+            {
+              "label": "Turks & Caicos Islands (TC)",
+              "value": "TC"
+            },
+            {
+              "label": "U.S. Virgin Islands (VI)",
+              "value": "VI"
+            },
+            {
+              "label": "Uganda (UG)",
+              "value": "UG"
+            },
+            {
+              "label": "Union des Comores (KM)",
+              "value": "KM"
+            },
+            {
+              "label": "United Kingdom (GB)",
+              "value": "GB"
+            },
+            {
+              "label": "United States of America (US)",
+              "value": "US"
+            },
+            {
+              "label": "Uruguay (UY)",
+              "value": "UY"
+            },
+            {
+              "label": "Venezuela (VE)",
+              "value": "VE"
+            },
+            {
+              "label": "Wallis-et-Futuna (WF)",
+              "value": "WF"
+            },
+            {
+              "label": "Zambia (ZM)",
+              "value": "ZM"
+            },
+            {
+              "label": "Zimbabwe (ZW)",
+              "value": "ZW"
+            },
+            {
+              "label": "Ελλάδα (GR)",
+              "value": "GR"
+            },
+            {
+              "label": "Κύπρος (CY)",
+              "value": "CY"
+            },
+            {
+              "label": "България (BG)",
+              "value": "BG"
+            },
+            {
+              "label": "Қазақстан (KZ)",
+              "value": "KZ"
+            },
+            {
+              "label": "Република Македонија (MK)",
+              "value": "MK"
+            },
+            {
+              "label": "Република Србија (RS)",
+              "value": "RS"
+            },
+            {
+              "label": "Россия (RU)",
+              "value": "RU"
+            },
+            {
+              "label": "Рэспубліка Беларусь (BY)",
+              "value": "BY"
+            },
+            {
+              "label": "Україна (UA)",
+              "value": "UA"
+            },
+            {
+              "label": "საქართველო (GE)",
+              "value": "GE"
+            },
+            {
+              "label": "Հայաստան (AM)",
+              "value": "AM"
+            },
+            {
+              "label": "מְדִינַת יִשְׂרָאֵל (IL)",
+              "value": "IL"
+            },
+            {
+              "label": "الجمهورية الإسلامية الموريتانية (MR)",
+              "value": "MR"
+            },
+            {
+              "label": "الجمهورية التونسية (TN)",
+              "value": "TN"
+            },
+            {
+              "label": "الجمهورية الجزائرية الديمقراطية الشعبية (DZ)",
+              "value": "DZ"
+            },
+            {
+              "label": "الجمهورية العربية الصحراوية الديمقراطية (EH)",
+              "value": "EH"
+            },
+            {
+              "label": "المملكة العربية السعودية (SA)",
+              "value": "SA"
+            },
+            {
+              "label": "المملكة المغربية (MA)",
+              "value": "MA"
+            },
+            {
+              "label": "پاکستان (PK)",
+              "value": "PK"
+            },
+            {
+              "label": "جمهورية السودان (SD)",
+              "value": "SD"
+            },
+            {
+              "label": "جمهورية تشاد (TD)",
+              "value": "TD"
+            },
+            {
+              "label": "جمهورية مصر العربية (EG)",
+              "value": "EG"
+            },
+            {
+              "label": "جمهوری اسلامی ایران (IR)",
+              "value": "IR"
+            },
+            {
+              "label": "دولة الإمارات العربية المتحدة (AE)",
+              "value": "AE"
+            },
+            {
+              "label": "دولة ليبيا (LY)",
+              "value": "LY"
+            },
+            {
+              "label": "مملكة البحرين (BH)",
+              "value": "BH"
+            },
+            {
+              "label": "ኢትዮጵያ (ET)",
+              "value": "ET"
+            },
+            {
+              "label": "গণপ্রজাতন্ত্রী বাংলাদেশ (BD)",
+              "value": "BD"
+            },
+            {
+              "label": "ශ්‍රී ලංකාව (LK)",
+              "value": "LK"
+            },
+            {
+              "label": "대한민국 (KR)",
+              "value": "KR"
+            },
+            {
+              "label": "中华人民共和国 (CN)",
+              "value": "CN"
+            },
+            {
+              "label": "中華民國 (TW)",
+              "value": "TW"
+            },
+            {
+              "label": "日本 (JP)",
+              "value": "JP"
+            },
+            {
+              "label": "香港 (HK)",
+              "value": "HK"
+            }
+          ],
+          "sm": 12,
+          "md": 6,
+          "lg": 4
+        },
+        "state": {
+          "type": "text",
+          "label": "label_state",
+          "help": "help_state",
+          "trim": true,
+          "hidden": "![\"AD\",\"AG\",\"AT\",\"AU\",\"BA\",\"BE\",\"BO\",\"BQ\",\"BR\",\"CA\",\"CH\",\"CK\",\"CL\",\"CV\",\"DE\",\"EC\",\"ES\",\"FR\",\"GB\",\"GT\",\"HR\",\"IC\",\"IN\",\"IT\",\"MD\",\"MY\",\"NL\",\"NZ\",\"PE\",\"PK\",\"SH\",\"SO\",\"SV\",\"US\",\"VE\"].includes(data.country)",
+          "sm": 12,
+          "md": 3,
+          "lg": 4
+        },
+        "region": {
+          "type": "text",
+          "label": "label_region",
+          "help": "help_region",
+          "trim": true,
+          "hidden": "![\"AD\",\"AG\",\"AT\",\"AU\",\"BA\",\"BE\",\"BO\",\"BQ\",\"BR\",\"CA\",\"CH\",\"CK\",\"CL\",\"CV\",\"DE\",\"EC\",\"ES\",\"FR\",\"GB\",\"GT\",\"HR\",\"IC\",\"IN\",\"IT\",\"MD\",\"MY\",\"NL\",\"NZ\",\"PE\",\"PK\",\"SH\",\"SO\",\"SV\",\"US\",\"VE\"].includes(data.country) || !data.state",
+          "sm": 12,
+          "md": 3,
+          "lg": 4
+        }
+      }
+    },
+    "tab_holidays": {
+      "type": "panel",
+      "label": "tab_holidays",
+      "items": {
+        "_headerTypes": {
+          "type": "header",
+          "size": 5,
+          "text": "header_types",
+          "sm": 12
+        },
+        "typePublic": {
+          "type": "checkbox",
+          "label": "label_typePublic",
+          "sm": 6,
+          "md": 4,
+          "lg": 2
+        },
+        "typeBank": {
+          "type": "checkbox",
+          "label": "label_typeBank",
+          "sm": 6,
+          "md": 4,
+          "lg": 2
+        },
+        "typeSchool": {
+          "type": "checkbox",
+          "label": "label_typeSchool",
+          "sm": 6,
+          "md": 4,
+          "lg": 2
+        },
+        "typeOptional": {
+          "type": "checkbox",
+          "label": "label_typeOptional",
+          "sm": 6,
+          "md": 4,
+          "lg": 2
+        },
+        "typeObservance": {
+          "type": "checkbox",
+          "label": "label_typeObservance",
+          "sm": 6,
+          "md": 4,
+          "lg": 2
+        },
+        "_headerBridge": {
+          "type": "header",
+          "size": 5,
+          "text": "header_bridge",
+          "newLine": true,
+          "sm": 12
+        },
+        "includeBridgeDays": {
+          "type": "checkbox",
+          "label": "label_includeBridgeDays",
+          "help": "help_includeBridgeDays",
+          "sm": 12,
+          "md": 6
+        },
+        "_headerExclude": {
+          "type": "header",
+          "size": 5,
+          "text": "header_exclude",
+          "newLine": true,
+          "sm": 12
+        },
+        "_helpExclude": {
+          "type": "staticText",
+          "text": "help_exclude",
+          "sm": 12
+        },
+        "excludeHolidays": {
+          "type": "chips",
+          "label": "label_excludeHolidays",
+          "sm": 12,
+          "md": 8
+        }
+      }
+    }
+  }
+}

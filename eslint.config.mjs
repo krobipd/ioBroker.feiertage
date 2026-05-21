@@ -30,6 +30,7 @@ export default [
       "build",
       "admin",
       "node_modules",
+      "scripts",
       "**/adapter-config.d.ts",
     ],
   },

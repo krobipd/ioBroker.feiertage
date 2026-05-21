@@ -43,9 +43,7 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": [
-      "krobi <krobi@power-dreams.com>"
-    ],
+    "authors": ["krobi <krobi@power-dreams.com>"],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
@@ -93,11 +91,789 @@
     "country": "",
     "state": "",
     "region": "",
-    "holidayTypes": [
-      "public"
-    ],
+    "typePublic": true,
+    "typeBank": false,
+    "typeSchool": false,
+    "typeOptional": false,
+    "typeObservance": false,
     "excludeHolidays": [],
     "includeBridgeDays": false
   },
-  "instanceObjects": []
+  "instanceObjects": [
+    {
+      "_id": "today",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Today",
+          "de": "Heute",
+          "ru": "Сегодня",
+          "pt": "Hoje",
+          "nl": "Vandaag",
+          "fr": "Aujourd'hui",
+          "it": "Oggi",
+          "es": "Hoy",
+          "pl": "Dzisiaj",
+          "uk": "Сьогодні",
+          "zh-cn": "今天"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "today.name",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday name",
+          "de": "Feiertagsname",
+          "ru": "Название праздника",
+          "pt": "Nome do feriado",
+          "nl": "Naam feestdag",
+          "fr": "Nom du jour férié",
+          "it": "Nome del giorno festivo",
+          "es": "Nombre del festivo",
+          "pl": "Nazwa święta",
+          "uk": "Назва свята",
+          "zh-cn": "假日名称"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "today.id",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday ID",
+          "de": "Feiertags-ID",
+          "ru": "Идентификатор праздника",
+          "pt": "ID do feriado",
+          "nl": "Feestdag-ID",
+          "fr": "ID du jour férié",
+          "it": "ID del giorno festivo",
+          "es": "ID del festivo",
+          "pl": "ID święta",
+          "uk": "Ідентифікатор свята",
+          "zh-cn": "假日ID"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "today.boolean",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Is a holiday",
+          "de": "Ist ein Feiertag",
+          "ru": "Является праздником",
+          "pt": "É feriado",
+          "nl": "Is een feestdag",
+          "fr": "Est un jour férié",
+          "it": "È un giorno festivo",
+          "es": "Es festivo",
+          "pl": "Jest świętem",
+          "uk": "Є святом",
+          "zh-cn": "是假日"
+        },
+        "type": "boolean",
+        "role": "indicator",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "today.region",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Region code",
+          "de": "Regionscode",
+          "ru": "Код региона",
+          "pt": "Código da região",
+          "nl": "Regiocode",
+          "fr": "Code région",
+          "it": "Codice regione",
+          "es": "Código de región",
+          "pl": "Kod regionu",
+          "uk": "Код регіону",
+          "zh-cn": "区域代码"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "today.type",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday type",
+          "de": "Feiertagstyp",
+          "ru": "Тип праздника",
+          "pt": "Tipo de feriado",
+          "nl": "Type feestdag",
+          "fr": "Type de jour férié",
+          "it": "Tipo di giorno festivo",
+          "es": "Tipo de festivo",
+          "pl": "Typ święta",
+          "uk": "Тип свята",
+          "zh-cn": "假日类型"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Yesterday",
+          "de": "Gestern",
+          "ru": "Вчера",
+          "pt": "Ontem",
+          "nl": "Gisteren",
+          "fr": "Hier",
+          "it": "Ieri",
+          "es": "Ayer",
+          "pl": "Wczoraj",
+          "uk": "Вчора",
+          "zh-cn": "昨天"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday.name",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday name",
+          "de": "Feiertagsname",
+          "ru": "Название праздника",
+          "pt": "Nome do feriado",
+          "nl": "Naam feestdag",
+          "fr": "Nom du jour férié",
+          "it": "Nome del giorno festivo",
+          "es": "Nombre del festivo",
+          "pl": "Nazwa święta",
+          "uk": "Назва свята",
+          "zh-cn": "假日名称"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday.id",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday ID",
+          "de": "Feiertags-ID",
+          "ru": "Идентификатор праздника",
+          "pt": "ID do feriado",
+          "nl": "Feestdag-ID",
+          "fr": "ID du jour férié",
+          "it": "ID del giorno festivo",
+          "es": "ID del festivo",
+          "pl": "ID święta",
+          "uk": "Ідентифікатор свята",
+          "zh-cn": "假日ID"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday.boolean",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Is a holiday",
+          "de": "Ist ein Feiertag",
+          "ru": "Является праздником",
+          "pt": "É feriado",
+          "nl": "Is een feestdag",
+          "fr": "Est un jour férié",
+          "it": "È un giorno festivo",
+          "es": "Es festivo",
+          "pl": "Jest świętem",
+          "uk": "Є святом",
+          "zh-cn": "是假日"
+        },
+        "type": "boolean",
+        "role": "indicator",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday.region",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Region code",
+          "de": "Regionscode",
+          "ru": "Код региона",
+          "pt": "Código da região",
+          "nl": "Regiocode",
+          "fr": "Code région",
+          "it": "Codice regione",
+          "es": "Código de región",
+          "pl": "Kod regionu",
+          "uk": "Код регіону",
+          "zh-cn": "区域代码"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "yesterday.type",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday type",
+          "de": "Feiertagstyp",
+          "ru": "Тип праздника",
+          "pt": "Tipo de feriado",
+          "nl": "Type feestdag",
+          "fr": "Type de jour férié",
+          "it": "Tipo di giorno festivo",
+          "es": "Tipo de festivo",
+          "pl": "Typ święta",
+          "uk": "Тип свята",
+          "zh-cn": "假日类型"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Tomorrow",
+          "de": "Morgen",
+          "ru": "Завтра",
+          "pt": "Amanhã",
+          "nl": "Morgen",
+          "fr": "Demain",
+          "it": "Domani",
+          "es": "Mañana",
+          "pl": "Jutro",
+          "uk": "Завтра",
+          "zh-cn": "明天"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow.name",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday name",
+          "de": "Feiertagsname",
+          "ru": "Название праздника",
+          "pt": "Nome do feriado",
+          "nl": "Naam feestdag",
+          "fr": "Nom du jour férié",
+          "it": "Nome del giorno festivo",
+          "es": "Nombre del festivo",
+          "pl": "Nazwa święta",
+          "uk": "Назва свята",
+          "zh-cn": "假日名称"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow.id",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday ID",
+          "de": "Feiertags-ID",
+          "ru": "Идентификатор праздника",
+          "pt": "ID do feriado",
+          "nl": "Feestdag-ID",
+          "fr": "ID du jour férié",
+          "it": "ID del giorno festivo",
+          "es": "ID del festivo",
+          "pl": "ID święta",
+          "uk": "Ідентифікатор свята",
+          "zh-cn": "假日ID"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow.boolean",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Is a holiday",
+          "de": "Ist ein Feiertag",
+          "ru": "Является праздником",
+          "pt": "É feriado",
+          "nl": "Is een feestdag",
+          "fr": "Est un jour férié",
+          "it": "È un giorno festivo",
+          "es": "Es festivo",
+          "pl": "Jest świętem",
+          "uk": "Є святом",
+          "zh-cn": "是假日"
+        },
+        "type": "boolean",
+        "role": "indicator",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow.region",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Region code",
+          "de": "Regionscode",
+          "ru": "Код региона",
+          "pt": "Código da região",
+          "nl": "Regiocode",
+          "fr": "Code région",
+          "it": "Codice regione",
+          "es": "Código de región",
+          "pl": "Kod regionu",
+          "uk": "Код регіону",
+          "zh-cn": "区域代码"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "tomorrow.type",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday type",
+          "de": "Feiertagstyp",
+          "ru": "Тип праздника",
+          "pt": "Tipo de feriado",
+          "nl": "Type feestdag",
+          "fr": "Type de jour férié",
+          "it": "Tipo di giorno festivo",
+          "es": "Tipo de festivo",
+          "pl": "Typ święta",
+          "uk": "Тип свята",
+          "zh-cn": "假日类型"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Day after tomorrow",
+          "de": "Übermorgen",
+          "ru": "Послезавтра",
+          "pt": "Depois de amanhã",
+          "nl": "Overmorgen",
+          "fr": "Après-demain",
+          "it": "Dopodomani",
+          "es": "Pasado mañana",
+          "pl": "Pojutrze",
+          "uk": "Післязавтра",
+          "zh-cn": "后天"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow.name",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday name",
+          "de": "Feiertagsname",
+          "ru": "Название праздника",
+          "pt": "Nome do feriado",
+          "nl": "Naam feestdag",
+          "fr": "Nom du jour férié",
+          "it": "Nome del giorno festivo",
+          "es": "Nombre del festivo",
+          "pl": "Nazwa święta",
+          "uk": "Назва свята",
+          "zh-cn": "假日名称"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow.id",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday ID",
+          "de": "Feiertags-ID",
+          "ru": "Идентификатор праздника",
+          "pt": "ID do feriado",
+          "nl": "Feestdag-ID",
+          "fr": "ID du jour férié",
+          "it": "ID del giorno festivo",
+          "es": "ID del festivo",
+          "pl": "ID święta",
+          "uk": "Ідентифікатор свята",
+          "zh-cn": "假日ID"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow.boolean",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Is a holiday",
+          "de": "Ist ein Feiertag",
+          "ru": "Является праздником",
+          "pt": "É feriado",
+          "nl": "Is een feestdag",
+          "fr": "Est un jour férié",
+          "it": "È un giorno festivo",
+          "es": "Es festivo",
+          "pl": "Jest świętem",
+          "uk": "Є святом",
+          "zh-cn": "是假日"
+        },
+        "type": "boolean",
+        "role": "indicator",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow.region",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Region code",
+          "de": "Regionscode",
+          "ru": "Код региона",
+          "pt": "Código da região",
+          "nl": "Regiocode",
+          "fr": "Code région",
+          "it": "Codice regione",
+          "es": "Código de región",
+          "pl": "Kod regionu",
+          "uk": "Код регіону",
+          "zh-cn": "区域代码"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "dayAfterTomorrow.type",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday type",
+          "de": "Feiertagstyp",
+          "ru": "Тип праздника",
+          "pt": "Tipo de feriado",
+          "nl": "Type feestdag",
+          "fr": "Type de jour férié",
+          "it": "Tipo di giorno festivo",
+          "es": "Tipo de festivo",
+          "pl": "Typ święta",
+          "uk": "Тип свята",
+          "zh-cn": "假日类型"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next",
+      "type": "channel",
+      "common": {
+        "name": {
+          "en": "Next holiday",
+          "de": "Nächster Feiertag",
+          "ru": "Следующий праздник",
+          "pt": "Próximo feriado",
+          "nl": "Volgende feestdag",
+          "fr": "Prochain jour férié",
+          "it": "Prossimo giorno festivo",
+          "es": "Próximo festivo",
+          "pl": "Następne święto",
+          "uk": "Наступне свято",
+          "zh-cn": "下一个假日"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.name",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday name",
+          "de": "Feiertagsname",
+          "ru": "Название праздника",
+          "pt": "Nome do feriado",
+          "nl": "Naam feestdag",
+          "fr": "Nom du jour férié",
+          "it": "Nome del giorno festivo",
+          "es": "Nombre del festivo",
+          "pl": "Nazwa święta",
+          "uk": "Назва свята",
+          "zh-cn": "假日名称"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.id",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday ID",
+          "de": "Feiertags-ID",
+          "ru": "Идентификатор праздника",
+          "pt": "ID do feriado",
+          "nl": "Feestdag-ID",
+          "fr": "ID du jour férié",
+          "it": "ID del giorno festivo",
+          "es": "ID del festivo",
+          "pl": "ID święta",
+          "uk": "Ідентифікатор свята",
+          "zh-cn": "假日ID"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.boolean",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Is a holiday",
+          "de": "Ist ein Feiertag",
+          "ru": "Является праздником",
+          "pt": "É feriado",
+          "nl": "Is een feestdag",
+          "fr": "Est un jour férié",
+          "it": "È un giorno festivo",
+          "es": "Es festivo",
+          "pl": "Jest świętem",
+          "uk": "Є святом",
+          "zh-cn": "是假日"
+        },
+        "type": "boolean",
+        "role": "indicator",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.region",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Region code",
+          "de": "Regionscode",
+          "ru": "Код региона",
+          "pt": "Código da região",
+          "nl": "Regiocode",
+          "fr": "Code région",
+          "it": "Codice regione",
+          "es": "Código de región",
+          "pl": "Kod regionu",
+          "uk": "Код регіону",
+          "zh-cn": "区域代码"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.type",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Holiday type",
+          "de": "Feiertagstyp",
+          "ru": "Тип праздника",
+          "pt": "Tipo de feriado",
+          "nl": "Type feestdag",
+          "fr": "Type de jour férié",
+          "it": "Tipo di giorno festivo",
+          "es": "Tipo de festivo",
+          "pl": "Typ święta",
+          "uk": "Тип свята",
+          "zh-cn": "假日类型"
+        },
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.date",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Date",
+          "de": "Datum",
+          "ru": "Дата",
+          "pt": "Data",
+          "nl": "Datum",
+          "fr": "Date",
+          "it": "Data",
+          "es": "Fecha",
+          "pl": "Data",
+          "uk": "Дата",
+          "zh-cn": "日期"
+        },
+        "type": "string",
+        "role": "value.date",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "next.duration",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Days until holiday",
+          "de": "Tage bis zum Feiertag",
+          "ru": "Дней до праздника",
+          "pt": "Dias até ao feriado",
+          "nl": "Dagen tot feestdag",
+          "fr": "Jours jusqu'au jour férié",
+          "it": "Giorni fino al giorno festivo",
+          "es": "Días hasta el festivo",
+          "pl": "Dni do święta",
+          "uk": "Днів до свята",
+          "zh-cn": "距假日天数"
+        },
+        "type": "number",
+        "role": "value",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    }
+  ]
 }

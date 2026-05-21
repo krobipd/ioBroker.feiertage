@@ -292,7 +292,13 @@ describe("bridge days", () => {
     const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
     // Simulate a Thursday holiday
     const thu = new Date("2026-05-14T00:00:00");
-    holidays.set("2026-05-14", { date: "2026-05-14", start: thu, end: new Date("2026-05-15T00:00:00"), name: "Test", type: "public" });
+    holidays.set("2026-05-14", {
+      date: "2026-05-14",
+      start: thu,
+      end: new Date("2026-05-15T00:00:00"),
+      name: "Test",
+      type: "public",
+    });
     const bridges = detectBridgeDays(holidays as any, 2026);
     expect(bridges.length).toBe(1);
     expect(toDateKey(bridges[0])).toBe("2026-05-15");
@@ -305,7 +311,13 @@ describe("bridge days", () => {
     // Jan 1 2030 is Tuesday → let's simulate
     const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
     const tue = new Date("2030-01-01T00:00:00");
-    holidays.set("2030-01-01", { date: "2030-01-01", start: tue, end: new Date("2030-01-02T00:00:00"), name: "Test", type: "public" });
+    holidays.set("2030-01-01", {
+      date: "2030-01-01",
+      start: tue,
+      end: new Date("2030-01-02T00:00:00"),
+      name: "Test",
+      type: "public",
+    });
     const bridges = detectBridgeDays(holidays as any, 2030);
     expect(bridges.length).toBe(1);
     expect(toDateKey(bridges[0])).toBe("2029-12-31");

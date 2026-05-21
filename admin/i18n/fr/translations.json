@@ -1,0 +1,22 @@
+{
+  "tab_region": "Région",
+  "tab_holidays": "Jours fériés",
+  "label_country": "Pays",
+  "help_country": "Sélectionnez le pays pour la détection des jours fériés",
+  "label_state": "État / Province",
+  "help_state": "Entrez le code de l'état ou de la province (ex. BY pour Bavière, ZH pour Zurich). Les codes disponibles figurent dans le journal de l'adaptateur.",
+  "label_region": "Région",
+  "help_region": "Entrez le code de la région si applicable. Les codes disponibles figurent dans le journal de l'adaptateur.",
+  "header_types": "Types de jours fériés",
+  "label_typePublic": "Jours fériés légaux",
+  "label_typeBank": "Jours fériés bancaires",
+  "label_typeSchool": "Vacances scolaires",
+  "label_typeOptional": "Jours fériés optionnels",
+  "label_typeObservance": "Jours commémoratifs",
+  "header_bridge": "Jours de pont",
+  "label_includeBridgeDays": "Détecter les jours de pont",
+  "help_includeBridgeDays": "Un jour de pont est un jour ouvrable entre un jour férié et le week-end (ex. vendredi après un jour férié le jeudi)",
+  "header_exclude": "Exclure des jours fériés",
+  "help_exclude": "Entrez les ID des jours fériés à exclure de la détection. Démarrez l'adaptateur une fois et consultez le journal pour voir tous les ID disponibles.",
+  "label_excludeHolidays": "ID des jours fériés exclus"
+}

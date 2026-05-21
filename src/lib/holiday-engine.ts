@@ -28,6 +28,18 @@ export function computeHolidays(config: AdapterConfig, languages: string[], refe
   return { yesterday, today, tomorrow, dayAfterTomorrow, next };
 }
 
+export function logAvailableHolidays(config: AdapterConfig, languages: string[], log: (msg: string) => void): void {
+  const hd = createHolidaysInstance(config, languages);
+  const year = new Date().getFullYear();
+  const holidays = hd.getHolidays(year) as RawHoliday[];
+  const matching = holidays
+    .filter(h => config.holidayTypes.includes(h.type))
+    .map(h => `${toHolidayId(h.name, h.rule)} (${h.name}, ${h.type})`);
+  log(
+    `${config.country}${config.state ? `/${config.state}` : ""}${config.region ? `/${config.region}` : ""}: ${matching.length} holidays for ${year} — IDs: ${matching.join(", ")}`,
+  );
+}
+
 function createHolidaysInstance(config: AdapterConfig, languages: string[]): Holidays {
   let hd: Holidays;
   if (config.state && config.region) {

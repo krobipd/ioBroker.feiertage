@@ -23,7 +23,15 @@ function makeComputed(): ComputedHolidays {
     today: { name: "Neujahr", id: "01-01", isHoliday: true, region: "", type: "public" },
     tomorrow: { name: "", id: "", isHoliday: false, region: "", type: "" },
     dayAfterTomorrow: { name: "", id: "", isHoliday: false, region: "", type: "" },
-    next: { name: "Karfreitag", id: "easter_-2", isHoliday: true, region: "", type: "public", date: "2026-04-03", duration: 92 },
+    next: {
+      name: "Karfreitag",
+      id: "easter_-2",
+      isHoliday: true,
+      region: "",
+      type: "public",
+      date: "2026-04-03",
+      duration: 92,
+    },
   };
 }
 
@@ -36,9 +44,7 @@ describe("ensureObjects", () => {
 
   it("creates all 5 channels", async () => {
     await ensureObjects(adapter as any);
-    const channelIds = Object.keys(adapter.objects).filter(
-      (id) => !id.includes("."),
-    );
+    const channelIds = Object.keys(adapter.objects).filter(id => !id.includes("."));
     expect(channelIds).toContain("today");
     expect(channelIds).toContain("yesterday");
     expect(channelIds).toContain("tomorrow");
