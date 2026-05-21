@@ -17,7 +17,8 @@ class FeiertageAdapter extends utils.Adapter {
   private async onReady(): Promise<void> {
     const config = this.validateConfig();
     if (!config) {
-      this.terminate?.("No country configured — open adapter settings", 11);
+      this.log.warn("No country configured — open adapter settings");
+      this.terminate?.("No country configured", 0);
       return;
     }
 
