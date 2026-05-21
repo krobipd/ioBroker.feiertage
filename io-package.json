@@ -3,6 +3,19 @@
     "name": "feiertage",
     "version": "0.1.0",
     "news": {
+      "NEXT": {
+        "en": "Use community-standard event handler pattern",
+        "de": "Community-Standard Event-Handler-Pattern verwendet",
+        "ru": "Использован стандартный шаблон обработчика событий сообщества",
+        "pt": "Utilizado padrão de manipulador de eventos da comunidade",
+        "nl": "Community-standaard event handler patroon gebruikt",
+        "fr": "Utilisation du modèle de gestionnaire d'événements standard de la communauté",
+        "it": "Utilizzato il pattern standard della comunità per i gestori di eventi",
+        "es": "Utilizado el patrón estándar de la comunidad para manejadores de eventos",
+        "pl": "Zastosowano standardowy wzorzec obsługi zdarzeń społeczności",
+        "uk": "Використано стандартний шаблон обробника подій спільноти",
+        "zh-cn": "使用社区标准事件处理程序模式"
+      },
       "0.1.0": {
         "en": "Initial release — offline holiday detection for 206 countries with bridge day support",
         "de": "Erstveröffentlichung — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Unterstützung",

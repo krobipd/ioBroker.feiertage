@@ -39,7 +39,7 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 | Setting          | Description                                                                               |
 | ---------------- | ----------------------------------------------------------------------------------------- |
 | Country          | Select from 206 countries                                                                 |
-| State / Province | State code (e.g. `BY` for Bayern, `ZH` for Zürich) — only shown for countries with states |
+| State / Province | State code (e.g. `BY` for Bavaria, `ZH` for Zurich) — only shown for countries with states |
 | Region           | Region code — only shown when a state is selected                                         |
 
 Start the adapter once and check the log to see available state/region codes for your country.
@@ -117,6 +117,10 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- (krobi) Use community-standard event handler pattern
 
 ### 0.1.0 (2026-05-21)
 
