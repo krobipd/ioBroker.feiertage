@@ -6,7 +6,7 @@
 
 **ioBroker Feiertage** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.0 (2026-05-21, Initial release, Tag + GitHub Release, kein npm)
+- **Version:** 0.1.1 (2026-05-21, community handler pattern, Tag + GitHub Release, kein npm)
 - **GitHub:** https://github.com/krobipd/ioBroker.feiertage
 - **npm:** blockiert bis mcm-Entscheidung — Release ohne npm wie NUT
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -60,6 +60,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 ## Versionshistorie
 
+- **0.1.1** (2026-05-21) — Community-standard event handler pattern (.bind + try/catch)
 - **0.1.0** (2026-05-21) — Initial release: 206 countries, bridge days, exclude by ID, 11-language admin
 
 ## Befehle
