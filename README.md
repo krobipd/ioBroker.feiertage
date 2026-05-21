@@ -117,8 +117,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 0.1.1 (2026-05-21)
 
 - Use community-standard event handler pattern
 

@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "feiertage",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
-      "NEXT": {
+      "0.1.1": {
         "en": "Use community-standard event handler pattern",
         "de": "Community-Standard Event-Handler-Pattern verwendet",
         "ru": "Использован стандартный шаблон обработчика событий сообщества",
@@ -56,7 +56,9 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": ["krobi <krobi@power-dreams.com>"],
+    "authors": [
+      "krobi <krobi@power-dreams.com>"
+    ],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
