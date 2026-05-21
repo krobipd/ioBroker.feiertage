@@ -120,7 +120,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 ### **WORK IN PROGRESS**
 
-- (krobi) Use community-standard event handler pattern
+- Use community-standard event handler pattern
 
 ### 0.1.0 (2026-05-21)
 
