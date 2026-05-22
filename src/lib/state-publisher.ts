@@ -37,11 +37,15 @@ export async function ensureObjects(adapter: ioBroker.Adapter): Promise<void> {
 }
 
 async function ensureChannel(adapter: ioBroker.Adapter, channel: string): Promise<void> {
-  await adapter.extendObjectAsync(channel, {
-    type: "channel",
-    common: { name: CHANNEL_I18N[channel] ?? channel },
-    native: {},
-  });
+  await adapter.extendObjectAsync(
+    channel,
+    {
+      type: "channel",
+      common: { name: CHANNEL_I18N[channel] ?? channel },
+      native: {},
+    },
+    { preserve: { common: ["name"] } },
+  );
 }
 
 async function ensureState(adapter: ioBroker.Adapter, channel: string, field: string): Promise<void> {
@@ -49,17 +53,21 @@ async function ensureState(adapter: ioBroker.Adapter, channel: string, field: st
   if (!spec) {
     return;
   }
-  await adapter.extendObjectAsync(`${channel}.${field}`, {
-    type: "state",
-    common: {
-      name: STATE_NAMES[field] ?? field,
-      type: spec.type,
-      role: spec.role,
-      read: spec.read,
-      write: spec.write,
+  await adapter.extendObjectAsync(
+    `${channel}.${field}`,
+    {
+      type: "state",
+      common: {
+        name: STATE_NAMES[field] ?? field,
+        type: spec.type,
+        role: spec.role,
+        read: spec.read,
+        write: spec.write,
+      },
+      native: {},
     },
-    native: {},
-  });
+    { preserve: { common: ["name"] } },
+  );
 }
 
 export async function publishStates(adapter: ioBroker.Adapter, computed: ComputedHolidays): Promise<void> {

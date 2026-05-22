@@ -3,6 +3,19 @@
     "name": "feiertage",
     "version": "0.1.1",
     "news": {
+      "NEXT": {
+        "en": "User-modified state names are no longer overwritten on adapter restart",
+        "de": "Vom Benutzer geänderte Datenpunktnamen werden beim Adapter-Neustart nicht mehr überschrieben",
+        "ru": "Пользовательские имена состояний больше не перезаписываются при перезапуске адаптера",
+        "pt": "Nomes de estados modificados pelo utilizador já não são substituídos ao reiniciar o adaptador",
+        "nl": "Door de gebruiker gewijzigde statusnamen worden niet meer overschreven bij het herstarten van de adapter",
+        "fr": "Les noms d'états modifiés par l'utilisateur ne sont plus écrasés lors du redémarrage de l'adaptateur",
+        "it": "I nomi degli stati modificati dall'utente non vengono più sovrascritti al riavvio dell'adattatore",
+        "es": "Los nombres de estados modificados por el usuario ya no se sobrescriben al reiniciar el adaptador",
+        "pl": "Nazwy stanów zmienione przez użytkownika nie są już nadpisywane przy ponownym uruchomieniu adaptera",
+        "uk": "Змінені користувачем назви станів більше не перезаписуються при перезапуску адаптера",
+        "zh-cn": "用户修改的状态名称在适配器重启时不再被覆盖"
+      },
       "0.1.1": {
         "en": "Use community-standard event handler pattern",
         "de": "Community-Standard Event-Handler-Pattern verwendet",

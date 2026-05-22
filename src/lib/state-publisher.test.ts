@@ -114,6 +114,20 @@ describe("ensureObjects", () => {
     expect(st.common.name).toHaveProperty("en");
     expect(st.common.name).toHaveProperty("de");
   });
+
+  it("passes preserve option for channels", async () => {
+    await ensureObjects(adapter as any);
+    expect(adapter.extendObjectAsync).toHaveBeenCalledWith("today", expect.anything(), {
+      preserve: { common: ["name"] },
+    });
+  });
+
+  it("passes preserve option for states", async () => {
+    await ensureObjects(adapter as any);
+    expect(adapter.extendObjectAsync).toHaveBeenCalledWith("today.name", expect.anything(), {
+      preserve: { common: ["name"] },
+    });
+  });
 });
 
 describe("publishStates", () => {

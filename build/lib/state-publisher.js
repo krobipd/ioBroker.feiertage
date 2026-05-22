@@ -49,11 +49,15 @@ async function ensureObjects(adapter) {
 }
 async function ensureChannel(adapter, channel) {
   var _a;
-  await adapter.extendObjectAsync(channel, {
-    type: "channel",
-    common: { name: (_a = import_i18n_states.CHANNEL_I18N[channel]) != null ? _a : channel },
-    native: {}
-  });
+  await adapter.extendObjectAsync(
+    channel,
+    {
+      type: "channel",
+      common: { name: (_a = import_i18n_states.CHANNEL_I18N[channel]) != null ? _a : channel },
+      native: {}
+    },
+    { preserve: { common: ["name"] } }
+  );
 }
 async function ensureState(adapter, channel, field) {
   var _a;
@@ -61,17 +65,21 @@ async function ensureState(adapter, channel, field) {
   if (!spec) {
     return;
   }
-  await adapter.extendObjectAsync(`${channel}.${field}`, {
-    type: "state",
-    common: {
-      name: (_a = import_i18n_states.STATE_NAMES[field]) != null ? _a : field,
-      type: spec.type,
-      role: spec.role,
-      read: spec.read,
-      write: spec.write
+  await adapter.extendObjectAsync(
+    `${channel}.${field}`,
+    {
+      type: "state",
+      common: {
+        name: (_a = import_i18n_states.STATE_NAMES[field]) != null ? _a : field,
+        type: spec.type,
+        role: spec.role,
+        read: spec.read,
+        write: spec.write
+      },
+      native: {}
     },
-    native: {}
-  });
+    { preserve: { common: ["name"] } }
+  );
 }
 async function publishStates(adapter, computed) {
   const dayMap = {
