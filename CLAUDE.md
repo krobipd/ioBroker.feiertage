@@ -6,7 +6,7 @@
 
 **ioBroker Feiertage** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.1 (2026-05-21, community handler pattern, Tag + GitHub Release, kein npm)
+- **Version:** 0.1.2 (2026-05-22, preserve user-modified names, Tag + GitHub Release, kein npm)
 - **GitHub:** https://github.com/krobipd/ioBroker.feiertage
 - **npm:** blockiert bis mcm-Entscheidung — Release ohne npm wie NUT
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -21,7 +21,7 @@ src/lib/
 ├── holiday-engine.ts              → date-holidays Wrapper, Type-Filter, Brückentag-Algo
 ├── holiday-engine.test.ts         → 72 Tests
 ├── state-publisher.ts             → ComputedHolidays → ioBroker States
-├── state-publisher.test.ts        → 20 Tests
+├── state-publisher.test.ts        → 22 Tests
 ├── i18n.ts                        → system.config.language Lookup + EN-Fallback
 ├── i18n.test.ts                   → 15 Tests
 ├── i18n-states.ts                 → 11-Sprachen State-Name-Translations
@@ -48,11 +48,11 @@ scripts/
 
 5 Channels × 5 States + next.date + next.duration = 27 States total. Channels: today, yesterday, tomorrow, dayAfterTomorrow, next. Fields: name (localized), id (stable), boolean, region, type.
 
-## Tests (107 unit + 57 package = 164)
+## Tests (109 unit + 57 package = 166)
 
 ```
 src/lib/holiday-engine.test.ts    → 72: DE/CH/AT/IT holidays, type filter, exclude, bridge days, localization
-src/lib/state-publisher.test.ts   → 20: ensureObjects, publishStates (mock adapter)
+src/lib/state-publisher.test.ts   → 22: ensureObjects, publishStates, preserve option (mock adapter)
 src/lib/i18n.test.ts              → 15: resolveLanguages, EN-Fallback
 test/package.js                   → 57: @iobroker/testing packageFiles
 test/integration.js               → @iobroker/testing integration (CI only)
@@ -60,6 +60,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 ## Versionshistorie
 
+- **0.1.2** (2026-05-22) — Preserve user-modified state names on restart (mcm1957 feedback)
 - **0.1.1** (2026-05-21) — Community-standard event handler pattern (.bind + try/catch)
 - **0.1.0** (2026-05-21) — Initial release: 206 countries, bridge days, exclude by ID, 11-language admin
 
