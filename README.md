@@ -117,7 +117,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.1.2 (2026-05-22)
 
 - User-modified state names are no longer overwritten on adapter restart
 
