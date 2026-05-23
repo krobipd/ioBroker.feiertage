@@ -117,7 +117,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.1.5 (2026-05-23)
 
 - Changelog rewritten in user-centric style.
 
@@ -136,10 +136,6 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 ### 0.1.1 (2026-05-21)
 
 - Improved error handling and stability.
-
-### 0.1.0 (2026-05-21)
-
-- Initial release — offline holiday detection for 206 countries with bridge day support
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

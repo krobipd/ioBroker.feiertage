@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "feiertage",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "news": {
-      "NEXT": {
+      "0.1.5": {
         "en": "Changelog rewritten in user-centric style.",
         "de": "Changelog in benutzerfreundlichem Stil umgeschrieben.",
         "ru": "Журнал изменений переписан в пользовательском стиле.",
