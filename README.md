@@ -117,7 +117,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.1.4 (2026-05-23)
 
 - Fixed missing responsive size attributes on admin checkboxes for stricter repochecker compliance
 - Fixed unknown state role on next.date

@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "feiertage",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "news": {
-      "NEXT": {
+      "0.1.4": {
         "en": "Fixed admin checkbox responsiveness and state role compliance",
         "de": "Admin-Checkbox-Responsivität und State-Role-Konformität behoben",
         "ru": "Исправлена адаптивность чекбоксов в админке и соответствие ролей состояний",
