@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "feiertage",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "news": {
-      "NEXT": {
+      "0.1.3": {
         "en": "State name translations use standard ioBroker i18n framework",
         "de": "Datenpunktnamen-Übersetzungen nutzen das Standard-ioBroker-i18n-Framework",
         "ru": "Переводы имён состояний используют стандартный фреймворк i18n ioBroker",
@@ -82,7 +82,9 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": ["krobi <krobi@power-dreams.com>"],
+    "authors": [
+      "krobi <krobi@power-dreams.com>"
+    ],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
