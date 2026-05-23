@@ -6,7 +6,7 @@
 
 **ioBroker Feiertage** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.3 (2026-05-23, State names use adapter-core I18n framework — replaces private `i18n-states.ts` with `I18n.getTranslatedObject()`, admin/i18n migrated from subdirectories to flat `<lang>.json` files). Vorgänger **0.1.2** (2026-05-22) — Preserve user-modified state names on restart.
+- **Version:** 0.1.4 (2026-05-23, Fixed admin checkbox responsiveness E5507, state role W1132, node: imports S5043). Vorgänger **0.1.3** (2026-05-23, State names use adapter-core I18n framework — replaces private `i18n-states.ts` with `I18n.getTranslatedObject()`, admin/i18n migrated from subdirectories to flat `<lang>.json` files). Vorgänger **0.1.2** (2026-05-22) — Preserve user-modified state names on restart.
 - **GitHub:** https://github.com/krobipd/ioBroker.feiertage
 - **npm:** blockiert bis mcm-Entscheidung — Release ohne npm wie NUT
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -62,6 +62,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 | Version | Highlights |
 |---------|------------|
+| 0.1.4 | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043). |
 | 0.1.3 | **i18n-Migration auf adapter-core.** Private `i18n-states.ts` durch `I18n.getTranslatedObject()` ersetzt, admin/i18n von Unterordner-Pattern auf flat `<lang>.json` migriert (32 Keys = 20 UI + 12 State-Names). Tests 109→113. |
 | 0.1.2 | Preserve user-modified state names on restart (mcm1957 feedback). |
 | 0.1.1 | Community-standard event handler pattern (.bind + try/catch). |
