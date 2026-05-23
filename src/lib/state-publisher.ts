@@ -1,5 +1,5 @@
 import type { ComputedHolidays, DayInfo, NextHoliday } from "./types";
-import { CHANNEL_I18N, STATE_NAMES } from "./i18n-states";
+import { tName, type I18nKey } from "./i18n";
 
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"] as const;
 const DAY_FIELDS = ["name", "id", "boolean", "region", "type"] as const;
@@ -41,7 +41,7 @@ async function ensureChannel(adapter: ioBroker.Adapter, channel: string): Promis
     channel,
     {
       type: "channel",
-      common: { name: CHANNEL_I18N[channel] ?? channel },
+      common: { name: tName(channel as I18nKey) },
       native: {},
     },
     { preserve: { common: ["name"] } },
@@ -58,7 +58,7 @@ async function ensureState(adapter: ioBroker.Adapter, channel: string, field: st
     {
       type: "state",
       common: {
-        name: STATE_NAMES[field] ?? field,
+        name: tName(field as I18nKey),
         type: spec.type,
         role: spec.role,
         read: spec.read,

@@ -18,5 +18,17 @@
   "help_includeBridgeDays": "Dzień pomostowy to dzień roboczy między świętem a weekendem (np. piątek po święcie w czwartek)",
   "header_exclude": "Wyklucz święta",
   "help_exclude": "Wprowadź identyfikatory świąt do wykluczenia z wykrywania. Uruchom adapter raz i sprawdź log, aby zobaczyć wszystkie dostępne identyfikatory.",
-  "label_excludeHolidays": "Wykluczone identyfikatory świąt"
+  "label_excludeHolidays": "Wykluczone identyfikatory świąt",
+  "today": "Dzisiaj",
+  "yesterday": "Wczoraj",
+  "tomorrow": "Jutro",
+  "dayAfterTomorrow": "Pojutrze",
+  "next": "Następne święto",
+  "name": "Nazwa święta",
+  "id": "ID święta",
+  "boolean": "Jest świętem",
+  "region": "Kod regionu",
+  "type": "Typ święta",
+  "date": "Data",
+  "duration": "Dni do święta"
 }

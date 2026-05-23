@@ -18,5 +18,17 @@
   "help_includeBridgeDays": "Un giorno ponte è un giorno lavorativo tra un giorno festivo e il fine settimana (es. venerdì dopo un giorno festivo il giovedì)",
   "header_exclude": "Escludere giorni festivi",
   "help_exclude": "Inserisci gli ID dei giorni festivi da escludere dal rilevamento. Avvia l'adattatore una volta e controlla il log per tutti gli ID disponibili.",
-  "label_excludeHolidays": "ID giorni festivi esclusi"
+  "label_excludeHolidays": "ID giorni festivi esclusi",
+  "today": "Oggi",
+  "yesterday": "Ieri",
+  "tomorrow": "Domani",
+  "dayAfterTomorrow": "Dopodomani",
+  "next": "Prossimo giorno festivo",
+  "name": "Nome del giorno festivo",
+  "id": "ID del giorno festivo",
+  "boolean": "È un giorno festivo",
+  "region": "Codice regione",
+  "type": "Tipo di giorno festivo",
+  "date": "Data",
+  "duration": "Giorni fino al giorno festivo"
 }

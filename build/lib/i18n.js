@@ -30,11 +30,16 @@ var i18n_exports = {};
 __export(i18n_exports, {
   getSystemCountry: () => getSystemCountry,
   getSystemLanguage: () => getSystemLanguage,
-  resolveLanguages: () => resolveLanguages
+  resolveLanguages: () => resolveLanguages,
+  tName: () => tName
 });
 module.exports = __toCommonJS(i18n_exports);
+var import_adapter_core = require("@iobroker/adapter-core");
 var import_date_holidays = __toESM(require("date-holidays"));
 const SUPPORTED_LANGS = ["de", "en", "es", "fr", "it", "nl", "pl", "pt", "ru", "uk", "zh"];
+function tName(key) {
+  return import_adapter_core.I18n.getTranslatedObject(key);
+}
 function resolveLanguages(systemLang, country) {
   const lang = systemLang.toLowerCase().split("-")[0];
   if (!SUPPORTED_LANGS.includes(lang)) {
@@ -69,6 +74,7 @@ async function getSystemCountry(adapter) {
 0 && (module.exports = {
   getSystemCountry,
   getSystemLanguage,
-  resolveLanguages
+  resolveLanguages,
+  tName
 });
 //# sourceMappingURL=i18n.js.map

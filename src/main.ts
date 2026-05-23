@@ -1,4 +1,6 @@
 import * as utils from "@iobroker/adapter-core";
+import { I18n } from "@iobroker/adapter-core";
+import { join } from "node:path";
 import { errText } from "./lib/coerce";
 import { computeHolidays, logAvailableHolidays } from "./lib/holiday-engine";
 import { getSystemCountry, getSystemLanguage, resolveLanguages } from "./lib/i18n";
@@ -14,6 +16,7 @@ class FeiertageAdapter extends utils.Adapter {
 
   private async onReady(): Promise<void> {
     try {
+      await I18n.init(join(this.adapterDir, "admin"), this);
       const config = this.validateConfig();
       if (!config) {
         this.log.warn("No country configured — open adapter settings");

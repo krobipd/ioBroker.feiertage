@@ -22,7 +22,7 @@ __export(state_publisher_exports, {
   publishStates: () => publishStates
 });
 module.exports = __toCommonJS(state_publisher_exports);
-var import_i18n_states = require("./i18n-states");
+var import_i18n = require("./i18n");
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"];
 const DAY_FIELDS = ["name", "id", "boolean", "region", "type"];
 const NEXT_FIELDS = ["name", "id", "boolean", "region", "type", "date", "duration"];
@@ -48,19 +48,17 @@ async function ensureObjects(adapter) {
   }
 }
 async function ensureChannel(adapter, channel) {
-  var _a;
   await adapter.extendObjectAsync(
     channel,
     {
       type: "channel",
-      common: { name: (_a = import_i18n_states.CHANNEL_I18N[channel]) != null ? _a : channel },
+      common: { name: (0, import_i18n.tName)(channel) },
       native: {}
     },
     { preserve: { common: ["name"] } }
   );
 }
 async function ensureState(adapter, channel, field) {
-  var _a;
   const spec = FIELD_SPECS[field];
   if (!spec) {
     return;
@@ -70,7 +68,7 @@ async function ensureState(adapter, channel, field) {
     {
       type: "state",
       common: {
-        name: (_a = import_i18n_states.STATE_NAMES[field]) != null ? _a : field,
+        name: (0, import_i18n.tName)(field),
         type: spec.type,
         role: spec.role,
         read: spec.read,

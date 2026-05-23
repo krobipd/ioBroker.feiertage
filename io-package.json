@@ -3,6 +3,19 @@
     "name": "feiertage",
     "version": "0.1.2",
     "news": {
+      "NEXT": {
+        "en": "State name translations use standard ioBroker i18n framework",
+        "de": "Datenpunktnamen-Übersetzungen nutzen das Standard-ioBroker-i18n-Framework",
+        "ru": "Переводы имён состояний используют стандартный фреймворк i18n ioBroker",
+        "pt": "Traduções dos nomes de estados utilizam o framework i18n padrão do ioBroker",
+        "nl": "Vertalingen van statusnamen gebruiken het standaard ioBroker i18n-framework",
+        "fr": "Les traductions des noms d'états utilisent le framework i18n standard d'ioBroker",
+        "it": "Le traduzioni dei nomi degli stati utilizzano il framework i18n standard di ioBroker",
+        "es": "Las traducciones de nombres de estados utilizan el framework i18n estándar de ioBroker",
+        "pl": "Tłumaczenia nazw stanów wykorzystują standardowy framework i18n ioBroker",
+        "uk": "Переклади назв станів використовують стандартний фреймворк i18n ioBroker",
+        "zh-cn": "状态名称翻译使用标准ioBroker i18n框架"
+      },
       "0.1.2": {
         "en": "User-modified state names are no longer overwritten on adapter restart",
         "de": "Vom Benutzer geänderte Datenpunktnamen werden beim Adapter-Neustart nicht mehr überschrieben",
@@ -69,9 +82,7 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": [
-      "krobi <krobi@power-dreams.com>"
-    ],
+    "authors": ["krobi <krobi@power-dreams.com>"],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"

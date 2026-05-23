@@ -6,22 +6,30 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === "object") || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
+var __toESM = (mod, isNodeMode, target) => (
+  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
+  __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+    mod,
+  )
+);
 var utils = __toESM(require("@iobroker/adapter-core"));
+var import_adapter_core = require("@iobroker/adapter-core");
+var import_node_path = require("node:path");
 var import_coerce = require("./lib/coerce");
 var import_holiday_engine = require("./lib/holiday-engine");
 var import_i18n = require("./lib/i18n");
@@ -35,6 +43,7 @@ class FeiertageAdapter extends utils.Adapter {
   async onReady() {
     var _a, _b;
     try {
+      await import_adapter_core.I18n.init((0, import_node_path.join)(this.adapterDir, "admin"), this);
       const config = this.validateConfig();
       if (!config) {
         this.log.warn("No country configured \u2014 open adapter settings");
@@ -52,9 +61,9 @@ class FeiertageAdapter extends utils.Adapter {
         }
       }
       const computed = (0, import_holiday_engine.computeHolidays)(config, languages);
-      (0, import_holiday_engine.logAvailableHolidays)(config, languages, (msg) => this.log.info(msg));
+      (0, import_holiday_engine.logAvailableHolidays)(config, languages, msg => this.log.info(msg));
       this.log.info(
-        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.duration} days`
+        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.duration} days`,
       );
       await (0, import_state_publisher.ensureObjects)(this);
       await (0, import_state_publisher.publishStates)(this, computed);
@@ -92,7 +101,7 @@ class FeiertageAdapter extends utils.Adapter {
       region: typeof raw.region === "string" ? raw.region.trim() : "",
       holidayTypes,
       excludeHolidays: Array.isArray(raw.excludeHolidays) ? raw.excludeHolidays : [],
-      includeBridgeDays: raw.includeBridgeDays === true
+      includeBridgeDays: raw.includeBridgeDays === true,
     };
   }
   onUnload(callback) {
@@ -100,7 +109,7 @@ class FeiertageAdapter extends utils.Adapter {
   }
 }
 if (require.main !== module) {
-  module.exports = (options) => new FeiertageAdapter(options);
+  module.exports = options => new FeiertageAdapter(options);
 } else {
   new FeiertageAdapter();
 }

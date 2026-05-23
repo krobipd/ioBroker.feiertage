@@ -1,4 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
+
+vi.mock("@iobroker/adapter-core", () => ({
+  I18n: {
+    getTranslatedObject: vi.fn((key: string) => ({ en: key, de: `${key}_de` })),
+  },
+}));
+
 import { ensureObjects, publishStates } from "./state-publisher";
 import type { ComputedHolidays } from "./types";
 
@@ -99,13 +106,11 @@ describe("ensureObjects", () => {
     expect(nameObj.common.write).toBe(false);
   });
 
-  it("channel objects have 11-language name", async () => {
+  it("channel objects have translation object name", async () => {
     await ensureObjects(adapter as any);
     const ch = adapter.objects["today"] as any;
     expect(ch.common.name).toHaveProperty("en");
     expect(ch.common.name).toHaveProperty("de");
-    expect(ch.common.name.en).toBe("Today");
-    expect(ch.common.name.de).toBe("Heute");
   });
 
   it("state objects have 11-language name", async () => {

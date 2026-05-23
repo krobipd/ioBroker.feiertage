@@ -18,5 +18,17 @@
   "help_includeBridgeDays": "A bridge day is a working day between a holiday and a weekend (e.g. Friday after a Thursday holiday)",
   "header_exclude": "Exclude holidays",
   "help_exclude": "Enter holiday IDs to exclude from detection. Start the adapter once and check the log to see all available holiday IDs.",
-  "label_excludeHolidays": "Excluded holiday IDs"
+  "label_excludeHolidays": "Excluded holiday IDs",
+  "today": "Today",
+  "yesterday": "Yesterday",
+  "tomorrow": "Tomorrow",
+  "dayAfterTomorrow": "Day after tomorrow",
+  "next": "Next holiday",
+  "name": "Holiday name",
+  "id": "Holiday ID",
+  "boolean": "Is a holiday",
+  "region": "Region code",
+  "type": "Holiday type",
+  "date": "Date",
+  "duration": "Days until holiday"
 }

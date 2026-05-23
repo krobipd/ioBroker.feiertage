@@ -36,11 +36,11 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 
 ### Tab 1 — Region
 
-| Setting          | Description                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------------- |
-| Country          | Select from 206 countries                                                                 |
+| Setting          | Description                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------ |
+| Country          | Select from 206 countries                                                                  |
 | State / Province | State code (e.g. `BY` for Bavaria, `ZH` for Zurich) — only shown for countries with states |
-| Region           | Region code — only shown when a state is selected                                         |
+| Region           | Region code — only shown when a state is selected                                          |
 
 Start the adapter once and check the log to see available state/region codes for your country.
 
@@ -117,6 +117,11 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- State name translations use standard ioBroker i18n framework
+
 ### 0.1.2 (2026-05-22)
 
 - User-modified state names are no longer overwritten on adapter restart
@@ -162,4 +167,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*Developed with assistance from Claude.ai*
+_Developed with assistance from Claude.ai_

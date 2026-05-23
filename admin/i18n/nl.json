@@ -18,5 +18,17 @@
   "help_includeBridgeDays": "Een brugdag is een werkdag tussen een feestdag en het weekend (bijv. vrijdag na een feestdag op donderdag)",
   "header_exclude": "Feestdagen uitsluiten",
   "help_exclude": "Voer feestdag-ID's in om uit te sluiten van detectie. Start de adapter eenmaal en controleer het log voor alle beschikbare ID's.",
-  "label_excludeHolidays": "Uitgesloten feestdag-ID's"
+  "label_excludeHolidays": "Uitgesloten feestdag-ID's",
+  "today": "Vandaag",
+  "yesterday": "Gisteren",
+  "tomorrow": "Morgen",
+  "dayAfterTomorrow": "Overmorgen",
+  "next": "Volgende feestdag",
+  "name": "Naam feestdag",
+  "id": "Feestdag-ID",
+  "boolean": "Is een feestdag",
+  "region": "Regiocode",
+  "type": "Type feestdag",
+  "date": "Datum",
+  "duration": "Dagen tot feestdag"
 }

@@ -18,5 +18,17 @@
   "help_includeBridgeDays": "Ein Brückentag ist ein Arbeitstag zwischen einem Feiertag und dem Wochenende (z.B. Freitag nach einem Donnerstags-Feiertag)",
   "header_exclude": "Feiertage ausschließen",
   "help_exclude": "Feiertags-IDs eingeben, die von der Erkennung ausgeschlossen werden sollen. Adapter einmal starten und im Log die verfügbaren IDs nachschlagen.",
-  "label_excludeHolidays": "Ausgeschlossene Feiertags-IDs"
+  "label_excludeHolidays": "Ausgeschlossene Feiertags-IDs",
+  "today": "Heute",
+  "yesterday": "Gestern",
+  "tomorrow": "Morgen",
+  "dayAfterTomorrow": "Übermorgen",
+  "next": "Nächster Feiertag",
+  "name": "Feiertagsname",
+  "id": "Feiertags-ID",
+  "boolean": "Ist ein Feiertag",
+  "region": "Regionscode",
+  "type": "Feiertagstyp",
+  "date": "Datum",
+  "duration": "Tage bis zum Feiertag"
 }
