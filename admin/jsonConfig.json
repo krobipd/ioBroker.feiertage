@@ -888,37 +888,47 @@
         "typePublic": {
           "type": "checkbox",
           "label": "label_typePublic",
+          "xs": 12,
           "sm": 6,
           "md": 4,
-          "lg": 2
+          "lg": 2,
+          "xl": 2
         },
         "typeBank": {
           "type": "checkbox",
           "label": "label_typeBank",
+          "xs": 12,
           "sm": 6,
           "md": 4,
-          "lg": 2
+          "lg": 2,
+          "xl": 2
         },
         "typeSchool": {
           "type": "checkbox",
           "label": "label_typeSchool",
+          "xs": 12,
           "sm": 6,
           "md": 4,
-          "lg": 2
+          "lg": 2,
+          "xl": 2
         },
         "typeOptional": {
           "type": "checkbox",
           "label": "label_typeOptional",
+          "xs": 12,
           "sm": 6,
           "md": 4,
-          "lg": 2
+          "lg": 2,
+          "xl": 2
         },
         "typeObservance": {
           "type": "checkbox",
           "label": "label_typeObservance",
+          "xs": 12,
           "sm": 6,
           "md": 4,
-          "lg": 2
+          "lg": 2,
+          "xl": 2
         },
         "_headerBridge": {
           "type": "header",
@@ -931,8 +941,11 @@
           "type": "checkbox",
           "label": "label_includeBridgeDays",
           "help": "help_includeBridgeDays",
+          "xs": 12,
           "sm": 12,
-          "md": 6
+          "md": 6,
+          "lg": 6,
+          "xl": 6
         },
         "_headerExclude": {
           "type": "header",

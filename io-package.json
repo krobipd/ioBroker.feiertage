@@ -3,6 +3,19 @@
     "name": "feiertage",
     "version": "0.1.3",
     "news": {
+      "NEXT": {
+        "en": "Fixed admin checkbox responsiveness and state role compliance",
+        "de": "Admin-Checkbox-Responsivität und State-Role-Konformität behoben",
+        "ru": "Исправлена адаптивность чекбоксов в админке и соответствие ролей состояний",
+        "pt": "Corrigida a responsividade dos checkboxes no admin e conformidade de roles",
+        "nl": "Admin-checkbox responsiviteit en state-role conformiteit gerepareerd",
+        "fr": "Correction de la réactivité des cases à cocher admin et conformité des rôles",
+        "it": "Corretta la reattività dei checkbox admin e la conformità dei ruoli degli stati",
+        "es": "Corregida la capacidad de respuesta de los checkboxes admin y la conformidad de roles",
+        "pl": "Naprawiono responsywność checkboxów admina i zgodność ról stanów",
+        "uk": "Виправлено адаптивність чекбоксів адмінки та відповідність ролей станів",
+        "zh-cn": "修复管理界面复选框响应式布局和状态角色合规性"
+      },
       "0.1.3": {
         "en": "State name translations use standard ioBroker i18n framework",
         "de": "Datenpunktnamen-Übersetzungen nutzen das Standard-ioBroker-i18n-Framework",
@@ -884,7 +897,7 @@
           "zh-cn": "日期"
         },
         "type": "string",
-        "role": "value.date",
+        "role": "text",
         "read": true,
         "write": false,
         "def": ""

@@ -6,8 +6,8 @@
  * Usage: npx ts-node scripts/generate-country-data.ts
  */
 import Holidays from "date-holidays";
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
 interface SelectOption {
   label: string | Record<string, string>;

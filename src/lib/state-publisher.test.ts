@@ -94,7 +94,7 @@ describe("ensureObjects", () => {
   it("state objects have correct roles", async () => {
     await ensureObjects(adapter as any);
     const dateObj = adapter.objects["next.date"] as any;
-    expect(dateObj.common.role).toBe("value.date");
+    expect(dateObj.common.role).toBe("text");
     const boolObj = adapter.objects["today.boolean"] as any;
     expect(boolObj.common.role).toBe("indicator");
   });

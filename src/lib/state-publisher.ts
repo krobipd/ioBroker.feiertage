@@ -18,7 +18,7 @@ const FIELD_SPECS: Record<string, StateSpec> = {
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
   region: { type: "string", role: "text", read: true, write: false },
   type: { type: "string", role: "text", read: true, write: false },
-  date: { type: "string", role: "value.date", read: true, write: false },
+  date: { type: "string", role: "text", read: true, write: false },
   duration: { type: "number", role: "value", read: true, write: false },
 };
 
