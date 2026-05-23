@@ -6,7 +6,7 @@
 
 **ioBroker Feiertage** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.2 (2026-05-22, preserve user-modified names, Tag + GitHub Release, kein npm)
+- **Version:** 0.1.3 (2026-05-23, State names use adapter-core I18n framework — replaces private `i18n-states.ts` with `I18n.getTranslatedObject()`, admin/i18n migrated from subdirectories to flat `<lang>.json` files). Vorgänger **0.1.2** (2026-05-22) — Preserve user-modified state names on restart.
 - **GitHub:** https://github.com/krobipd/ioBroker.feiertage
 - **npm:** blockiert bis mcm-Entscheidung — Release ohne npm wie NUT
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -22,17 +22,17 @@ src/lib/
 ├── holiday-engine.test.ts         → 72 Tests
 ├── state-publisher.ts             → ComputedHolidays → ioBroker States
 ├── state-publisher.test.ts        → 22 Tests
-├── i18n.ts                        → system.config.language Lookup + EN-Fallback
-├── i18n.test.ts                   → 15 Tests
-├── i18n-states.ts                 → 11-Sprachen State-Name-Translations
+├── i18n.ts                        → tName(key) Wrapper über I18n.getTranslatedObject() + system.config.language Lookup + EN-Fallback
+├── i18n.test.ts                   → 19 Tests (tName delegation + i18n completeness + resolveLanguages)
 ├── types.ts                       → AdapterConfig, DayInfo, NextHoliday, ComputedHolidays
 └── coerce.ts                      → errText
 admin/
 ├── jsonConfig.json                → 2 Tabs (Region + Holidays), 206 Country-Dropdown
-├── i18n/<11 langs>/translations.json
+├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (32 Keys × 11 Sprachen)
 ├── feiertage.svg                  → Icon (SVG 256×256, transparent)
 scripts/
 ├── generate-country-data.ts       → Regeneriert Country-Optionen in jsonConfig aus date-holidays
+../scripts/sync-iopackage-from-i18n.py → regeneriert io-package.json:instanceObjects.common.name aus admin/i18n/ (zentral, source: admin-i18n)
 ```
 
 ## Design-Entscheidungen
@@ -48,21 +48,24 @@ scripts/
 
 5 Channels × 5 States + next.date + next.duration = 27 States total. Channels: today, yesterday, tomorrow, dayAfterTomorrow, next. Fields: name (localized), id (stable), boolean, region, type.
 
-## Tests (109 unit + 57 package = 166)
+## Tests (113 unit + 57 package = 170)
 
 ```
 src/lib/holiday-engine.test.ts    → 72: DE/CH/AT/IT holidays, type filter, exclude, bridge days, localization
 src/lib/state-publisher.test.ts   → 22: ensureObjects, publishStates, preserve option (mock adapter)
-src/lib/i18n.test.ts              → 15: resolveLanguages, EN-Fallback
+src/lib/i18n.test.ts              → 19: tName delegation + i18n completeness (11 languages, identical keysets) + resolveLanguages
 test/package.js                   → 57: @iobroker/testing packageFiles
 test/integration.js               → @iobroker/testing integration (CI only)
 ```
 
 ## Versionshistorie
 
-- **0.1.2** (2026-05-22) — Preserve user-modified state names on restart (mcm1957 feedback)
-- **0.1.1** (2026-05-21) — Community-standard event handler pattern (.bind + try/catch)
-- **0.1.0** (2026-05-21) — Initial release: 206 countries, bridge days, exclude by ID, 11-language admin
+| Version | Highlights |
+|---------|------------|
+| 0.1.3 | **i18n-Migration auf adapter-core.** Private `i18n-states.ts` durch `I18n.getTranslatedObject()` ersetzt, admin/i18n von Unterordner-Pattern auf flat `<lang>.json` migriert (32 Keys = 20 UI + 12 State-Names). Tests 109→113. |
+| 0.1.2 | Preserve user-modified state names on restart (mcm1957 feedback). |
+| 0.1.1 | Community-standard event handler pattern (.bind + try/catch). |
+| 0.1.0 | Initial release: 206 countries, bridge days, exclude by ID, 11-language admin. |
 
 ## Befehle
 
