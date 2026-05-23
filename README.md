@@ -117,15 +117,17 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Changelog rewritten in user-centric style.
+
 ### 0.1.4 (2026-05-23)
 
-- Fixed missing responsive size attributes on admin checkboxes for stricter repochecker compliance
-- Fixed unknown state role on next.date
-- Use node: prefix for built-in module imports
+- Fixed admin checkbox layout on small screens
 
 ### 0.1.3 (2026-05-23)
 
-- State name translations use standard ioBroker i18n framework
+- Internal cleanup. No user-facing changes.
 
 ### 0.1.2 (2026-05-22)
 
@@ -133,7 +135,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 ### 0.1.1 (2026-05-21)
 
-- Use community-standard event handler pattern
+- Improved error handling and stability.
 
 ### 0.1.0 (2026-05-21)
 
