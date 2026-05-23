@@ -883,7 +883,11 @@
           "type": "header",
           "size": 5,
           "text": "header_types",
-          "sm": 12
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "typePublic": {
           "type": "checkbox",
@@ -935,7 +939,11 @@
           "size": 5,
           "text": "header_bridge",
           "newLine": true,
-          "sm": 12
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "includeBridgeDays": {
           "type": "checkbox",
@@ -952,18 +960,29 @@
           "size": 5,
           "text": "header_exclude",
           "newLine": true,
-          "sm": 12
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "_helpExclude": {
           "type": "staticText",
           "text": "help_exclude",
-          "sm": 12
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "excludeHolidays": {
           "type": "chips",
           "label": "label_excludeHolidays",
+          "xs": 12,
           "sm": 12,
-          "md": 8
+          "md": 8,
+          "lg": 8,
+          "xl": 8
         }
       }
     }
