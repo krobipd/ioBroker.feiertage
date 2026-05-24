@@ -1,6 +1,10 @@
 # Older changelog entries
 
 No older entries yet.
+## 0.1.2 (2026-05-22)
+
+- User-modified state names are no longer overwritten on adapter restart
+
 ## 0.1.1 (2026-05-21)
 
 - Improved error handling and stability.

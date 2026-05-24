@@ -98,7 +98,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.3.0 (2026-05-24)
 
 - Removed ID states from all channels — slimmed state tree from 17 to 12 data points
 - Reduced verbose output during normal operation
@@ -122,10 +122,6 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 ### 0.1.3 (2026-05-23)
 
 - Internal cleanup. No user-facing changes.
-
-### 0.1.2 (2026-05-22)
-
-- User-modified state names are no longer overwritten on adapter restart
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
