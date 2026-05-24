@@ -4,17 +4,17 @@
     "version": "0.2.0",
     "news": {
       "NEXT": {
-        "en": "Removed ID states, slimmed state tree from 17 to 12 data points. Improved stability and reduced log noise",
-        "de": "ID-Datenpunkte entfernt, State-Tree von 17 auf 12 Datenpunkte verschlankt. Verbesserte Stabilität und reduzierte Log-Ausgaben",
-        "ru": "Удалены ID-состояния, дерево состояний уменьшено с 17 до 12 точек данных. Улучшена стабильность и уменьшен объём логов",
-        "pt": "Removidos estados de ID, árvore de estados reduzida de 17 para 12 pontos de dados. Melhorada a estabilidade e reduzido o ruído nos logs",
-        "nl": "ID-statussen verwijderd, statusboom teruggebracht van 17 naar 12 datapunten. Verbeterde stabiliteit en minder log-ruis",
-        "fr": "États d'ID supprimés, arbre d'états réduit de 17 à 12 points de données. Stabilité améliorée et bruit dans les logs réduit",
-        "it": "Rimossi gli stati ID, albero degli stati ridotto da 17 a 12 punti dati. Migliorata la stabilità e ridotto il rumore nei log",
-        "es": "Eliminados los estados de ID, árbol de estados reducido de 17 a 12 puntos de datos. Mejorada la estabilidad y reducido el ruido en los logs",
-        "pl": "Usunięto stany ID, drzewo stanów zmniejszone z 17 do 12 punktów danych. Poprawiona stabilność i zmniejszony szum w logach",
-        "uk": "Видалено стани ID, дерево станів зменшено з 17 до 12 точок даних. Покращена стабільність та зменшено шум у логах",
-        "zh-cn": "移除了ID状态点，状态树从17个精简至12个数据点。提升了稳定性并减少了日志噪音"
+        "en": "Removed ID states, slimmed state tree from 17 to 12 data points. Improved stability and reduced verbose output",
+        "de": "ID-Datenpunkte entfernt, State-Tree von 17 auf 12 Datenpunkte verschlankt. Verbesserte Stabilität und weniger Ausgaben",
+        "ru": "Удалены ID-состояния, дерево состояний уменьшено с 17 до 12 точек данных. Улучшена стабильность и сокращён вывод",
+        "pt": "Removidos estados de ID, árvore de estados reduzida de 17 para 12 pontos de dados. Melhorada a estabilidade e saída reduzida",
+        "nl": "ID-statussen verwijderd, statusboom teruggebracht van 17 naar 12 datapunten. Verbeterde stabiliteit en minder uitvoer",
+        "fr": "États d'ID supprimés, arbre d'états réduit de 17 à 12 points de données. Stabilité améliorée et sortie réduite",
+        "it": "Rimossi gli stati ID, albero degli stati ridotto da 17 a 12 punti dati. Migliorata la stabilità e output ridotto",
+        "es": "Eliminados los estados de ID, árbol de estados reducido de 17 a 12 puntos de datos. Mejorada la estabilidad y salida reducida",
+        "pl": "Usunięto stany ID, drzewo stanów zmniejszone z 17 do 12 punktów danych. Poprawiona stabilność i mniej komunikatów",
+        "uk": "Видалено стани ID, дерево станів зменшено з 17 до 12 точок даних. Покращена стабільність та зменшено вивід",
+        "zh-cn": "移除了ID状态点，状态树从17个精简至12个数据点。提升了稳定性并减少了冗余输出"
       },
       "0.2.0": {
         "en": "State/region selection via dropdowns, exclude holidays per type, country auto-detect, slimmed state tree",

@@ -101,8 +101,8 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 ### **WORK IN PROGRESS**
 
 - Removed ID states from all channels — slimmed state tree from 17 to 12 data points
-- Holiday list now logged at debug level instead of info to reduce log noise
-- Improved adapter stability: crash protection, daemon mode race condition fix, reduced unnecessary state writes
+- Reduced verbose output during normal operation
+- Improved adapter stability: crash protection, race condition fix, reduced unnecessary state writes
 
 ### 0.2.0 (2026-05-24)
 
