@@ -16,7 +16,6 @@
   "help_includeBridgeDays": "桥接日是介于假日和周末之间的工作日（例如周四假日后的周五）",
   "header_exclude": "排除节假日",
   "help_exclude": "选择要从检测中排除的节假日。",
-  "label_excludeHolidays": "排除的节假日",
   "today": "今天",
   "yesterday": "昨天",
   "tomorrow": "明天",
@@ -25,8 +24,11 @@
   "name": "假日名称",
   "id": "假日ID",
   "boolean": "是假日",
-  "region": "区域代码",
-  "type": "假日类型",
   "date": "日期",
-  "duration": "距假日天数"
+  "duration": "距假日天数",
+  "label_excludePublic": "排除公共假日",
+  "label_excludeBank": "排除银行假日",
+  "label_excludeSchool": "排除学校假日",
+  "label_excludeOptional": "排除可选假日",
+  "label_excludeObservance": "排除纪念日"
 }

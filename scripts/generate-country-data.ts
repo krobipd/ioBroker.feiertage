@@ -41,16 +41,16 @@ for (const cc of Object.keys(countries)) {
       regionPanels[`_regionPanel_${cc}_${code}`] = {
         type: "panel",
         hidden: `data.country !== '${cc}' || data.state !== '${code}'`,
+        xs: 12,
+        sm: 12,
+        md: 6,
+        lg: 4,
+        xl: 4,
         items: {
           region: {
             type: "select",
             label: "label_region",
             options: regionOptions,
-            xs: 12,
-            sm: 12,
-            md: 4,
-            lg: 4,
-            xl: 4,
           },
         },
       };
@@ -60,76 +60,102 @@ for (const cc of Object.keys(countries)) {
   statePanels[`_statePanel_${cc}`] = {
     type: "panel",
     hidden: `data.country !== '${cc}'`,
+    xs: 12,
+    sm: 12,
+    md: 6,
+    lg: 4,
+    xl: 4,
     items: {
       state: {
         type: "select",
         label: "label_state",
         options: stateOptions,
-        xs: 12,
-        sm: 12,
-        md: 4,
-        lg: 4,
-        xl: 4,
       },
     },
   };
 }
 
+const HOLIDAY_TYPES = ["public", "bank", "school", "optional", "observance"] as const;
+const TYPE_CONFIG_KEYS: Record<string, string> = {
+  public: "typePublic",
+  bank: "typeBank",
+  school: "typeSchool",
+  optional: "typeOptional",
+  observance: "typeObservance",
+};
+const TYPE_NATIVE_KEYS: Record<string, string> = {
+  public: "excludePublic",
+  bank: "excludeBank",
+  school: "excludeSchool",
+  optional: "excludeOptional",
+  observance: "excludeObservance",
+};
+const TYPE_LABELS: Record<string, string> = {
+  public: "label_excludePublic",
+  bank: "label_excludeBank",
+  school: "label_excludeSchool",
+  optional: "label_excludeOptional",
+  observance: "label_excludeObservance",
+};
+
 const excludePanels: Items = {};
 const year = new Date().getFullYear();
 
 for (const cc of Object.keys(countries)) {
-  const allHolidays = new Map<string, string>();
+  const holidaysByType = new Map<string, Map<string, string>>();
+  for (const t of HOLIDAY_TYPES) holidaysByType.set(t, new Map());
 
-  const hdNational = new Holidays(cc);
-  for (const h of hdNational.getHolidays(year)) {
-    allHolidays.set(toHolidayId(h.name, h.rule), h.name);
+  function collectHolidays(hdInstance: Holidays): void {
+    for (const h of hdInstance.getHolidays(year)) {
+      const bucket = holidaysByType.get(h.type);
+      if (!bucket) continue;
+      const id = toHolidayId(h.name, h.rule);
+      if (!bucket.has(id)) bucket.set(id, h.name);
+    }
   }
+
+  collectHolidays(new Holidays(cc));
 
   const states = hd.getStates(cc);
   if (states) {
     for (const st of Object.keys(states)) {
-      const hdState = new Holidays(cc, st);
-      for (const h of hdState.getHolidays(year)) {
-        const id = toHolidayId(h.name, h.rule);
-        if (!allHolidays.has(id)) allHolidays.set(id, h.name);
-      }
-
+      collectHolidays(new Holidays(cc, st));
       const regions = hd.getRegions(cc, st);
       if (regions) {
         for (const rg of Object.keys(regions)) {
-          const hdRegion = new Holidays(cc, st, rg);
-          for (const h of hdRegion.getHolidays(year)) {
-            const id = toHolidayId(h.name, h.rule);
-            if (!allHolidays.has(id)) allHolidays.set(id, h.name);
-          }
+          collectHolidays(new Holidays(cc, st, rg));
         }
       }
     }
   }
 
-  if (allHolidays.size === 0) continue;
+  const items: Items = {};
+  for (const t of HOLIDAY_TYPES) {
+    const bucket = holidaysByType.get(t)!;
+    if (bucket.size === 0) continue;
+    const options = Array.from(bucket.entries())
+      .sort((a, b) => a[1].localeCompare(b[1]))
+      .map(([id, name]) => ({ label: `${name} (${id})`, value: id }));
+    items[TYPE_NATIVE_KEYS[t]] = {
+      type: "select",
+      multiple: true,
+      hidden: `!data.${TYPE_CONFIG_KEYS[t]}`,
+      label: TYPE_LABELS[t],
+      options,
+    };
+  }
 
-  const options = Array.from(allHolidays.entries())
-    .sort((a, b) => a[1].localeCompare(b[1]))
-    .map(([id, name]) => ({ label: `${name} (${id})`, value: id }));
+  if (Object.keys(items).length === 0) continue;
 
   excludePanels[`_excludePanel_${cc}`] = {
     type: "panel",
     hidden: `data.country !== '${cc}'`,
-    items: {
-      excludeHolidays: {
-        type: "select",
-        multiple: true,
-        label: "label_excludeHolidays",
-        options,
-        xs: 12,
-        sm: 12,
-        md: 8,
-        lg: 8,
-        xl: 8,
-      },
-    },
+    xs: 12,
+    sm: 12,
+    md: 12,
+    lg: 12,
+    xl: 12,
+    items,
   };
 }
 

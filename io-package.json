@@ -3,6 +3,19 @@
     "name": "public-holidays",
     "version": "0.1.5",
     "news": {
+      "NEXT": {
+        "en": "State/region selection via dropdowns, exclude holidays per type, country auto-detect, slimmed state tree",
+        "de": "Bundesland/Region als Dropdown, Feiertage pro Typ ausschließen, Land-Autoerkennung, schlankerer State-Tree",
+        "ru": "Выбор региона через выпадающие списки, исключение праздников по типу, автоопределение страны, упрощённое дерево состояний",
+        "pt": "Seleção de estado/região por dropdown, excluir feriados por tipo, deteção automática de país, árvore de estados simplificada",
+        "nl": "Staat/regio selectie via dropdowns, feestdagen per type uitsluiten, land-autodetectie, vereenvoudigde statusboom",
+        "fr": "Sélection état/région par menus déroulants, exclusion de jours fériés par type, détection automatique du pays, arbre d'états simplifié",
+        "it": "Selezione stato/regione tramite menu a tendina, esclusione festività per tipo, rilevamento automatico del paese, albero stati semplificato",
+        "es": "Selección de estado/región mediante desplegables, excluir festivos por tipo, detección automática de país, árbol de estados simplificado",
+        "pl": "Wybór stanu/regionu z list rozwijanych, wykluczanie świąt wg typu, automatyczne wykrywanie kraju, uproszczone drzewo stanów",
+        "uk": "Вибір штату/регіону через випадаючі списки, виключення свят за типом, автовизначення країни, спрощене дерево станів",
+        "zh-cn": "通过下拉菜单选择州/地区，按类型排除假日，自动检测国家，精简状态树"
+      },
       "0.1.5": {
         "en": "Changelog rewritten in user-centric style.",
         "de": "Changelog in benutzerfreundlichem Stil umgeschrieben.",
@@ -638,56 +651,6 @@
         "read": true,
         "write": false,
         "def": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "next.region",
-      "type": "state",
-      "common": {
-        "name": {
-          "en": "Region code",
-          "de": "Regionscode",
-          "ru": "Код региона",
-          "pt": "Código da região",
-          "nl": "Regiocode",
-          "fr": "Code région",
-          "it": "Codice regione",
-          "es": "Código de región",
-          "pl": "Kod regionu",
-          "uk": "Код регіону",
-          "zh-cn": "区域代码"
-        },
-        "type": "string",
-        "role": "text",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
-      "native": {}
-    },
-    {
-      "_id": "next.type",
-      "type": "state",
-      "common": {
-        "name": {
-          "en": "Holiday type",
-          "de": "Feiertagstyp",
-          "ru": "Тип праздника",
-          "pt": "Tipo de feriado",
-          "nl": "Type feestdag",
-          "fr": "Type de jour férié",
-          "it": "Tipo di giorno festivo",
-          "es": "Tipo de festivo",
-          "pl": "Typ święta",
-          "uk": "Тип свята",
-          "zh-cn": "假日类型"
-        },
-        "type": "string",
-        "role": "text",
-        "read": true,
-        "write": false,
-        "def": ""
       },
       "native": {}
     },

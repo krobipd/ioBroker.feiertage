@@ -11,8 +11,6 @@ export interface DayInfo {
   name: string;
   id: string;
   isHoliday: boolean;
-  region: string;
-  type: string;
 }
 
 export interface NextHoliday extends DayInfo {

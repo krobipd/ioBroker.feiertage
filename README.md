@@ -78,8 +78,6 @@ public-holidays.0.
     ├── name         string    next holiday name (localized)
     ├── id           string    next holiday ID
     ├── boolean      boolean   always true (it's a holiday)
-    ├── region       string    region code
-    ├── type         string    holiday type
     ├── date         string    "2026-12-25" (ISO date)
     └── duration     number    days until holiday
 ```
@@ -105,6 +103,13 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- State and region selection via dropdown menus instead of free text input
+- Exclude holidays shown per type — only visible when the corresponding type is enabled
+- Country auto-detected from ioBroker system settings when not configured
+- Slimmed state tree from 27 to 17 data points (removed redundant region/type fields)
 
 ### 0.1.5 (2026-05-23)
 

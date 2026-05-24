@@ -16,7 +16,6 @@
   "help_includeBridgeDays": "Un jour de pont est un jour ouvrable entre un jour férié et le week-end (ex. vendredi après un jour férié le jeudi)",
   "header_exclude": "Exclure des jours fériés",
   "help_exclude": "Sélectionnez les jours fériés à exclure de la détection.",
-  "label_excludeHolidays": "Jours fériés exclus",
   "today": "Aujourd'hui",
   "yesterday": "Hier",
   "tomorrow": "Demain",
@@ -25,8 +24,11 @@
   "name": "Nom du jour férié",
   "id": "ID du jour férié",
   "boolean": "Est un jour férié",
-  "region": "Code région",
-  "type": "Type de jour férié",
   "date": "Date",
-  "duration": "Jours jusqu'au jour férié"
+  "duration": "Jours jusqu'au jour férié",
+  "label_excludePublic": "Exclure les jours fériés",
+  "label_excludeBank": "Exclure les jours bancaires",
+  "label_excludeSchool": "Exclure les vacances scolaires",
+  "label_excludeOptional": "Exclure les jours facultatifs",
+  "label_excludeObservance": "Exclure les jours commémoratifs"
 }

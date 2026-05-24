@@ -25,13 +25,11 @@ module.exports = __toCommonJS(state_publisher_exports);
 var import_i18n = require("./i18n");
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"];
 const DAY_FIELDS = ["name", "id", "boolean"];
-const NEXT_FIELDS = ["name", "id", "boolean", "region", "type", "date", "duration"];
+const NEXT_FIELDS = ["name", "id", "boolean", "date", "duration"];
 const FIELD_SPECS = {
   name: { type: "string", role: "text", read: true, write: false },
   id: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
-  region: { type: "string", role: "text", read: true, write: false },
-  type: { type: "string", role: "text", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
   duration: { type: "number", role: "value", read: true, write: false }
 };
@@ -98,8 +96,6 @@ async function publishNextHoliday(adapter, next) {
   await adapter.setStateAsync("next.name", next.name, true);
   await adapter.setStateAsync("next.id", next.id, true);
   await adapter.setStateAsync("next.boolean", next.isHoliday, true);
-  await adapter.setStateAsync("next.region", next.region, true);
-  await adapter.setStateAsync("next.type", next.type, true);
   await adapter.setStateAsync("next.date", next.date, true);
   await adapter.setStateAsync("next.duration", next.duration, true);
 }

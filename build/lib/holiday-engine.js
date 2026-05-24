@@ -36,7 +36,7 @@ __export(holiday_engine_exports, {
 });
 module.exports = __toCommonJS(holiday_engine_exports);
 var import_date_holidays = __toESM(require("date-holidays"));
-const EMPTY_DAY = { name: "", id: "", isHoliday: false, region: "", type: "" };
+const EMPTY_DAY = { name: "", id: "", isHoliday: false };
 function computeHolidays(config, languages, referenceDate) {
   const now = referenceDate != null ? referenceDate : /* @__PURE__ */ new Date();
   const hd = createHolidaysInstance(config, languages);
@@ -103,9 +103,7 @@ function getDayInfo(holidays, date) {
   return {
     name: h.name,
     id: toHolidayId(h.name, h.rule),
-    isHoliday: true,
-    region: extractRegion(h.rule),
-    type: h.type
+    isHoliday: true
   };
 }
 function getNextHoliday(holidays, referenceDate) {
@@ -132,8 +130,6 @@ function getNextHoliday(holidays, referenceDate) {
     name: nearest.name,
     id: toHolidayId(nearest.name, nearest.rule),
     isHoliday: true,
-    region: extractRegion(nearest.rule),
-    type: nearest.type,
     date: toDateKey(nearestDate),
     duration
   };
@@ -187,13 +183,6 @@ function toHolidayId(name, rule) {
     }
   }
   return name.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-zA-Z0-9\s]/g, "").replace(/\s+/g, "_").toLowerCase();
-}
-function extractRegion(rule) {
-  if (!rule) {
-    return "";
-  }
-  const match = rule.match(/\b([A-Z]{2}-[A-Z0-9]{1,3})\b/);
-  return match ? match[1] : "";
 }
 function toDateKey(date) {
   const y = date.getFullYear();

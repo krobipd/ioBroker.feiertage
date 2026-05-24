@@ -28,7 +28,6 @@ describe("DE holidays 2026", () => {
     const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
     expect(result.today.name).toBe("Neujahr");
-    expect(result.today.type).toBe("public");
   });
 
   it("Karfreitag (Apr 3)", () => {
@@ -83,7 +82,6 @@ describe("DE holidays 2026", () => {
     expect(result.today.isHoliday).toBe(false);
     expect(result.today.name).toBe("");
     expect(result.today.id).toBe("");
-    expect(result.today.type).toBe("");
   });
 });
 
@@ -102,7 +100,6 @@ describe("DE state-specific holidays", () => {
     const result = computeHolidays(config, ["de"], makeDate("2026-08-15"));
     expect(result.today.isHoliday).toBe(true);
     expect(result.today.name).toContain("Himmelfahrt");
-    expect(result.today.type).toBe("observance");
   });
 
   it("HB: Reformationstag (Oct 31)", () => {
@@ -194,16 +191,13 @@ describe("type filter", () => {
   it("filters out non-matching types", () => {
     const config = makeConfig({ holidayTypes: ["bank"] });
     const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
-    // Neujahr is public, not bank — should NOT be a holiday with bank filter
-    // (depends on date-holidays classification, might still match)
-    expect(result.today.type === "" || result.today.type === "bank").toBe(true);
+    expect(result.today.isHoliday).toBe(false);
   });
 
   it("shows holidays when type matches", () => {
     const config = makeConfig({ holidayTypes: ["public"] });
     const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
-    expect(result.today.type).toBe("public");
   });
 
   it("multiple types allowed", () => {
@@ -260,7 +254,6 @@ describe("bridge days", () => {
     const result = computeHolidays(config, ["de"], makeDate("2026-05-15"));
     expect(result.today.isHoliday).toBe(true);
     expect(result.today.name).toBe("Bridge day");
-    expect(result.today.type).toBe("bridge");
   });
 
   it("bridge day not created when disabled", () => {
@@ -274,7 +267,7 @@ describe("bridge days", () => {
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2021-12-31"));
     // Dec 31 2021 is Friday — should NOT be bridge day (Jan 1 2022 is Saturday)
-    expect(result.today.type !== "bridge").toBe(true);
+    expect(result.today.isHoliday).toBe(false);
   });
 
   it("Wednesday holiday does not create bridge day", () => {
@@ -284,7 +277,7 @@ describe("bridge days", () => {
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2024-12-24"));
     // Dec 24 is Tuesday, Dec 25 is Wednesday holiday → no bridge on Dec 24 (it's a Tue before Wed)
-    expect(result.today.type !== "bridge").toBe(true);
+    expect(result.today.isHoliday).toBe(false);
   });
 
   it("detectBridgeDays returns correct dates", () => {
@@ -441,7 +434,7 @@ describe("edge cases", () => {
   it("Silvester (Dec 31) — not a public holiday in DE", () => {
     const config = makeConfig();
     const result = computeHolidays(config, ["de"], makeDate("2026-12-31"));
-    expect(result.today.type !== "public" || !result.today.isHoliday).toBe(true);
+    expect(result.today.isHoliday).toBe(false);
   });
 
   it("multiple countries produce different results for same date", () => {
@@ -459,8 +452,6 @@ describe("edge cases", () => {
       name: "",
       id: "",
       isHoliday: false,
-      region: "",
-      type: "",
     });
   });
 });

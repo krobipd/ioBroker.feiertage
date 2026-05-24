@@ -12,7 +12,7 @@ interface RawHoliday {
   note?: string;
 }
 
-const EMPTY_DAY: DayInfo = { name: "", id: "", isHoliday: false, region: "", type: "" };
+const EMPTY_DAY: DayInfo = { name: "", id: "", isHoliday: false };
 
 export function computeHolidays(config: AdapterConfig, languages: string[], referenceDate?: Date): ComputedHolidays {
   const now = referenceDate ?? new Date();
@@ -92,8 +92,6 @@ function getDayInfo(holidays: Map<string, RawHoliday>, date: Date): DayInfo {
     name: h.name,
     id: toHolidayId(h.name, h.rule),
     isHoliday: true,
-    region: extractRegion(h.rule),
-    type: h.type,
   };
 }
 
@@ -125,8 +123,6 @@ function getNextHoliday(holidays: Map<string, RawHoliday>, referenceDate: Date):
     name: nearest.name,
     id: toHolidayId(nearest.name, nearest.rule),
     isHoliday: true,
-    region: extractRegion(nearest.rule),
-    type: nearest.type,
     date: toDateKey(nearestDate),
     duration,
   };
@@ -193,14 +189,6 @@ export function toHolidayId(name: string, rule?: string): string {
     .replace(/[^a-zA-Z0-9\s]/g, "")
     .replace(/\s+/g, "_")
     .toLowerCase();
-}
-
-function extractRegion(rule?: string): string {
-  if (!rule) {
-    return "";
-  }
-  const match = rule.match(/\b([A-Z]{2}-[A-Z0-9]{1,3})\b/);
-  return match ? match[1] : "";
 }
 
 export function toDateKey(date: Date): string {

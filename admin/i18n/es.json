@@ -16,7 +16,6 @@
   "help_includeBridgeDays": "Un día puente es un día laborable entre un festivo y el fin de semana (ej. viernes después de un festivo en jueves)",
   "header_exclude": "Excluir festivos",
   "help_exclude": "Seleccione los días festivos que desea excluir de la detección.",
-  "label_excludeHolidays": "Días festivos excluidos",
   "today": "Hoy",
   "yesterday": "Ayer",
   "tomorrow": "Mañana",
@@ -25,8 +24,11 @@
   "name": "Nombre del festivo",
   "id": "ID del festivo",
   "boolean": "Es festivo",
-  "region": "Código de región",
-  "type": "Tipo de festivo",
   "date": "Fecha",
-  "duration": "Días hasta el festivo"
+  "duration": "Días hasta el festivo",
+  "label_excludePublic": "Excluir festivos públicos",
+  "label_excludeBank": "Excluir festivos bancarios",
+  "label_excludeSchool": "Excluir vacaciones escolares",
+  "label_excludeOptional": "Excluir festivos opcionales",
+  "label_excludeObservance": "Excluir días conmemorativos"
 }

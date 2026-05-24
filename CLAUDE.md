@@ -28,7 +28,7 @@ src/lib/
 └── coerce.ts                      → errText
 admin/
 ├── jsonConfig.json                → 2 Tabs (Region + Holidays), generiert durch generate-country-data.ts
-├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (30 Keys × 11 Sprachen)
+├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (32 Keys × 11 Sprachen)
 ├── public-holidays.svg            → Icon (SVG 256×256, transparent)
 scripts/
 ├── generate-country-data.ts       → Regeneriert jsonConfig: 206 Countries, 35 State-Panels, 29 Region-Panels, 206 Exclude-Panels
@@ -46,9 +46,9 @@ scripts/
 
 ## State Tree
 
-4 Day-Channels × 3 Fields + next × 7 Fields = 19 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, id, boolean. Next: name, id, boolean, region, type, date, duration.
+4 Day-Channels × 3 Fields + next × 5 Fields = 17 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, id, boolean. Next: name, id, boolean, date, duration.
 
-## Tests (113 unit + 57 package = 170)
+## Tests (111 unit + 57 package = 168)
 
 ```
 src/lib/holiday-engine.test.ts    → 72: DE/CH/AT/IT holidays, type filter, exclude, bridge days, localization

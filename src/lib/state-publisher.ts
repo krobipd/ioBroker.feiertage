@@ -3,7 +3,7 @@ import { tName, type I18nKey } from "./i18n";
 
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"] as const;
 const DAY_FIELDS = ["name", "id", "boolean"] as const;
-const NEXT_FIELDS = ["name", "id", "boolean", "region", "type", "date", "duration"] as const;
+const NEXT_FIELDS = ["name", "id", "boolean", "date", "duration"] as const;
 
 interface StateSpec {
   type: ioBroker.CommonType;
@@ -16,8 +16,6 @@ const FIELD_SPECS: Record<string, StateSpec> = {
   name: { type: "string", role: "text", read: true, write: false },
   id: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
-  region: { type: "string", role: "text", read: true, write: false },
-  type: { type: "string", role: "text", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
   duration: { type: "number", role: "value", read: true, write: false },
 };
@@ -92,8 +90,6 @@ async function publishNextHoliday(adapter: ioBroker.Adapter, next: NextHoliday):
   await adapter.setStateAsync("next.name", next.name, true);
   await adapter.setStateAsync("next.id", next.id, true);
   await adapter.setStateAsync("next.boolean", next.isHoliday, true);
-  await adapter.setStateAsync("next.region", next.region, true);
-  await adapter.setStateAsync("next.type", next.type, true);
   await adapter.setStateAsync("next.date", next.date, true);
   await adapter.setStateAsync("next.duration", next.duration, true);
 }

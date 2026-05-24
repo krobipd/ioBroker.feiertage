@@ -26,16 +26,14 @@ function makeMockAdapter() {
 
 function makeComputed(): ComputedHolidays {
   return {
-    yesterday: { name: "", id: "", isHoliday: false, region: "", type: "" },
-    today: { name: "Neujahr", id: "01-01", isHoliday: true, region: "", type: "public" },
-    tomorrow: { name: "", id: "", isHoliday: false, region: "", type: "" },
-    dayAfterTomorrow: { name: "", id: "", isHoliday: false, region: "", type: "" },
+    yesterday: { name: "", id: "", isHoliday: false },
+    today: { name: "Neujahr", id: "01-01", isHoliday: true },
+    tomorrow: { name: "", id: "", isHoliday: false },
+    dayAfterTomorrow: { name: "", id: "", isHoliday: false },
     next: {
       name: "Karfreitag",
       id: "easter_-2",
       isHoliday: true,
-      region: "",
-      type: "public",
       date: "2026-04-03",
       duration: 92,
     },
@@ -76,9 +74,9 @@ describe("ensureObjects", () => {
     expect(adapter.objects["next.duration"]).toBeDefined();
   });
 
-  it("total object count is 5 channels + 19 states = 24", async () => {
+  it("total object count is 5 channels + 17 states = 22", async () => {
     await ensureObjects(adapter as any);
-    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(24);
+    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(22);
   });
 
   it("state objects have correct common.type", async () => {
@@ -185,13 +183,8 @@ describe("publishStates", () => {
     }
   });
 
-  it("total state count is 19", async () => {
+  it("total state count is 17", async () => {
     await publishStates(adapter as any, makeComputed());
-    expect(adapter.setStateAsync).toHaveBeenCalledTimes(19);
-  });
-
-  it("next.region is empty string for national holidays", async () => {
-    await publishStates(adapter as any, makeComputed());
-    expect(adapter.states["next.region"]).toEqual({ val: "", ack: true });
+    expect(adapter.setStateAsync).toHaveBeenCalledTimes(17);
   });
 });

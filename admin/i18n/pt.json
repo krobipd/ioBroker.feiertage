@@ -16,7 +16,6 @@
   "help_includeBridgeDays": "Um dia ponte é um dia útil entre um feriado e o fim de semana (ex. sexta-feira após um feriado na quinta-feira)",
   "header_exclude": "Excluir feriados",
   "help_exclude": "Selecione os feriados a excluir da deteção.",
-  "label_excludeHolidays": "Feriados excluídos",
   "today": "Hoje",
   "yesterday": "Ontem",
   "tomorrow": "Amanhã",
@@ -25,8 +24,11 @@
   "name": "Nome do feriado",
   "id": "ID do feriado",
   "boolean": "É feriado",
-  "region": "Código da região",
-  "type": "Tipo de feriado",
   "date": "Data",
-  "duration": "Dias até ao feriado"
+  "duration": "Dias até ao feriado",
+  "label_excludePublic": "Excluir feriados públicos",
+  "label_excludeBank": "Excluir feriados bancários",
+  "label_excludeSchool": "Excluir feriados escolares",
+  "label_excludeOptional": "Excluir feriados opcionais",
+  "label_excludeObservance": "Excluir dias de observância"
 }

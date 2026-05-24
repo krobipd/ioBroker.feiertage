@@ -87,9 +87,20 @@ class PublicHolidaysAdapter extends utils.Adapter {
       state: typeof raw.state === "string" ? raw.state.trim() : "",
       region: typeof raw.region === "string" ? raw.region.trim() : "",
       holidayTypes,
-      excludeHolidays: Array.isArray(raw.excludeHolidays) ? (raw.excludeHolidays as string[]) : [],
+      excludeHolidays: [
+        ...PublicHolidaysAdapter.toStringArray(raw.excludePublic),
+        ...PublicHolidaysAdapter.toStringArray(raw.excludeBank),
+        ...PublicHolidaysAdapter.toStringArray(raw.excludeSchool),
+        ...PublicHolidaysAdapter.toStringArray(raw.excludeOptional),
+        ...PublicHolidaysAdapter.toStringArray(raw.excludeObservance),
+        ...PublicHolidaysAdapter.toStringArray(raw.excludeHolidays),
+      ],
       includeBridgeDays: raw.includeBridgeDays === true,
     };
+  }
+
+  private static toStringArray(val: unknown): string[] {
+    return Array.isArray(val) ? (val as string[]) : [];
   }
 
   private onUnload(callback: () => void): void {
