@@ -1,14 +1,14 @@
-# ioBroker.feiertage
+# ioBroker.public-holidays
 
-[![npm version](https://img.shields.io/npm/v/iobroker.feiertage)](https://www.npmjs.com/package/iobroker.feiertage)
+[![npm version](https://img.shields.io/npm/v/iobroker.public-holidays)](https://www.npmjs.com/package/iobroker.public-holidays)
 ![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![npm downloads](https://img.shields.io/npm/dt/iobroker.feiertage)](https://www.npmjs.com/package/iobroker.feiertage)
+[![npm downloads](https://img.shields.io/npm/dt/iobroker.public-holidays)](https://www.npmjs.com/package/iobroker.public-holidays)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-ff5e5b?logo=ko-fi)](https://ko-fi.com/krobipd)
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/krobipd)
 
-<img src="admin/feiertage.svg" width="100" />
+<img src="admin/public-holidays.svg" width="100" />
 
 Detects public holidays for 206 countries. Runs completely offline — no cloud, no API calls. Updates daily at midnight via ioBroker schedule mode.
 
@@ -61,7 +61,7 @@ The adapter logs all available holiday IDs at startup. Use these IDs for the exc
 ## State Tree
 
 ```
-feiertage.0.
+public-holidays.0.
 ├── today.
 │   ├── name         string    "Karfreitag" / "Good Friday"
 │   ├── id           string    "goodFriday" (language-independent)
@@ -117,6 +117,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+
 ### 0.1.5 (2026-05-23)
 
 - Changelog rewritten in user-centric style.
@@ -170,4 +171,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-*Developed with assistance from Claude.ai*
+_Developed with assistance from Claude.ai_

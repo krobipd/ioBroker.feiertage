@@ -1,6 +1,6 @@
 {
   "common": {
-    "name": "feiertage",
+    "name": "public-holidays",
     "version": "0.1.5",
     "news": {
       "0.1.5": {
@@ -108,17 +108,15 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": [
-      "krobi <krobi@power-dreams.com>"
-    ],
+    "authors": ["krobi <krobi@power-dreams.com>"],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
     },
     "platform": "Javascript/Node.js",
-    "icon": "feiertage.svg",
-    "extIcon": "https://cdn.jsdelivr.net/gh/krobipd/ioBroker.feiertage@main/admin/feiertage.svg",
-    "readme": "https://github.com/krobipd/ioBroker.feiertage/blob/main/README.md",
+    "icon": "public-holidays.svg",
+    "extIcon": "https://cdn.jsdelivr.net/gh/krobipd/ioBroker.public-holidays@main/admin/public-holidays.svg",
+    "readme": "https://github.com/krobipd/ioBroker.public-holidays/blob/main/README.md",
     "enabled": true,
     "tier": 2,
     "loglevel": "info",
@@ -147,6 +145,7 @@
     "keywords": [
       "holidays",
       "feiertage",
+      "public-holidays",
       "public holidays",
       "bank holidays",
       "bridge days",

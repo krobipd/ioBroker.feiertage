@@ -7,9 +7,9 @@ import { getSystemCountry, getSystemLanguage, resolveLanguages } from "./lib/i18
 import { ensureObjects, publishStates } from "./lib/state-publisher";
 import type { AdapterConfig } from "./lib/types";
 
-class FeiertageAdapter extends utils.Adapter {
+class PublicHolidaysAdapter extends utils.Adapter {
   constructor(options: Partial<utils.AdapterOptions> = {}) {
-    super({ ...options, name: "feiertage" });
+    super({ ...options, name: "public-holidays" });
     this.on("ready", this.onReady.bind(this));
     this.on("unload", this.onUnload.bind(this));
   }
@@ -95,7 +95,7 @@ class FeiertageAdapter extends utils.Adapter {
 }
 
 if (require.main !== module) {
-  module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new FeiertageAdapter(options);
+  module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new PublicHolidaysAdapter(options);
 } else {
-  new FeiertageAdapter();
+  new PublicHolidaysAdapter();
 }

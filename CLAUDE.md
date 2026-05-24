@@ -1,14 +1,14 @@
-# CLAUDE.md — ioBroker.feiertage
+# CLAUDE.md — ioBroker.public-holidays
 
 > Gemeinsame ioBroker-Wissensbasis: `../CLAUDE.md` (lokal, nicht im Git). Standards dort, Projekt-Spezifisches hier.
 
 ## Projekt
 
-**ioBroker Feiertage** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
+**ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.5 (released 2026-05-23, changelog user-centric rewrite). Vorgänger **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm blockiert bis mcm-Entscheidung.
-- **GitHub:** https://github.com/krobipd/ioBroker.feiertage
-- **npm:** blockiert bis mcm-Entscheidung — Release ohne npm wie NUT
+- **Version:** 0.1.5 (released 2026-05-23, changelog user-centric rewrite). Vorgänger **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
+- **GitHub:** https://github.com/krobipd/ioBroker.public-holidays
+- **npm:** `iobroker.public-holidays` — Zugang erhalten 2026-05-24
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
 - **Test-Setup:** Tests unter `src/**/*.test.ts` via **vitest**. `test/package.js` + `test/integration.js` bleiben mocha.
 - **`@types/node` an `engines.node`-Min gekoppelt:** `^22` weil `engines.node: ">=22"`
@@ -29,7 +29,7 @@ src/lib/
 admin/
 ├── jsonConfig.json                → 2 Tabs (Region + Holidays), 206 Country-Dropdown
 ├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (32 Keys × 11 Sprachen)
-├── feiertage.svg                  → Icon (SVG 256×256, transparent)
+├── public-holidays.svg            → Icon (SVG 256×256, transparent)
 scripts/
 ├── generate-country-data.ts       → Regeneriert Country-Optionen in jsonConfig aus date-holidays
 ../scripts/sync-iopackage-from-i18n.py → regeneriert io-package.json:instanceObjects.common.name aus admin/i18n/ (zentral, source: admin-i18n)
@@ -60,14 +60,14 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 ## Versionshistorie
 
-| Version | Highlights |
-|---------|------------|
-| 0.1.5 | Changelog user-centric rewrite (README + io-package.json news audited against Hard-Negativ-Liste). |
-| 0.1.4 | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043). |
-| 0.1.3 | **i18n-Migration auf adapter-core.** Private `i18n-states.ts` durch `I18n.getTranslatedObject()` ersetzt, admin/i18n von Unterordner-Pattern auf flat `<lang>.json` migriert (32 Keys = 20 UI + 12 State-Names). Tests 109→113. |
-| 0.1.2 | Preserve user-modified state names on restart (mcm1957 feedback). |
-| 0.1.1 | Community-standard event handler pattern (.bind + try/catch). |
-| 0.1.0 | Initial release: 206 countries, bridge days, exclude by ID, 11-language admin. |
+| Version | Highlights                                                                                                                                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.1.5   | Changelog user-centric rewrite (README + io-package.json news audited against Hard-Negativ-Liste).                                                                                                                              |
+| 0.1.4   | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043).                                                                                                                 |
+| 0.1.3   | **i18n-Migration auf adapter-core.** Private `i18n-states.ts` durch `I18n.getTranslatedObject()` ersetzt, admin/i18n von Unterordner-Pattern auf flat `<lang>.json` migriert (32 Keys = 20 UI + 12 State-Names). Tests 109→113. |
+| 0.1.2   | Preserve user-modified state names on restart (mcm1957 feedback).                                                                                                                                                               |
+| 0.1.1   | Community-standard event handler pattern (.bind + try/catch).                                                                                                                                                                   |
+| 0.1.0   | Initial release: 206 countries, bridge days, exclude by ID, 11-language admin.                                                                                                                                                  |
 
 ## Befehle
 
