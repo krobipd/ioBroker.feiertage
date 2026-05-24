@@ -6,7 +6,7 @@
 
 **ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
 
-- **Version:** 0.1.5 (released 2026-05-23, changelog user-centric rewrite). Vorgänger **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
+- **Version:** 0.2.0 (released 2026-05-24, UX overhaul: dropdown selects for state/region/exclude, slim state tree, country auto-detect). Vorgänger **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
 - **GitHub:** https://github.com/krobipd/ioBroker.public-holidays
 - **npm:** `iobroker.public-holidays` — Zugang erhalten 2026-05-24
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -50,9 +50,11 @@ scripts/
 
 ## Tests (111 unit + 57 package = 168)
 
+Test-Breakdown: holiday-engine 72, state-publisher 20, i18n 19.
+
 ```
 src/lib/holiday-engine.test.ts    → 72: DE/CH/AT/IT holidays, type filter, exclude, bridge days, localization
-src/lib/state-publisher.test.ts   → 22: ensureObjects, publishStates, preserve option (mock adapter)
+src/lib/state-publisher.test.ts   → 20: ensureObjects, publishStates, preserve option (mock adapter)
 src/lib/i18n.test.ts              → 19: tName delegation + i18n completeness (11 languages, identical keysets) + resolveLanguages
 test/package.js                   → 57: @iobroker/testing packageFiles
 test/integration.js               → @iobroker/testing integration (CI only)
@@ -62,6 +64,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 | Version | Highlights                                                                                                                                                                                                                      |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.2.0   | **UX Overhaul.** Dropdown-Selects für State/Region/Exclude (per-type), Country auto-detect, State Tree 27→17 States. Panel-per-Country Pattern. 32 i18n Keys.                                                                  |
 | 0.1.5   | Changelog user-centric rewrite (README + io-package.json news audited against Hard-Negativ-Liste).                                                                                                                              |
 | 0.1.4   | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043).                                                                                                                 |
 | 0.1.3   | **i18n-Migration auf adapter-core.** Private `i18n-states.ts` durch `I18n.getTranslatedObject()` ersetzt, admin/i18n von Unterordner-Pattern auf flat `<lang>.json` migriert (32 Keys = 20 UI + 12 State-Names). Tests 109→113. |
