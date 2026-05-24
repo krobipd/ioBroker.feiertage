@@ -37,10 +37,23 @@ __export(holiday_engine_exports, {
 module.exports = __toCommonJS(holiday_engine_exports);
 var import_date_holidays = __toESM(require("date-holidays"));
 const EMPTY_DAY = { name: "", isHoliday: false };
+const BRIDGE_DAY_NAMES = {
+  de: "Br\xFCckentag",
+  en: "Bridge day",
+  es: "D\xEDa puente",
+  fr: "Jour de pont",
+  it: "Ponte",
+  nl: "Brugdag",
+  pl: "Dzie\u0144 pomostowy",
+  pt: "Dia de ponte",
+  ru: "\u041D\u0435\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0434\u0435\u043D\u044C",
+  uk: "\u041D\u0435\u0440\u043E\u0431\u043E\u0447\u0438\u0439 \u0434\u0435\u043D\u044C",
+  zh: "\u6865\u63A5\u65E5"
+};
 function computeHolidays(config, languages, referenceDate) {
   const now = referenceDate != null ? referenceDate : /* @__PURE__ */ new Date();
   const hd = createHolidaysInstance(config, languages);
-  const filtered = getFilteredHolidays(hd, now, config);
+  const filtered = getFilteredHolidays(hd, now, config, languages);
   const yesterday = getDayInfo(filtered, addDays(now, -1));
   const today = getDayInfo(filtered, now);
   const tomorrow = getDayInfo(filtered, addDays(now, 1));
@@ -69,7 +82,7 @@ function createHolidaysInstance(config, languages) {
   hd.setLanguages(languages);
   return hd;
 }
-function getFilteredHolidays(hd, referenceDate, config) {
+function getFilteredHolidays(hd, referenceDate, config, languages) {
   const year = referenceDate.getFullYear();
   const years = [year - 1, year, year + 1];
   const result = /* @__PURE__ */ new Map();
@@ -90,7 +103,7 @@ function getFilteredHolidays(hd, referenceDate, config) {
     }
   }
   if (config.includeBridgeDays) {
-    addBridgeDays(result, year, hd, config);
+    addBridgeDays(result, year, languages);
   }
   return result;
 }
@@ -157,7 +170,10 @@ function detectBridgeDays(holidays, year) {
   }
   return bridgeDays;
 }
-function addBridgeDays(holidays, year, _hd, _config) {
+function addBridgeDays(holidays, year, languages) {
+  var _a, _b, _c;
+  const lang = (_b = (_a = languages[0]) == null ? void 0 : _a.split("-")[0]) != null ? _b : "en";
+  const name = (_c = BRIDGE_DAY_NAMES[lang]) != null ? _c : BRIDGE_DAY_NAMES.en;
   const bridgeDays = detectBridgeDays(holidays, year);
   for (const bd of bridgeDays) {
     const key = toDateKey(bd);
@@ -166,7 +182,7 @@ function addBridgeDays(holidays, year, _hd, _config) {
         date: key,
         start: bd,
         end: addDays(bd, 1),
-        name: "Bridge day",
+        name,
         type: "bridge",
         rule: ""
       });

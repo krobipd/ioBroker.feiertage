@@ -98,7 +98,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.4.0 (2026-05-24)
 
 - Bridge day names now shown in system language (11 languages)
 - Fixed adapter not restarting when settings changed in admin
@@ -123,10 +123,6 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 ### 0.1.4 (2026-05-23)
 
 - Fixed admin checkbox layout on small screens
-
-### 0.1.3 (2026-05-23)
-
-- Internal cleanup. No user-facing changes.
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

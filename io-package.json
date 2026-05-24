@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "public-holidays",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "news": {
-      "NEXT": {
+      "0.4.0": {
         "en": "Bridge day names now shown in system language. Fixed adapter not restarting on settings change",
         "de": "Brückentag-Namen werden jetzt in der Systemsprache angezeigt. Adapter startet bei Einstellungsänderungen jetzt korrekt neu",
         "ru": "Названия промежуточных выходных теперь отображаются на языке системы. Исправлен перезапуск адаптера при изменении настроек",
