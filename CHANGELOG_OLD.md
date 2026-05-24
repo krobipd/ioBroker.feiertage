@@ -1,6 +1,9 @@
 # Older changelog entries
 
 No older entries yet.
+## 0.1.1 (2026-05-21)
+
+- Improved error handling and stability.
 
 ## 0.1.0 (2026-05-21)
 

@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "public-holidays",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "news": {
-      "NEXT": {
+      "0.2.0": {
         "en": "State/region selection via dropdowns, exclude holidays per type, country auto-detect, slimmed state tree",
         "de": "Bundesland/Region als Dropdown, Feiertage pro Typ ausschließen, Land-Autoerkennung, schlankerer State-Tree",
         "ru": "Выбор региона через выпадающие списки, исключение праздников по типу, автоопределение страны, упрощённое дерево состояний",
@@ -121,7 +121,9 @@
       "uk": "Визначає святкові дні для 206 країн — працює офлайн, оновлення щодня опівночі",
       "zh-cn": "检测206个国家的公共假日——离线运行，每日午夜自动更新"
     },
-    "authors": ["krobi <krobi@power-dreams.com>"],
+    "authors": [
+      "krobi <krobi@power-dreams.com>"
+    ],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
