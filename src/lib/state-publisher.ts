@@ -2,8 +2,8 @@ import type { ComputedHolidays, DayInfo, NextHoliday } from "./types";
 import { tName, type I18nKey } from "./i18n";
 
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"] as const;
-const DAY_FIELDS = ["name", "id", "boolean"] as const;
-const NEXT_FIELDS = ["name", "id", "boolean", "date", "duration"] as const;
+const DAY_FIELDS = ["name", "boolean"] as const;
+const NEXT_FIELDS = ["name", "boolean", "date", "duration"] as const;
 
 interface StateSpec {
   type: ioBroker.CommonType;
@@ -14,11 +14,42 @@ interface StateSpec {
 
 const FIELD_SPECS: Record<string, StateSpec> = {
   name: { type: "string", role: "text", read: true, write: false },
-  id: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
   duration: { type: "number", role: "value", read: true, write: false },
 };
+
+const DEPRECATED_STATES = [
+  "today.region",
+  "today.type",
+  "today.id",
+  "yesterday.region",
+  "yesterday.type",
+  "yesterday.id",
+  "tomorrow.region",
+  "tomorrow.type",
+  "tomorrow.id",
+  "dayAfterTomorrow.region",
+  "dayAfterTomorrow.type",
+  "dayAfterTomorrow.id",
+  "next.region",
+  "next.type",
+  "next.id",
+];
+
+export async function cleanupDeprecatedStates(adapter: ioBroker.Adapter): Promise<void> {
+  for (const id of DEPRECATED_STATES) {
+    try {
+      const obj = await adapter.getObjectAsync(id);
+      if (obj) {
+        await adapter.delObjectAsync(id);
+        adapter.log.debug(`Removed deprecated state: ${id}`);
+      }
+    } catch {
+      // already gone
+    }
+  }
+}
 
 export async function ensureObjects(adapter: ioBroker.Adapter): Promise<void> {
   for (const ch of DAY_CHANNELS) {
@@ -78,18 +109,16 @@ export async function publishStates(adapter: ioBroker.Adapter, computed: Compute
 
   for (const ch of DAY_CHANNELS) {
     const info = dayMap[ch];
-    await adapter.setStateAsync(`${ch}.name`, info.name, true);
-    await adapter.setStateAsync(`${ch}.id`, info.id, true);
-    await adapter.setStateAsync(`${ch}.boolean`, info.isHoliday, true);
+    await adapter.setStateChangedAsync(`${ch}.name`, info.name, true);
+    await adapter.setStateChangedAsync(`${ch}.boolean`, info.isHoliday, true);
   }
 
   await publishNextHoliday(adapter, computed.next);
 }
 
 async function publishNextHoliday(adapter: ioBroker.Adapter, next: NextHoliday): Promise<void> {
-  await adapter.setStateAsync("next.name", next.name, true);
-  await adapter.setStateAsync("next.id", next.id, true);
-  await adapter.setStateAsync("next.boolean", next.isHoliday, true);
-  await adapter.setStateAsync("next.date", next.date, true);
-  await adapter.setStateAsync("next.duration", next.duration, true);
+  await adapter.setStateChangedAsync("next.name", next.name, true);
+  await adapter.setStateChangedAsync("next.boolean", next.isHoliday, true);
+  await adapter.setStateChangedAsync("next.date", next.date, true);
+  await adapter.setStateChangedAsync("next.duration", next.duration, true);
 }

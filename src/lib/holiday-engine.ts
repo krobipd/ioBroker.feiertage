@@ -12,7 +12,7 @@ interface RawHoliday {
   note?: string;
 }
 
-const EMPTY_DAY: DayInfo = { name: "", id: "", isHoliday: false };
+const EMPTY_DAY: DayInfo = { name: "", isHoliday: false };
 
 export function computeHolidays(config: AdapterConfig, languages: string[], referenceDate?: Date): ComputedHolidays {
   const now = referenceDate ?? new Date();
@@ -90,7 +90,6 @@ function getDayInfo(holidays: Map<string, RawHoliday>, date: Date): DayInfo {
   }
   return {
     name: h.name,
-    id: toHolidayId(h.name, h.rule),
     isHoliday: true,
   };
 }
@@ -121,7 +120,6 @@ function getNextHoliday(holidays: Map<string, RawHoliday>, referenceDate: Date):
 
   return {
     name: nearest.name,
-    id: toHolidayId(nearest.name, nearest.rule),
     isHoliday: true,
     date: toDateKey(nearestDate),
     duration,

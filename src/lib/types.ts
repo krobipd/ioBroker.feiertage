@@ -9,7 +9,6 @@ export interface AdapterConfig {
 
 export interface DayInfo {
   name: string;
-  id: string;
   isHoliday: boolean;
 }
 

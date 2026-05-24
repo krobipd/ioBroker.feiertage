@@ -4,9 +4,9 @@
 
 ## Projekt
 
-**ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode: startet täglich um Mitternacht, berechnet, schreibt States, terminiert.
+**ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Daemon-Mode mit Midnight-Timer: berechnet bei Start und danach täglich um Mitternacht.
 
-- **Version:** 0.2.0 (released 2026-05-24, UX overhaul: dropdown selects for state/region/exclude, slim state tree, country auto-detect). Vorgänger **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
+- **Version:** 0.3.0 (released 2026-05-25, ID-States entfernt 17→12 States, Logging info→debug, Daemon-Mode-Safety). Vorgänger **0.2.0** UX overhaul: dropdown selects, country auto-detect, 27→17 States. **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
 - **GitHub:** https://github.com/krobipd/ioBroker.public-holidays
 - **npm:** `iobroker.public-holidays` — Zugang erhalten 2026-05-24
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -21,14 +21,14 @@ src/lib/
 ├── holiday-engine.ts              → date-holidays Wrapper, Type-Filter, Brückentag-Algo
 ├── holiday-engine.test.ts         → 72 Tests
 ├── state-publisher.ts             → ComputedHolidays → ioBroker States
-├── state-publisher.test.ts        → 22 Tests
+├── state-publisher.test.ts        → 20 Tests
 ├── i18n.ts                        → tName(key) Wrapper über I18n.getTranslatedObject() + system.config.language Lookup + EN-Fallback
 ├── i18n.test.ts                   → 19 Tests (tName delegation + i18n completeness + resolveLanguages)
 ├── types.ts                       → AdapterConfig, DayInfo, NextHoliday, ComputedHolidays
 └── coerce.ts                      → errText
 admin/
 ├── jsonConfig.json                → 2 Tabs (Region + Holidays), generiert durch generate-country-data.ts
-├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (32 Keys × 11 Sprachen)
+├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (31 Keys × 11 Sprachen)
 ├── public-holidays.svg            → Icon (SVG 256×256, transparent)
 scripts/
 ├── generate-country-data.ts       → Regeneriert jsonConfig: 206 Countries, 35 State-Panels, 29 Region-Panels, 206 Exclude-Panels
@@ -37,24 +37,24 @@ scripts/
 
 ## Design-Entscheidungen
 
-1. **Schedule-Mode statt Daemon** — Feiertage ändern sich nicht untertags. `0 0 * * *` reicht.
+1. **Daemon-Mode mit Midnight-Timer** — berechnet bei Start und danach täglich um Mitternacht. Daemon-Mode garantiert dass Settings-Änderungen sofort einen Durchlauf auslösen (Schedule-Mode restartete nicht bei Config-Save).
 2. **date-holidays als einzige Engine** — 206 Länder, offline, stabile API seit 5+ Jahren, ISC-Lizenz
-3. **Panel-per-Country Dropdowns** — Schedule-Adapter läuft nicht wenn Admin offen → Country/State/Region/Exclude als statische Selects, per-Country Panels mit hidden-Condition
+3. **Panel-per-Country Dropdowns** — Country/State/Region/Exclude als statische Selects, per-Country Panels mit hidden-Condition
 4. **Individuelle Type-Booleans in native** statt `holidayTypes: string[]` — sauberes jsonConfig-Mapping (5 Checkboxen)
 5. **referenceDate-Parameter** in computeHolidays — deterministische Tests ohne Mocking
 6. **Brückentag nur Do→Fr und Di→Mo** — Mi→Wochenende braucht 2 Fehltage, kein Brückentag
 
 ## State Tree
 
-4 Day-Channels × 3 Fields + next × 5 Fields = 17 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, id, boolean. Next: name, id, boolean, date, duration.
+4 Day-Channels × 2 Fields + next × 4 Fields = 12 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, boolean. Next: name, boolean, date, duration.
 
-## Tests (111 unit + 57 package = 168)
+## Tests (112 unit + 57 package = 169)
 
-Test-Breakdown: holiday-engine 72, state-publisher 20, i18n 19.
+Test-Breakdown: holiday-engine 72, state-publisher 21, i18n 19.
 
 ```
 src/lib/holiday-engine.test.ts    → 72: DE/CH/AT/IT holidays, type filter, exclude, bridge days, localization
-src/lib/state-publisher.test.ts   → 20: ensureObjects, publishStates, preserve option (mock adapter)
+src/lib/state-publisher.test.ts   → 21: ensureObjects, cleanupDeprecated, publishStates, preserve option (mock adapter)
 src/lib/i18n.test.ts              → 19: tName delegation + i18n completeness (11 languages, identical keysets) + resolveLanguages
 test/package.js                   → 57: @iobroker/testing packageFiles
 test/integration.js               → @iobroker/testing integration (CI only)
@@ -64,6 +64,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 | Version | Highlights                                                                                                                                                                                                                      |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0.3.0   | **Slim State Tree + Stability.** ID-States entfernt (17→12 States). Logging info→debug. Process-Handler, Daemon-Mode Race-Fix, setStateChangedAsync.                                                                           |
 | 0.2.0   | **UX Overhaul.** Dropdown-Selects für State/Region/Exclude (per-type), Country auto-detect, State Tree 27→17 States. Panel-per-Country Pattern. 32 i18n Keys.                                                                  |
 | 0.1.5   | Changelog user-centric rewrite (README + io-package.json news audited against Hard-Negativ-Liste).                                                                                                                              |
 | 0.1.4   | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043).                                                                                                                 |

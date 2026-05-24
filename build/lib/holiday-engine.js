@@ -36,7 +36,7 @@ __export(holiday_engine_exports, {
 });
 module.exports = __toCommonJS(holiday_engine_exports);
 var import_date_holidays = __toESM(require("date-holidays"));
-const EMPTY_DAY = { name: "", id: "", isHoliday: false };
+const EMPTY_DAY = { name: "", isHoliday: false };
 function computeHolidays(config, languages, referenceDate) {
   const now = referenceDate != null ? referenceDate : /* @__PURE__ */ new Date();
   const hd = createHolidaysInstance(config, languages);
@@ -102,7 +102,6 @@ function getDayInfo(holidays, date) {
   }
   return {
     name: h.name,
-    id: toHolidayId(h.name, h.rule),
     isHoliday: true
   };
 }
@@ -128,7 +127,6 @@ function getNextHoliday(holidays, referenceDate) {
   const duration = Math.round((nearestDate.getTime() - refMidnight.getTime()) / 864e5);
   return {
     name: nearest.name,
-    id: toHolidayId(nearest.name, nearest.rule),
     isHoliday: true,
     date: toDateKey(nearestDate),
     duration

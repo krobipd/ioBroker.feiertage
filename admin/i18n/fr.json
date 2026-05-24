@@ -22,7 +22,6 @@
   "dayAfterTomorrow": "Après-demain",
   "next": "Prochain jour férié",
   "name": "Nom du jour férié",
-  "id": "ID du jour férié",
   "boolean": "Est un jour férié",
   "date": "Date",
   "duration": "Jours jusqu'au jour férié",

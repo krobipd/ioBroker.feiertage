@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../src/lib/types.ts"],
-  "sourcesContent": ["export interface AdapterConfig {\n  country: string;\n  state: string;\n  region: string;\n  holidayTypes: string[];\n  excludeHolidays: string[];\n  includeBridgeDays: boolean;\n}\n\nexport interface DayInfo {\n  name: string;\n  id: string;\n  isHoliday: boolean;\n}\n\nexport interface NextHoliday extends DayInfo {\n  date: string;\n  duration: number;\n}\n\nexport interface ComputedHolidays {\n  yesterday: DayInfo;\n  today: DayInfo;\n  tomorrow: DayInfo;\n  dayAfterTomorrow: DayInfo;\n  next: NextHoliday;\n}\n"],
+  "sourcesContent": ["export interface AdapterConfig {\n  country: string;\n  state: string;\n  region: string;\n  holidayTypes: string[];\n  excludeHolidays: string[];\n  includeBridgeDays: boolean;\n}\n\nexport interface DayInfo {\n  name: string;\n  isHoliday: boolean;\n}\n\nexport interface NextHoliday extends DayInfo {\n  date: string;\n  duration: number;\n}\n\nexport interface ComputedHolidays {\n  yesterday: DayInfo;\n  today: DayInfo;\n  tomorrow: DayInfo;\n  dayAfterTomorrow: DayInfo;\n  next: NextHoliday;\n}\n"],
   "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
   "names": []
 }

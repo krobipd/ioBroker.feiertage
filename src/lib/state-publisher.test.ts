@@ -6,7 +6,7 @@ vi.mock("@iobroker/adapter-core", () => ({
   },
 }));
 
-import { ensureObjects, publishStates } from "./state-publisher";
+import { cleanupDeprecatedStates, ensureObjects, publishStates } from "./state-publisher";
 import type { ComputedHolidays } from "./types";
 
 function makeMockAdapter() {
@@ -16,7 +16,7 @@ function makeMockAdapter() {
     extendObjectAsync: vi.fn(async (id: string, obj: unknown) => {
       objects[id] = obj;
     }),
-    setStateAsync: vi.fn(async (id: string, val: unknown, ack: boolean) => {
+    setStateChangedAsync: vi.fn(async (id: string, val: unknown, ack: boolean) => {
       states[id] = { val, ack };
     }),
     states,
@@ -26,13 +26,12 @@ function makeMockAdapter() {
 
 function makeComputed(): ComputedHolidays {
   return {
-    yesterday: { name: "", id: "", isHoliday: false },
-    today: { name: "Neujahr", id: "01-01", isHoliday: true },
-    tomorrow: { name: "", id: "", isHoliday: false },
-    dayAfterTomorrow: { name: "", id: "", isHoliday: false },
+    yesterday: { name: "", isHoliday: false },
+    today: { name: "Neujahr", isHoliday: true },
+    tomorrow: { name: "", isHoliday: false },
+    dayAfterTomorrow: { name: "", isHoliday: false },
     next: {
       name: "Karfreitag",
-      id: "easter_-2",
       isHoliday: true,
       date: "2026-04-03",
       duration: 92,
@@ -58,11 +57,11 @@ describe("ensureObjects", () => {
     expect(channelIds.length).toBe(5);
   });
 
-  it("creates today states (name, id, boolean)", async () => {
+  it("creates today states (name, boolean)", async () => {
     await ensureObjects(adapter as any);
     expect(adapter.objects["today.name"]).toBeDefined();
-    expect(adapter.objects["today.id"]).toBeDefined();
     expect(adapter.objects["today.boolean"]).toBeDefined();
+    expect(adapter.objects["today.id"]).toBeUndefined();
     expect(adapter.objects["today.region"]).toBeUndefined();
     expect(adapter.objects["today.type"]).toBeUndefined();
   });
@@ -74,9 +73,9 @@ describe("ensureObjects", () => {
     expect(adapter.objects["next.duration"]).toBeDefined();
   });
 
-  it("total object count is 5 channels + 17 states = 22", async () => {
+  it("total object count is 5 channels + 12 states = 17", async () => {
     await ensureObjects(adapter as any);
-    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(22);
+    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(17);
   });
 
   it("state objects have correct common.type", async () => {
@@ -133,6 +132,39 @@ describe("ensureObjects", () => {
   });
 });
 
+describe("cleanupDeprecatedStates", () => {
+  it("deletes deprecated region and type states when present", async () => {
+    const existingObjects: Record<string, unknown> = {
+      "next.region": { type: "state" },
+      "next.type": { type: "state" },
+      "today.region": { type: "state" },
+    };
+    const deleted: string[] = [];
+    const adapter = {
+      getObjectAsync: vi.fn(async (id: string) => existingObjects[id] ?? null),
+      delObjectAsync: vi.fn(async (id: string) => {
+        deleted.push(id);
+      }),
+      log: { debug: vi.fn() },
+    };
+    await cleanupDeprecatedStates(adapter as any);
+    expect(deleted).toContain("next.region");
+    expect(deleted).toContain("next.type");
+    expect(deleted).toContain("today.region");
+    expect(deleted.length).toBe(3);
+  });
+
+  it("does nothing when no deprecated states exist", async () => {
+    const adapter = {
+      getObjectAsync: vi.fn(async () => null),
+      delObjectAsync: vi.fn(),
+      log: { debug: vi.fn() },
+    };
+    await cleanupDeprecatedStates(adapter as any);
+    expect(adapter.delObjectAsync).not.toHaveBeenCalled();
+  });
+});
+
 describe("publishStates", () => {
   let adapter: ReturnType<typeof makeMockAdapter>;
 
@@ -148,11 +180,6 @@ describe("publishStates", () => {
   it("publishes today boolean", async () => {
     await publishStates(adapter as any, makeComputed());
     expect(adapter.states["today.boolean"]).toEqual({ val: true, ack: true });
-  });
-
-  it("publishes today id", async () => {
-    await publishStates(adapter as any, makeComputed());
-    expect(adapter.states["today.id"]).toEqual({ val: "01-01", ack: true });
   });
 
   it("publishes empty yesterday", async () => {
@@ -183,8 +210,8 @@ describe("publishStates", () => {
     }
   });
 
-  it("total state count is 17", async () => {
+  it("total state count is 12", async () => {
     await publishStates(adapter as any, makeComputed());
-    expect(adapter.setStateAsync).toHaveBeenCalledTimes(17);
+    expect(adapter.setStateChangedAsync).toHaveBeenCalledTimes(12);
   });
 });

@@ -18,21 +18,50 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var state_publisher_exports = {};
 __export(state_publisher_exports, {
+  cleanupDeprecatedStates: () => cleanupDeprecatedStates,
   ensureObjects: () => ensureObjects,
   publishStates: () => publishStates
 });
 module.exports = __toCommonJS(state_publisher_exports);
 var import_i18n = require("./i18n");
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"];
-const DAY_FIELDS = ["name", "id", "boolean"];
-const NEXT_FIELDS = ["name", "id", "boolean", "date", "duration"];
+const DAY_FIELDS = ["name", "boolean"];
+const NEXT_FIELDS = ["name", "boolean", "date", "duration"];
 const FIELD_SPECS = {
   name: { type: "string", role: "text", read: true, write: false },
-  id: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
   duration: { type: "number", role: "value", read: true, write: false }
 };
+const DEPRECATED_STATES = [
+  "today.region",
+  "today.type",
+  "today.id",
+  "yesterday.region",
+  "yesterday.type",
+  "yesterday.id",
+  "tomorrow.region",
+  "tomorrow.type",
+  "tomorrow.id",
+  "dayAfterTomorrow.region",
+  "dayAfterTomorrow.type",
+  "dayAfterTomorrow.id",
+  "next.region",
+  "next.type",
+  "next.id"
+];
+async function cleanupDeprecatedStates(adapter) {
+  for (const id of DEPRECATED_STATES) {
+    try {
+      const obj = await adapter.getObjectAsync(id);
+      if (obj) {
+        await adapter.delObjectAsync(id);
+        adapter.log.debug(`Removed deprecated state: ${id}`);
+      }
+    } catch {
+    }
+  }
+}
 async function ensureObjects(adapter) {
   for (const ch of DAY_CHANNELS) {
     await ensureChannel(adapter, ch);
@@ -86,21 +115,20 @@ async function publishStates(adapter, computed) {
   };
   for (const ch of DAY_CHANNELS) {
     const info = dayMap[ch];
-    await adapter.setStateAsync(`${ch}.name`, info.name, true);
-    await adapter.setStateAsync(`${ch}.id`, info.id, true);
-    await adapter.setStateAsync(`${ch}.boolean`, info.isHoliday, true);
+    await adapter.setStateChangedAsync(`${ch}.name`, info.name, true);
+    await adapter.setStateChangedAsync(`${ch}.boolean`, info.isHoliday, true);
   }
   await publishNextHoliday(adapter, computed.next);
 }
 async function publishNextHoliday(adapter, next) {
-  await adapter.setStateAsync("next.name", next.name, true);
-  await adapter.setStateAsync("next.id", next.id, true);
-  await adapter.setStateAsync("next.boolean", next.isHoliday, true);
-  await adapter.setStateAsync("next.date", next.date, true);
-  await adapter.setStateAsync("next.duration", next.duration, true);
+  await adapter.setStateChangedAsync("next.name", next.name, true);
+  await adapter.setStateChangedAsync("next.boolean", next.isHoliday, true);
+  await adapter.setStateChangedAsync("next.date", next.date, true);
+  await adapter.setStateChangedAsync("next.duration", next.duration, true);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  cleanupDeprecatedStates,
   ensureObjects,
   publishStates
 });

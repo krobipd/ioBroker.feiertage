@@ -10,7 +10,7 @@
 
 <img src="admin/public-holidays.svg" width="100" />
 
-Detects public holidays for 206 countries. Runs completely offline — no cloud, no API calls. Updates daily at midnight via ioBroker schedule mode.
+Detects public holidays for 206 countries. Runs completely offline — no cloud, no API calls. Updates daily at midnight.
 
 Holiday data provided by [date-holidays](https://github.com/commenthol/date-holidays) (ISC + CC-BY-SA-3.0).
 
@@ -22,9 +22,9 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 - **Fully offline** — all holiday data is bundled, no internet required
 - **5 holiday types** — public, bank, school, optional, observance (configurable)
 - **Bridge day detection** — detects working days between holidays and weekends
-- **Exclude individual holidays** — remove specific holidays by ID
+- **Exclude individual holidays** — select holidays to exclude via dropdown
 - **Localized holiday names** — follows system language with English fallback
-- **Schedule mode** — runs once daily at midnight, no daemon
+- **Daemon mode** — computes at startup, then daily at midnight
 
 ## Requirements
 
@@ -60,23 +60,18 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 public-holidays.0.
 ├── today.
 │   ├── name         string    "Karfreitag" / "Good Friday"
-│   ├── id           string    "goodFriday" (language-independent)
 │   └── boolean      boolean   true / false
 ├── yesterday.
 │   ├── name         string
-│   ├── id           string
 │   └── boolean      boolean
 ├── tomorrow.
 │   ├── name         string
-│   ├── id           string
 │   └── boolean      boolean
 ├── dayAfterTomorrow.
 │   ├── name         string
-│   ├── id           string
 │   └── boolean      boolean
 └── next.
     ├── name         string    next holiday name (localized)
-    ├── id           string    next holiday ID
     ├── boolean      boolean   always true (it's a holiday)
     ├── date         string    "2026-12-25" (ISO date)
     └── duration     number    days until holiday
@@ -98,11 +93,17 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 **No states after first start** — Open adapter settings and select a country. The adapter terminates with error code 11 if no country is configured.
 
-**Wrong holidays / missing regional holidays** — Check that the correct state/province is selected. The adapter logs all detected holidays at startup (info level).
+**Wrong holidays / missing regional holidays** — Check that the correct state/province is selected. Set log level to debug to see all detected holidays.
 
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Removed ID states from all channels — slimmed state tree from 17 to 12 data points
+- Holiday list now logged at debug level instead of info to reduce log noise
+- Improved adapter stability: crash protection, daemon mode race condition fix, reduced unnecessary state writes
+
 ### 0.2.0 (2026-05-24)
 
 - State and region selection via dropdown menus instead of free text input

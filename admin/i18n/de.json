@@ -22,7 +22,6 @@
   "dayAfterTomorrow": "Übermorgen",
   "next": "Nächster Feiertag",
   "name": "Feiertagsname",
-  "id": "Feiertags-ID",
   "boolean": "Ist ein Feiertag",
   "date": "Datum",
   "duration": "Tage bis zum Feiertag",

@@ -81,7 +81,6 @@ describe("DE holidays 2026", () => {
     const result = computeHolidays(config, ["de"], makeDate("2026-03-11"));
     expect(result.today.isHoliday).toBe(false);
     expect(result.today.name).toBe("");
-    expect(result.today.id).toBe("");
   });
 });
 
@@ -220,9 +219,8 @@ describe("exclude list", () => {
     const config = makeConfig({ holidayTypes: ["public"] });
     const resultBefore = computeHolidays(config, ["de"], makeDate("2026-01-01"));
     expect(resultBefore.today.isHoliday).toBe(true);
-    const neujahId = resultBefore.today.id;
 
-    const configExcluded = makeConfig({ excludeHolidays: [neujahId] });
+    const configExcluded = makeConfig({ excludeHolidays: [toHolidayId("Neujahr", "01-01")] });
     const resultAfter = computeHolidays(configExcluded, ["de"], makeDate("2026-01-01"));
     expect(resultAfter.today.isHoliday).toBe(false);
   });
@@ -230,10 +228,9 @@ describe("exclude list", () => {
   it("excluded holiday does not appear in next", () => {
     const config = makeConfig();
     const resultBefore = computeHolidays(config, ["de"], makeDate("2026-12-24"));
-    const christmasId = resultBefore.tomorrow.id;
     expect(resultBefore.tomorrow.isHoliday).toBe(true);
 
-    const configExcluded = makeConfig({ excludeHolidays: [christmasId] });
+    const configExcluded = makeConfig({ excludeHolidays: [toHolidayId("1. Weihnachtstag", "12-25")] });
     const resultAfter = computeHolidays(configExcluded, ["de"], makeDate("2026-12-24"));
     expect(resultAfter.tomorrow.isHoliday).toBe(false);
   });
@@ -450,7 +447,6 @@ describe("edge cases", () => {
     const result = computeHolidays(config, ["de"], makeDate("2026-03-11"));
     expect(result.today).toEqual({
       name: "",
-      id: "",
       isHoliday: false,
     });
   });
