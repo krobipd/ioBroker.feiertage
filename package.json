@@ -71,8 +71,8 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "prettier --write src/ admin/ scripts/",
+    "format:check": "prettier --check src/ admin/ scripts/",
     "release": "release-script",
     "translate": "translate-adapter"
   },

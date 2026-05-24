@@ -873,7 +873,12 @@
                   "label": "Andorra la Vella (07)",
                   "value": "07"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -901,7 +906,12 @@
                   "label": "Barbuda (10)",
                   "value": "10"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -961,7 +971,12 @@
                   "label": "Wien (9)",
                   "value": "9"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1017,7 +1032,12 @@
                   "label": "Western Australia (WA)",
                   "value": "WA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1053,7 +1073,12 @@
                   "label": "Republika Srpska (SRP)",
                   "value": "SRP"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1093,7 +1118,12 @@
                   "label": "Vlaamse Gemeenschap (VLG)",
                   "value": "VLG"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1153,7 +1183,12 @@
                   "label": "Tarija (T)",
                   "value": "T"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1189,7 +1224,12 @@
                   "label": "Sint Eustatius (SE)",
                   "value": "SE"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1313,7 +1353,12 @@
                   "label": "Tocantins (TO)",
                   "value": "TO"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1389,7 +1434,12 @@
                   "label": "Yukon (YT)",
                   "value": "YT"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1517,7 +1567,12 @@
                   "label": "Kanton Zürich (ZH)",
                   "value": "ZH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1581,7 +1636,12 @@
                   "label": "Rarotonga (Rarotonga)",
                   "value": "Rarotonga"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1621,7 +1681,12 @@
                   "label": "Tarapacá (TA)",
                   "value": "TA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1649,7 +1714,12 @@
                   "label": "Sotavento Islands (S)",
                   "value": "S"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1737,7 +1807,12 @@
                   "label": "Thüringen (TH)",
                   "value": "TH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1765,7 +1840,12 @@
                   "label": "Pichincha (P)",
                   "value": "P"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1865,7 +1945,12 @@
                   "label": "País Vasco (PV)",
                   "value": "PV"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1929,7 +2014,12 @@
                   "label": "Département Moselle (57)",
                   "value": "57"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -1973,7 +2063,12 @@
                   "label": "Wales (WLS)",
                   "value": "WLS"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2001,7 +2096,12 @@
                   "label": "Guatemala (1)",
                   "value": "1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2033,7 +2133,12 @@
                   "label": "Split-Dalmatia (17)",
                   "value": "17"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2085,7 +2190,12 @@
                   "label": "Tenerife (TE)",
                   "value": "TE"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2249,7 +2359,12 @@
                   "label": "West Bengal (WB)",
                   "value": "WB"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2297,7 +2412,12 @@
                   "label": "Toscana (52)",
                   "value": "52"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2329,7 +2449,12 @@
                   "label": "Chișinău (CU)",
                   "value": "CU"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2417,7 +2542,12 @@
                   "label": "Terengganu (11)",
                   "value": "11"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2453,7 +2583,12 @@
                   "label": "Zuid-Holland (ZH)",
                   "value": "ZH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2545,7 +2680,12 @@
                   "label": "Westland (WTC)",
                   "value": "WTC"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2573,7 +2713,12 @@
                   "label": "Cuzco (CUS)",
                   "value": "CUS"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2625,7 +2770,12 @@
                   "label": "Sindh (SD)",
                   "value": "SD"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2661,7 +2811,12 @@
                   "label": "Tristan da Cunha (TA)",
                   "value": "TA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2705,7 +2860,12 @@
                   "label": "Woqooyi Galbeed (WO)",
                   "value": "WO"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2733,7 +2893,12 @@
                   "label": "San Salvador (SS)",
                   "value": "SS"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -2961,7 +3126,12 @@
                   "label": "Wyoming (WY)",
                   "value": "WY"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3013,7 +3183,12 @@
                   "label": "Zulia (V)",
                   "value": "V"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3041,7 +3216,12 @@
                   "label": "Western Herzegovina (W)",
                   "value": "W"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3069,7 +3249,12 @@
                   "label": "Belo Horizonte (BH)",
                   "value": "BH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3097,7 +3282,12 @@
                   "label": "Curitiba (CU)",
                   "value": "CU"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3125,7 +3315,12 @@
                   "label": "Recife (RE)",
                   "value": "RE"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3153,7 +3348,12 @@
                   "label": "Rio de Janeiro (RJ)",
                   "value": "RJ"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3181,7 +3381,12 @@
                   "label": "São Paulo (SP)",
                   "value": "SP"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3209,7 +3414,12 @@
                   "label": "Chillán y Chillán Viejo (CH)",
                   "value": "CH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3237,7 +3447,12 @@
                   "label": "Chillán y Chillán Viejo (CH)",
                   "value": "CH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3265,7 +3480,12 @@
                   "label": "Praia (PR)",
                   "value": "PR"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3301,7 +3521,12 @@
                   "label": "Überwiegend katholische Gemeinden (KATH)",
                   "value": "KATH"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3329,7 +3554,12 @@
                   "label": "Landkreis Bautzen (BZ)",
                   "value": "BZ"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3365,7 +3595,12 @@
                   "label": "Wartburgkreis (WAK)",
                   "value": "WAK"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3393,7 +3628,12 @@
                   "label": "Quito (QU)",
                   "value": "QU"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3421,7 +3661,12 @@
                   "label": "Barcelona (B)",
                   "value": "B"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3473,7 +3718,12 @@
                   "label": "Tenerife (TE)",
                   "value": "TE"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3565,7 +3815,12 @@
                   "label": "Villa Nueva (115)",
                   "value": "115"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3593,7 +3848,12 @@
                   "label": "Roma (RM)",
                   "value": "RM"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3621,7 +3881,12 @@
                   "label": "Milan (MI)",
                   "value": "MI"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3649,7 +3914,12 @@
                   "label": "Torino (TO)",
                   "value": "TO"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3677,7 +3947,12 @@
                   "label": "Palermo (PA)",
                   "value": "PA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3705,7 +3980,12 @@
                   "label": "Firenze (FI)",
                   "value": "FI"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3733,7 +4013,12 @@
                   "label": "Groningen (GRN)",
                   "value": "GRN"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3761,7 +4046,12 @@
                   "label": "Alkmaar (ALK)",
                   "value": "ALK"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3793,7 +4083,12 @@
                   "label": "Leiden (LDN)",
                   "value": "LDN"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3821,7 +4116,12 @@
                   "label": "Timaru District (Timaru)",
                   "value": "Timaru"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3849,7 +4149,12 @@
                   "label": "Buller district (Buller)",
                   "value": "Buller"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3877,7 +4182,12 @@
                   "label": "Los Angeles (LA)",
                   "value": "LA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3905,7 +4215,12 @@
                   "label": "New Orleans (NO)",
                   "value": "NO"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -3933,7 +4248,12 @@
                   "label": "Barquisimeto (BA)",
                   "value": "BA"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         }
@@ -4122,7 +4442,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -4138,7 +4463,12 @@
                   "label": "Nochebuena (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4189,7 +4519,12 @@
                   "label": "عيد الفطر (1_shawwal_p3d)",
                   "value": "1_shawwal_p3d"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4252,7 +4587,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4272,7 +4612,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4347,7 +4692,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4363,7 +4713,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4446,7 +4801,12 @@
                   "label": "Viti i Ri (01-01_and_if_sunday_then_next_tuesday)",
                   "value": "01-01_and_if_sunday_then_next_tuesday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -4458,7 +4818,12 @@
                   "label": "Nata e Krishtlindjes (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4490,7 +4855,12 @@
                   "label": "Dita Ndërkombëtare e Fëmijëve (06-01)",
                   "value": "06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4557,7 +4927,12 @@
                   "label": "Ցեղասպանության զոհերի հիշատակի օր (04-24)",
                   "value": "04-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4597,7 +4972,12 @@
                   "label": "Սուրբ Վարդանանց տոն՝ բարի գործի եւ ազգային տուրքի օր (easter_-52)",
                   "value": "easter_-52"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4660,7 +5040,12 @@
                   "label": "Sexta-Feira Santa (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4676,7 +5061,12 @@
                   "label": "Páscoa (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4759,7 +5149,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -4771,7 +5166,12 @@
                   "label": "Jueves Santo (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -4799,7 +5199,12 @@
                   "label": "Nochebuena (12-24_1200)",
                   "value": "12-24_1200"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -4866,7 +5271,12 @@
                   "label": "Washington's Birthday (3rd_monday_in_february)",
                   "value": "3rd_monday_in_february"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -4882,7 +5292,12 @@
                   "label": "New Year's Eve (12-31_1200)",
                   "value": "12-31_1200"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -4898,7 +5313,12 @@
                   "label": "Manu'a Cession Day (07-16)",
                   "value": "07-16"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -4942,7 +5362,12 @@
                   "label": "White Sunday (2nd_sunday_in_october)",
                   "value": "2nd_sunday_in_october"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5033,7 +5458,12 @@
                   "label": "Tag der Volksabstimmung (10-10)",
                   "value": "10-10"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -5049,7 +5479,12 @@
                   "label": "Silvester (12-31_1400_if_sunday_then_0000)",
                   "value": "12-31_1400_if_sunday_then_0000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -5061,7 +5496,12 @@
                   "label": "Josefitag (03-19)",
                   "value": "03-19"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -5073,7 +5513,12 @@
                   "label": "Leopoldi-Tag (11-15)",
                   "value": "11-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5093,7 +5538,12 @@
                   "label": "Muttertag (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5228,7 +5678,12 @@
                   "label": "Western Australia Day (1st_monday_in_june)",
                   "value": "1st_monday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -5240,7 +5695,12 @@
                   "label": "Bank Holiday (1st_monday_in_august)",
                   "value": "1st_monday_in_august"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -5252,7 +5712,12 @@
                   "label": "Easter Tuesday (easter_2)",
                   "value": "easter_2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5268,7 +5733,12 @@
                   "label": "Mother's Day (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5331,7 +5801,12 @@
                   "label": "Dialuna di Carnaval (easter_-48)",
                   "value": "easter_-48"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5351,7 +5826,12 @@
                   "label": "Sinterklaasavond (12-05)",
                   "value": "12-05"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5418,7 +5898,12 @@
                   "label": "Trettondedag jul (01-06)",
                   "value": "01-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -5438,7 +5923,12 @@
                   "label": "Nyårsafton (12-31_1200)",
                   "value": "12-31_1200"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5454,7 +5944,12 @@
                   "label": "Pingstdagen (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5541,7 +6036,12 @@
                   "label": "Yeni il (01-02_and_if_saturday_then_next_monday_if_sunday_then_next_tuesday)",
                   "value": "01-02_and_if_saturday_then_next_monday_if_sunday_then_next_tuesday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5553,7 +6053,12 @@
                   "label": "Qara Yanvar (01-20)",
                   "value": "01-20"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5680,7 +6185,12 @@
                   "label": "Velika Gospa (julian_08-15)",
                   "value": "julian_08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5751,7 +6261,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5763,7 +6278,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5842,7 +6362,12 @@
                   "label": "স্বাধীনতা দিবস (bengali-revised_12-12)",
                   "value": "bengali-revised_12-12"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5862,7 +6387,12 @@
                   "label": "Martyred Intellectuals Day (12-14)",
                   "value": "12-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -5921,7 +6451,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -5977,7 +6512,12 @@
                   "label": "Tweede kerstdag (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6060,7 +6600,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6127,7 +6672,12 @@
                   "label": "Разпети петък (orthodox_-2)",
                   "value": "orthodox_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -6139,7 +6689,12 @@
                   "label": "Ден на народните будители (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -6163,7 +6718,12 @@
                   "label": "Ден на радиото и телевизията (05-07)",
                   "value": "05-07"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6222,7 +6782,12 @@
                   "label": "يوم عرفة (9_dhu_al-hijjah)",
                   "value": "9_dhu_al-hijjah"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6293,7 +6858,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6364,7 +6934,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -6380,7 +6955,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6447,7 +7027,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -6459,7 +7044,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -6495,7 +7085,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6554,7 +7149,12 @@
                   "label": "Somers' Day (friday_before_08-05)",
                   "value": "friday_before_08-05"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -6566,7 +7166,12 @@
                   "label": "Boxing Day (substitute day) (substitutes_12-26_if_saturday_then_next_monday_if_sunday_then_next_tuesday)",
                   "value": "substitutes_12-26_if_saturday_then_next_monday_if_sunday_then_next_tuesday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6637,7 +7242,12 @@
                   "label": "Tahun Baru Cina (chinese_01-0-01)",
                   "value": "chinese_01-0-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6736,7 +7346,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -6788,7 +7403,12 @@
                   "label": "Todos Santos (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -6871,7 +7491,12 @@
                   "label": "Tweede paasdag (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -6895,7 +7520,12 @@
                   "label": "Vaderdag (3rd_sunday_in_june)",
                   "value": "3rd_sunday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7114,7 +7744,12 @@
                   "label": "Sexta-Feira Santa (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -7142,7 +7777,12 @@
                   "label": "Véspera de Ano Novo (12-31_1400)",
                   "value": "12-31_1400"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7170,7 +7810,12 @@
                   "label": "Páscoa (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7233,7 +7878,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7253,7 +7903,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7324,7 +7979,12 @@
                   "label": "Sir Seretse Khama Day (07-01)",
                   "value": "07-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7340,7 +8000,12 @@
                   "label": "Mother's Day (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7395,7 +8060,12 @@
                   "label": "Радунiца (orthodox_9)",
                   "value": "orthodox_9"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7411,7 +8081,12 @@
                   "label": "Вялiкдзень праваслаўны (orthodox)",
                   "value": "orthodox"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7486,7 +8161,12 @@
                   "label": "St. George's Caye Day (09-10_if_sunday_then_next_monday)",
                   "value": "09-10_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7498,7 +8178,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7589,7 +8274,12 @@
                   "label": "Victoria Day (monday_before_05-25)",
                   "value": "monday_before_05-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -7601,7 +8291,12 @@
                   "label": "Nunavut Day (07-09)",
                   "value": "07-09"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -7633,7 +8328,12 @@
                   "label": "Saint Patrick's Day (03-17)",
                   "value": "03-17"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -7669,7 +8369,12 @@
                   "label": "Valentine's Day (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7744,7 +8449,12 @@
                   "label": "Self Determination Day (04-06)",
                   "value": "04-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7799,7 +8509,12 @@
                   "label": "Nouvel An (01-01_and_if_sunday_then_next_monday)",
                   "value": "01-01_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7874,7 +8589,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -7937,7 +8657,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8088,7 +8813,12 @@
                   "label": "Weihnachtstag (12-25)",
                   "value": "12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -8108,7 +8838,12 @@
                   "label": "Saint-Etienne (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -8144,7 +8879,12 @@
                   "label": "Stephanstag (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -8200,7 +8940,12 @@
                   "label": "Vätertag (1st_sunday_in_june)",
                   "value": "1st_sunday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8275,7 +9020,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8338,7 +9088,12 @@
                   "label": "Ra o te Ui Ariki (House of Ariki) (1st_friday_in_july)",
                   "value": "1st_friday_in_july"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8429,7 +9184,12 @@
                   "label": "Virgen del Carmen (07-16)",
                   "value": "07-16"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -8441,7 +9201,12 @@
                   "label": "Fin del Año (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -8453,7 +9218,12 @@
                   "label": "San Lorenzo de Tarapacá (08-10)",
                   "value": "08-10"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8512,7 +9282,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8591,7 +9366,12 @@
                   "label": "青年节 (05-04_1200)",
                   "value": "05-04_1200"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8686,7 +9466,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -8698,7 +9483,12 @@
                   "label": "Domingo de Ramos (easter_-7)",
                   "value": "easter_-7"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8761,7 +9551,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -8773,7 +9568,12 @@
                   "label": "Pascua (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8828,7 +9628,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8903,7 +9708,12 @@
                   "label": "Todos os santos (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -8915,7 +9725,12 @@
                   "label": "Páscoa (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -8982,7 +9797,12 @@
                   "label": "Tweede paasdag (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9002,7 +9822,12 @@
                   "label": "Vaderdag (1st_sunday_in_june)",
                   "value": "1st_sunday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9065,7 +9890,12 @@
                   "label": "Territory Day (10-06)",
                   "value": "10-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9144,7 +9974,12 @@
                   "label": "Χριστούγεννα (12-25)",
                   "value": "12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9160,7 +9995,12 @@
                   "label": "Καθαρά Δευτέρα (orthodox_-48)",
                   "value": "orthodox_-48"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9231,7 +10071,12 @@
                   "label": "Velký pátek (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9259,7 +10104,12 @@
                   "label": "Zelený čtvrtek (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9362,7 +10212,12 @@
                   "label": "Weltkindertag (09-20)",
                   "value": "09-20"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -9378,7 +10233,12 @@
                   "label": "Silvester (12-31_1400_if_sunday_then_0000)",
                   "value": "12-31_1400_if_sunday_then_0000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -9402,7 +10262,12 @@
                   "label": "Reformationstag (10-31)",
                   "value": "10-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9498,7 +10363,12 @@
                   "label": "Weiberfastnacht (easter_-52)",
                   "value": "easter_-52"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9557,7 +10427,12 @@
                   "label": "يوم عرفة (9_dhu_al-hijjah)",
                   "value": "9_dhu_al-hijjah"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9616,7 +10491,12 @@
                   "label": "Skærtorsdag (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9644,7 +10524,12 @@
                   "label": "Mors Dag (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9711,7 +10596,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9727,7 +10617,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9794,7 +10689,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9853,7 +10753,12 @@
                   "label": "يوم العمال (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -9920,7 +10825,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -9948,7 +10858,12 @@
                   "label": "Pascua (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10015,7 +10930,12 @@
                   "label": "võidupüha (06-23)",
                   "value": "06-23"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -10071,7 +10991,12 @@
                   "label": "vastupanuvõitluse päev (09-22)",
                   "value": "09-22"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10142,7 +11067,12 @@
                   "label": "يوم العمال (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10197,7 +11127,12 @@
                   "label": "May 20 Revolution (05-10)",
                   "value": "05-10"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10284,7 +11219,12 @@
                   "label": "ፋሲካ (orthodox)",
                   "value": "orthodox"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10467,7 +11407,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -10507,7 +11452,12 @@
                   "label": "Sant Esteve (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10578,7 +11528,12 @@
                   "label": "ፋሲካ (orthodox)",
                   "value": "orthodox"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10649,7 +11604,12 @@
                   "label": "Vappu (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -10669,7 +11629,12 @@
                   "label": "Uudenvuodenaatto (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -10685,7 +11650,12 @@
                   "label": "Isänpäivä (2nd_sunday_in_november)",
                   "value": "2nd_sunday_in_november"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10740,7 +11710,12 @@
                   "label": "New Year's Day (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -10752,7 +11727,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10831,7 +11811,12 @@
                   "label": "Skírhósdagur (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -10847,7 +11832,12 @@
                   "label": "Sankt Olavsaften (07-28_1200_if_sunday_then_0000)",
                   "value": "07-28_1200_if_sunday_then_0000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -10942,7 +11932,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -10954,7 +11949,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -10966,7 +11966,12 @@
                   "label": "Jour de Victor Schoelcher (07-21)",
                   "value": "07-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11002,7 +12007,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11065,7 +12075,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11148,7 +12163,12 @@
                   "label": "Summer bank holiday (1st_monday_in_august)",
                   "value": "1st_monday_in_august"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11168,7 +12188,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11239,7 +12264,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11271,7 +12301,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11358,7 +12393,12 @@
                   "label": "წმინდა ანდრია პირველწოდებულის ხსენების დღე (05-12)",
                   "value": "05-12"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11425,7 +12465,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11441,7 +12486,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11496,7 +12546,12 @@
                   "label": "Spring bank holiday (1st_monday_before_06-01)",
                   "value": "1st_monday_before_06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11516,7 +12571,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11587,7 +12647,12 @@
                   "label": "New Year's Day (01-01_and_if_saturday_sunday_then_next_monday)",
                   "value": "01-01_and_if_saturday_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11599,7 +12664,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11670,7 +12740,12 @@
                   "label": "Workers Memorial Day (04-28)",
                   "value": "04-28"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11690,7 +12765,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11765,7 +12845,12 @@
                   "label": "ullortuneq (06-21)",
                   "value": "06-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11840,7 +12925,12 @@
                   "label": "Tabaski (10_dhu_al-hijjah)",
                   "value": "10_dhu_al-hijjah"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -11852,7 +12942,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11919,7 +13014,12 @@
                   "label": "Nouvel An (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -11990,7 +13090,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -12002,7 +13107,12 @@
                   "label": "Jour de Victor Schoelcher (07-21)",
                   "value": "07-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12014,7 +13124,12 @@
                   "label": "Fête des Mères (sunday_before_06-01)",
                   "value": "sunday_before_06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12073,7 +13188,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12148,7 +13268,12 @@
                   "label": "Χριστούγεννα (12-25)",
                   "value": "12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12160,7 +13285,12 @@
                   "label": "Γιορτή της μητέρας (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12283,7 +13413,12 @@
                   "label": "Virgen de la Candelaria y Sagrado Corazón de Jesús (02-02)",
                   "value": "02-02"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -12299,7 +13434,12 @@
                   "label": "Día del Empleado Bancario (07-01_if_tuesdaysaturday_then_previous_friday_if_sunday_then_next_monday)",
                   "value": "07-01_if_tuesdaysaturday_then_previous_friday_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -12315,7 +13455,12 @@
                   "label": "Día del Padre (06-17)",
                   "value": "06-17"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12351,7 +13496,12 @@
                   "label": "Pascua (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12426,7 +13576,12 @@
                   "label": "Veterans Day (11-11)",
                   "value": "11-11"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -12438,7 +13593,12 @@
                   "label": "Christmas Eve (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12486,7 +13646,12 @@
                   "label": "Valentine's Day (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12545,7 +13710,12 @@
                   "label": "Pidjiguiti Day (08-03)",
                   "value": "08-03"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12616,7 +13786,12 @@
                   "label": "Youman Nabi (12_rabi_al-awwal)",
                   "value": "12_rabi_al-awwal"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12703,7 +13878,12 @@
                   "label": "香港特別行政區成立紀念日 (07-01_not_on_sunday)",
                   "value": "07-01_not_on_sunday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12762,7 +13942,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12794,7 +13979,12 @@
                   "label": "Pascua (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -12869,7 +14059,12 @@
                   "label": "Velika Gospa (08-15)",
                   "value": "08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -12913,7 +14108,12 @@
                   "label": "Sveti Vlaho (02-03)",
                   "value": "02-03"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -12937,7 +14137,12 @@
                   "label": "Pokladni utorak (easter_-47)",
                   "value": "easter_-47"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13020,7 +14225,12 @@
                   "label": "Vertières (11-18)",
                   "value": "11-18"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13040,7 +14250,12 @@
                   "label": "Mercredi des Cendres (easter_-46)",
                   "value": "easter_-46"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13111,7 +14326,12 @@
                   "label": "Újév (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -13123,7 +14343,12 @@
                   "label": "Szenteste (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13175,7 +14400,12 @@
                   "label": "Szilveszter (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13274,7 +14504,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13298,7 +14533,12 @@
                   "label": "San José (03-19)",
                   "value": "03-19"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13381,7 +14621,12 @@
                   "label": "Wafat Yesus Kristus (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13444,7 +14689,12 @@
                   "label": "St. Stephen's Day (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -13460,7 +14710,12 @@
                   "label": "St. Stephen's Day (substitute day) (12-26_and_if_saturday_then_next_monday_if_sunday_then_next_monday)",
                   "value": "12-26_and_if_saturday_then_next_monday_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13476,7 +14731,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13531,7 +14791,12 @@
                   "label": "שמחת תורה/שמיני עצרת (22_tishrei)",
                   "value": "22_tishrei"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -13563,7 +14828,12 @@
                   "label": "תענית אסתר (13_adarii_if_saturday_then_previous_thursday)",
                   "value": "13_adarii_if_saturday_then_previous_thursday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13635,7 +14905,12 @@
                   "label": "תשעה באב (9_av_if_saturday_then_next_sunday)",
                   "value": "9_av_if_saturday_then_next_sunday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13694,7 +14969,12 @@
                   "label": "Tynwald Day (07-05)",
                   "value": "07-05"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13714,7 +14994,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -13901,7 +15186,12 @@
                   "label": "YMA Day (06-15)",
                   "value": "06-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -13921,7 +15211,12 @@
                   "label": "Me-Dam-Me-Phi (01-31)",
                   "value": "01-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14048,7 +15343,12 @@
                   "label": "وﻻدت ﺣﻀﺮت ﻗﺎﺋﻢ ﻋﺠﻞاﷲ ﺗﻌﺎﻟﯽ ﻓﺮﺟﻪ شریف (15_shaban)",
                   "value": "15_shaban"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14131,7 +15431,12 @@
                   "label": "Uppstigningardagur (easter_39)",
                   "value": "easter_39"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14187,7 +15492,12 @@
                   "label": "Þrettándinn (01-06)",
                   "value": "01-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14278,7 +15588,12 @@
                   "label": "Santo Stefano (12-26)",
                   "value": "12-26"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -14290,7 +15605,12 @@
                   "label": "San Giovanni (06-24)",
                   "value": "06-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14302,7 +15622,12 @@
                   "label": "Festa della mamma (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14361,7 +15686,12 @@
                   "label": "Summer Bank Holiday (1st_monday_before_09-01)",
                   "value": "1st_monday_before_09-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14381,7 +15711,12 @@
                   "label": "Mother's Day (easter_-21)",
                   "value": "easter_-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14440,7 +15775,12 @@
                   "label": "New Year's Day (01-01_and_if_sunday_then_next_monday)",
                   "value": "01-01_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14452,7 +15792,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14543,7 +15888,12 @@
                   "label": "秋分の日 (september_equinox_in_0900)",
                   "value": "september_equinox_in_0900"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -14563,7 +15913,12 @@
                   "label": "銀行休業日 (01-03)",
                   "value": "01-03"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14579,7 +15934,12 @@
                   "label": "七五三 (11-15)",
                   "value": "11-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14650,7 +16010,12 @@
                   "label": "Siku ya Mashujaa (10-20_and_if_sunday_then_next_monday)",
                   "value": "10-20_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14709,7 +16074,12 @@
                   "label": "الإسراء والمعراج (27_rajab)",
                   "value": "27_rajab"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14776,7 +16146,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14792,7 +16167,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14859,7 +16239,12 @@
                   "label": "현충일 (06-06)",
                   "value": "06-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -14918,7 +16303,12 @@
                   "label": "Queen's Birthday (2026-06-15)",
                   "value": "2026-06-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -14930,7 +16320,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15009,7 +16404,12 @@
                   "label": "Халықаралық әйелдер күні (03-08_and_if_saturdaysunday_then_next_monday)",
                   "value": "03-08_and_if_saturdaysunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15084,7 +16484,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15159,7 +16564,12 @@
                   "label": "Weihnachten (12-25)",
                   "value": "12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -15183,7 +16593,12 @@
                   "label": "Silvester (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -15219,7 +16634,12 @@
                   "label": "Staatsfeiertag (08-15)",
                   "value": "08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15342,7 +16762,12 @@
                   "label": "සිංහල හා දෙමළ අලුත් අවුරුද්ද (04-14)",
                   "value": "04-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15405,7 +16830,12 @@
                   "label": "William Tubman's Birthday (11-29)",
                   "value": "11-29"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15468,7 +16898,12 @@
                   "label": "Workers' Day (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15543,7 +16978,12 @@
                   "label": "Žolinė (08-15)",
                   "value": "08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -15559,7 +16999,12 @@
                   "label": "Tėvo diena (1st_sunday_in_june)",
                   "value": "1st_sunday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15622,7 +17067,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -15638,7 +17088,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15709,7 +17164,12 @@
                   "label": "Ziemassvētku vakars (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -15721,7 +17181,12 @@
                   "label": "Mātes diena (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15780,7 +17245,12 @@
                   "label": "يوم عرفة (9_dhu_al-hijjah)",
                   "value": "9_dhu_al-hijjah"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15851,7 +17321,12 @@
                   "label": "يوم وادي الذهب (08-14)",
                   "value": "08-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -15918,7 +17393,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -15934,7 +17414,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16005,7 +17490,12 @@
                   "label": "Ziua Victoriei (05-09)",
                   "value": "05-09"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -16017,7 +17507,12 @@
                   "label": "Ziua vinului (1st_saturday_in_october_p2d)",
                   "value": "1st_saturday_in_october_p2d"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16132,7 +17627,12 @@
                   "label": "Veliki petak (orthodox_-2)",
                   "value": "orthodox_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -16176,7 +17676,12 @@
                   "label": "Velika Gospa (08-15)",
                   "value": "08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16243,7 +17748,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -16259,7 +17769,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16338,7 +17853,12 @@
                   "label": "Taom-baovao (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16405,7 +17925,12 @@
                   "label": "Св. Климент Охридски (12-08_and_if_sunday_then_next_monday)",
                   "value": "12-08_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -16481,7 +18006,12 @@
                   "label": "Успение на Пресвета Богородица (julian_08-15)",
                   "value": "julian_08-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16544,7 +18074,12 @@
                   "label": "Nouvel An (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16615,7 +18150,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -16627,7 +18167,12 @@
                   "label": "Jour de Victor Schoelcher (07-21)",
                   "value": "07-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -16643,7 +18188,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16694,7 +18244,12 @@
                   "label": "يوم العمال (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16757,7 +18312,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16832,7 +18392,12 @@
                   "label": "Sette Giugno (06-07)",
                   "value": "06-07"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16911,7 +18476,12 @@
                   "label": "Ugadi (04-01_since_2020_prior_to_2050)",
                   "value": "04-01_since_2020_prior_to_2050"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -16974,7 +18544,12 @@
                   "label": "New Year's Day (01-01_and_if_saturdaysunday_then_next_monday)",
                   "value": "01-01_and_if_saturdaysunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -16986,7 +18561,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17033,7 +18613,12 @@
                   "label": "Navidad (12-25)",
                   "value": "12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -17057,7 +18642,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17069,7 +18659,12 @@
                   "label": "Día de la Madre (05-10)",
                   "value": "05-10"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17284,7 +18879,12 @@
                   "label": "Vesak Day (2026-05-31)",
                   "value": "2026-05-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17343,7 +18943,12 @@
                   "label": "Feriado Obrigatório (substitutes_10-04_if_sunday_then_next_monday)",
                   "value": "substitutes_10-04_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17355,7 +18960,12 @@
                   "label": "Dia das Mães (1st_sunday_in_may)",
                   "value": "1st_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17422,7 +19032,12 @@
                   "label": "Workers Day (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17434,7 +19049,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17501,7 +19121,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17517,7 +19142,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17584,7 +19214,12 @@
                   "label": "Proclamation de la République (12-18)",
                   "value": "12-18"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17651,7 +19286,12 @@
                   "label": "Thanksgiving Day (wednesday_before_12-01)",
                   "value": "wednesday_before_12-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17667,7 +19307,12 @@
                   "label": "Mother's Day (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17742,7 +19387,12 @@
                   "label": "Worker's Day (05-01_and_if_saturday_then_next_monday)",
                   "value": "05-01_and_if_saturday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17758,7 +19408,12 @@
                   "label": "New Year's Eve (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17821,7 +19476,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17849,7 +19509,12 @@
                   "label": "Nochebuena (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -17904,7 +19569,12 @@
                   "label": "Tweede pinksterdag (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -17916,7 +19586,12 @@
                   "label": "Oudejaarsavond (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -17932,7 +19607,12 @@
                   "label": "Goede Vrijdag (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -17984,7 +19664,12 @@
                   "label": "Vaderdag (3rd_sunday_in_june)",
                   "value": "3rd_sunday_in_june"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18051,7 +19736,12 @@
                   "label": "Skjærtorsdag (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -18067,7 +19757,12 @@
                   "label": "Nyttårsaften (12-31_1400_if_sunday_then_0000)",
                   "value": "12-31_1400_if_sunday_then_0000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -18079,7 +19774,12 @@
                   "label": "Olsok (07-29)",
                   "value": "07-29"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18175,7 +19875,12 @@
                   "label": "Valentinsdag (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18282,7 +19987,12 @@
                   "label": "Waitangi Day (02-06_and_if_saturdaysunday_then_next_monday)",
                   "value": "02-06_and_if_saturdaysunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18294,7 +20004,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18353,7 +20068,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18365,7 +20085,12 @@
                   "label": "Carnaval (easter_-48)",
                   "value": "easter_-48"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18436,7 +20161,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18448,7 +20178,12 @@
                   "label": "Fiesta Inca del Sol (06-24)",
                   "value": "06-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18523,7 +20258,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18539,7 +20279,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18610,7 +20355,12 @@
                   "label": "Rizal Day (12-30)",
                   "value": "12-30"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -18650,7 +20400,12 @@
                   "label": "Ninoy Aquino Day (08-21)",
                   "value": "08-21"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -18698,7 +20453,12 @@
                   "label": "Mid-Autumn Festival (chinese_08-0-15)",
                   "value": "chinese_08-0-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18761,7 +20521,12 @@
                   "label": "یومِ یکجہتیِ کشمیر (02-05)",
                   "value": "02-05"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -18836,7 +20601,12 @@
                   "label": "Zielone Świątki (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -18852,7 +20622,12 @@
                   "label": "Wielki Piątek (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -18864,7 +20639,12 @@
                   "label": "Dzień Flagi Rzeczypospolitej Polskiej (05-02_since_2004)",
                   "value": "05-02_since_2004"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19000,7 +20780,12 @@
                   "label": "Wielka Sobota (easter_-1)",
                   "value": "easter_-1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19063,7 +20848,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19079,7 +20869,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19182,7 +20977,12 @@
                   "label": "Recordación de los Muertos de la Guerra (monday_before_06-01)",
                   "value": "monday_before_06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -19194,7 +20994,12 @@
                   "label": "Nochebuena (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19238,7 +21043,12 @@
                   "label": "Valentine's Day (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19309,7 +21119,12 @@
                   "label": "Todos os santos (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19333,7 +21148,12 @@
                   "label": "Véspera de Ano Novo (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19400,7 +21220,12 @@
                   "label": "Virgen de Caacupé (12-08)",
                   "value": "12-08"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -19412,7 +21237,12 @@
                   "label": "Fin del Año (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -19424,7 +21254,12 @@
                   "label": "Día del Maestro (04-30)",
                   "value": "04-30"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19491,7 +21326,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19507,7 +21347,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19590,7 +21435,12 @@
                   "label": "Ziua Unirii Principatelor Române (01-24)",
                   "value": "01-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19622,7 +21472,12 @@
                   "label": "Ziua Românilor de Pretutindeni, Ziua Românului de Pretutindeni (sunday_before_06-01)",
                   "value": "sunday_before_06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19685,7 +21540,12 @@
                   "label": "Празник рада (05-02_if_sunday_then_next_monday)",
                   "value": "05-02_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -19721,7 +21581,12 @@
                   "label": "Рамазански Бајрам (1_shawwal)",
                   "value": "1_shawwal"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -19749,7 +21614,12 @@
                   "label": "Свети Сава (julian_01-14)",
                   "value": "julian_01-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19808,7 +21678,12 @@
                   "label": "Рождество Христово (julian_12-25)",
                   "value": "julian_12-25"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19887,7 +21762,12 @@
                   "label": "Public Holiday (01-02)",
                   "value": "01-02"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19922,7 +21802,12 @@
                   "label": "يوم التأسيس (02-22_since_2022)",
                   "value": "02-22_since_2022"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -19993,7 +21878,12 @@
                   "label": "New Year's Day (01-01_p2d)",
                   "value": "01-01_p2d"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20048,7 +21938,12 @@
                   "label": "Revolution Day (12-19)",
                   "value": "12-19"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20119,7 +22014,12 @@
                   "label": "Trettondedag jul (01-06)",
                   "value": "01-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -20139,7 +22039,12 @@
                   "label": "Nyårsafton (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -20159,7 +22064,12 @@
                   "label": "Valborgsmässoafton (04-30_1200)",
                   "value": "04-30_1200"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20211,7 +22121,12 @@
                   "label": "Vasaloppet (1st_sunday_in_march)",
                   "value": "1st_sunday_in_march"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20286,7 +22201,12 @@
                   "label": "Vesak Day (2026-06-01)",
                   "value": "2026-06-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20353,7 +22273,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20365,7 +22290,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20444,7 +22374,12 @@
                   "label": "Velikonočni ponedeljek (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20496,7 +22431,12 @@
                   "label": "Združitev prekmurskih Slovencev z matičnim narodom (08-17)",
                   "value": "08-17"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20563,7 +22503,12 @@
                   "label": "Skjærtorsdag (easter_-3)",
                   "value": "easter_-3"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeBank": {
               "type": "select",
@@ -20579,7 +22524,12 @@
                   "label": "Nyttårsaften (12-31_1400_if_sunday_then_0000)",
                   "value": "12-31_1400_if_sunday_then_0000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -20591,7 +22541,12 @@
                   "label": "Olsok (07-29)",
                   "value": "07-29"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20687,7 +22642,12 @@
                   "label": "Valentinsdag (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20754,7 +22714,12 @@
                   "label": "Zjavenie Pána (01-06)",
                   "value": "01-06"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20782,7 +22747,12 @@
                   "label": "Sviatok Panny Márie Sedembolestnej (09-15_since_2026)",
                   "value": "09-15_since_2026"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20845,7 +22815,12 @@
                   "label": "Tabaski (10_dhu_al-hijjah_and_if_sunday_then_next_monday)",
                   "value": "10_dhu_al-hijjah_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -20936,7 +22911,12 @@
                   "label": "Tutti i Santi (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -20948,7 +22928,12 @@
                   "label": "Ultimo dell’anno (12-31)",
                   "value": "12-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -20960,7 +22945,12 @@
                   "label": "Festa della mamma (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21035,7 +23025,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21098,7 +23093,12 @@
                   "label": "يوم العمال (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21181,7 +23181,12 @@
                   "label": "Tweede paasdag (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -21193,7 +23198,12 @@
                   "label": "Pasen (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21256,7 +23266,12 @@
                   "label": "SPLA Day (05-16)",
                   "value": "05-16"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -21268,7 +23283,12 @@
                   "label": "Mother's Day (1st_monday_in_july)",
                   "value": "1st_monday_in_july"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21319,7 +23339,12 @@
                   "label": "Natal (12-25_and_if_saturday_then_previous_friday_if_sunday_then_next_monday)",
                   "value": "12-25_and_if_saturday_then_previous_friday_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21378,7 +23403,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -21394,7 +23424,12 @@
                   "label": "Día del Maestro (06-22)",
                   "value": "06-22"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -21426,7 +23461,12 @@
                   "label": "Pascua (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21501,7 +23541,12 @@
                   "label": "Tweede paasdag (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21572,7 +23617,12 @@
                   "label": "Umhlanga Reed Dance (1st_monday_in_september)",
                   "value": "1st_monday_in_september"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -21584,7 +23634,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21651,7 +23706,12 @@
                   "label": "Queen's Birthday (2nd_monday_after_06-02)",
                   "value": "2nd_monday_after_06-02"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -21663,7 +23723,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21726,7 +23791,12 @@
                   "label": "يوم العمال (05-01_and_if_sunday_then_next_monday)",
                   "value": "05-01_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21801,7 +23871,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21892,7 +23967,12 @@
                   "label": "Vesak Day (2026-05-31)",
                   "value": "2026-05-31"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -21959,7 +24039,12 @@
                   "label": "يوم العمال (05-01)",
                   "value": "05-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22022,7 +24107,12 @@
                   "label": "Tupou I Day (12-04_if_thursdayfridaysaturdaysunday_then_next_monday_and_if_tuesday_then_previous_monday)",
                   "value": "12-04_if_thursdayfridaysaturdaysunday_then_next_monday_and_if_tuesday_then_previous_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22077,7 +24167,12 @@
                   "label": "Zafer Bayramı (08-30)",
                   "value": "08-30"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22156,7 +24251,12 @@
                   "label": "Spiritual Baptist Liberation Day (03-30_and_if_sunday_then_next_monday)",
                   "value": "03-30_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -22168,7 +24268,12 @@
                   "label": "Easter Monday (easter_1)",
                   "value": "easter_1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22239,7 +24344,12 @@
                   "label": "農曆除夕 (chinese_01-0-00)",
                   "value": "chinese_01-0-00"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -22367,7 +24477,12 @@
                   "label": "靑年節 (03-29)",
                   "value": "03-29"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22450,7 +24565,12 @@
                   "label": "Zanzibar Revolution Day (01-02)",
                   "value": "01-02"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -22462,7 +24582,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22529,7 +24654,12 @@
                   "label": "Трійця (orthodox_49_and_if_sunday_then_next_monday_since_2000)",
                   "value": "orthodox_49_and_if_sunday_then_next_monday_since_2000"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22608,7 +24738,12 @@
                   "label": "New Year's Day (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -22620,7 +24755,12 @@
                   "label": "Ash Wednesday (easter_-46)",
                   "value": "easter_-46"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -22863,7 +25003,12 @@
                   "label": "West Virginia Day (06-20)",
                   "value": "06-20"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -22875,7 +25020,12 @@
                   "label": "Christmas Eve (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -22975,7 +25125,12 @@
                   "label": "Valentine's Day (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23022,7 +25177,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23078,7 +25238,12 @@
                   "label": "Semana de Turismo (easter_-6_p5d)",
                   "value": "easter_-6_p5d"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23205,7 +25370,12 @@
                   "label": "Venerdì santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23272,7 +25442,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23284,7 +25459,12 @@
                   "label": "Easter Sunday (easter)",
                   "value": "easter"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23403,7 +25583,12 @@
                   "label": "Viernes Santo (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -23415,7 +25600,12 @@
                   "label": "Día del Maestro (01-15)",
                   "value": "01-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23459,7 +25649,12 @@
                   "label": "Todos los Santos (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23534,7 +25729,12 @@
                   "label": "Whit Monday (easter_50)",
                   "value": "easter_50"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23550,7 +25750,12 @@
                   "label": "Pentecost (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23641,7 +25846,12 @@
                   "label": "Virgin Islands–Puerto Rico Friendship Day (2nd_monday_in_october)",
                   "value": "2nd_monday_in_october"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeSchool": {
               "type": "select",
@@ -23653,7 +25863,12 @@
                   "label": "Day after Thanksgiving Day (friday_after_4th_thursday_in_november)",
                   "value": "friday_after_4th_thursday_in_november"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeOptional": {
               "type": "select",
@@ -23665,7 +25880,12 @@
                   "label": "Christmas Eve (12-24)",
                   "value": "12-24"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23709,7 +25929,12 @@
                   "label": "Valentine's Day (02-14)",
                   "value": "02-14"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23756,7 +25981,12 @@
                   "label": "Tết Nguyên Đán (vietnamese_1-0-1)",
                   "value": "vietnamese_1-0-1"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -23844,7 +26074,12 @@
                   "label": "Tết Trung thu (vietnamese_8-0-15)",
                   "value": "vietnamese_8-0-15"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -23931,7 +26166,12 @@
                   "label": "Vendredi saint (easter_-2)",
                   "value": "easter_-2"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24006,7 +26246,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -24022,7 +26267,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24085,7 +26335,12 @@
                   "label": "Viti i Ri (01-01)",
                   "value": "01-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24152,7 +26407,12 @@
                   "label": "Toussaint (11-01)",
                   "value": "11-01"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -24168,7 +26428,12 @@
                   "label": "Pentecôte (easter_49)",
                   "value": "easter_49"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24239,7 +26504,12 @@
                   "label": "Youth Day (06-16)",
                   "value": "06-16"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -24263,7 +26533,12 @@
                   "label": "Nelson Mandela Day (07-18)",
                   "value": "07-18"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24338,7 +26613,12 @@
                   "label": "Youth Day (03-12_and_if_sunday_then_next_monday)",
                   "value": "03-12_and_if_sunday_then_next_monday"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         },
@@ -24401,7 +26681,12 @@
                   "label": "Unity Day (12-22)",
                   "value": "12-22"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "excludeObservance": {
               "type": "select",
@@ -24421,7 +26706,12 @@
                   "label": "Mother's Day (2nd_sunday_in_may)",
                   "value": "2nd_sunday_in_may"
                 }
-              ]
+              ],
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             }
           }
         }

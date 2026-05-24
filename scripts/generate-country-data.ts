@@ -51,6 +51,11 @@ for (const cc of Object.keys(countries)) {
             type: "select",
             label: "label_region",
             options: regionOptions,
+            xs: 12,
+            sm: 12,
+            md: 12,
+            lg: 12,
+            xl: 12,
           },
         },
       };
@@ -70,6 +75,11 @@ for (const cc of Object.keys(countries)) {
         type: "select",
         label: "label_state",
         options: stateOptions,
+        xs: 12,
+        sm: 12,
+        md: 12,
+        lg: 12,
+        xl: 12,
       },
     },
   };
@@ -142,6 +152,11 @@ for (const cc of Object.keys(countries)) {
       hidden: `!data.${TYPE_CONFIG_KEYS[t]}`,
       label: TYPE_LABELS[t],
       options,
+      xs: 12,
+      sm: 12,
+      md: 12,
+      lg: 12,
+      xl: 12,
     };
   }
 
