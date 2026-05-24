@@ -250,7 +250,7 @@ describe("bridge days", () => {
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2026-05-15"));
     expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Bridge day");
+    expect(result.today.name).toBe("Brückentag");
   });
 
   it("bridge day not created when disabled", () => {
@@ -292,6 +292,14 @@ describe("bridge days", () => {
     const bridges = detectBridgeDays(holidays as any, 2026);
     expect(bridges.length).toBe(1);
     expect(toDateKey(bridges[0])).toBe("2026-05-15");
+  });
+
+  it("bridge day name uses system language", () => {
+    const config = makeConfig({ includeBridgeDays: true });
+    const resultEn = computeHolidays(config, ["en"], makeDate("2026-05-15"));
+    expect(resultEn.today.name).toBe("Bridge day");
+    const resultFr = computeHolidays(config, ["fr"], makeDate("2026-05-15"));
+    expect(resultFr.today.name).toBe("Jour de pont");
   });
 
   it("Tuesday holiday creates Monday bridge day", () => {

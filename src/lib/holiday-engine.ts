@@ -14,10 +14,24 @@ interface RawHoliday {
 
 const EMPTY_DAY: DayInfo = { name: "", isHoliday: false };
 
+const BRIDGE_DAY_NAMES: Record<string, string> = {
+  de: "Brückentag",
+  en: "Bridge day",
+  es: "Día puente",
+  fr: "Jour de pont",
+  it: "Ponte",
+  nl: "Brugdag",
+  pl: "Dzień pomostowy",
+  pt: "Dia de ponte",
+  ru: "Нерабочий день",
+  uk: "Неробочий день",
+  zh: "桥接日",
+};
+
 export function computeHolidays(config: AdapterConfig, languages: string[], referenceDate?: Date): ComputedHolidays {
   const now = referenceDate ?? new Date();
   const hd = createHolidaysInstance(config, languages);
-  const filtered = getFilteredHolidays(hd, now, config);
+  const filtered = getFilteredHolidays(hd, now, config, languages);
 
   const yesterday = getDayInfo(filtered, addDays(now, -1));
   const today = getDayInfo(filtered, now);
@@ -53,7 +67,12 @@ function createHolidaysInstance(config: AdapterConfig, languages: string[]): Hol
   return hd;
 }
 
-function getFilteredHolidays(hd: Holidays, referenceDate: Date, config: AdapterConfig): Map<string, RawHoliday> {
+function getFilteredHolidays(
+  hd: Holidays,
+  referenceDate: Date,
+  config: AdapterConfig,
+  languages: string[],
+): Map<string, RawHoliday> {
   const year = referenceDate.getFullYear();
   const years = [year - 1, year, year + 1];
   const result = new Map<string, RawHoliday>();
@@ -76,7 +95,7 @@ function getFilteredHolidays(hd: Holidays, referenceDate: Date, config: AdapterC
   }
 
   if (config.includeBridgeDays) {
-    addBridgeDays(result, year, hd, config);
+    addBridgeDays(result, year, languages);
   }
 
   return result;
@@ -154,7 +173,9 @@ export function detectBridgeDays(holidays: Map<string, RawHoliday>, year: number
   return bridgeDays;
 }
 
-function addBridgeDays(holidays: Map<string, RawHoliday>, year: number, _hd: Holidays, _config: AdapterConfig): void {
+function addBridgeDays(holidays: Map<string, RawHoliday>, year: number, languages: string[]): void {
+  const lang = languages[0]?.split("-")[0] ?? "en";
+  const name = BRIDGE_DAY_NAMES[lang] ?? BRIDGE_DAY_NAMES.en;
   const bridgeDays = detectBridgeDays(holidays, year);
   for (const bd of bridgeDays) {
     const key = toDateKey(bd);
@@ -163,7 +184,7 @@ function addBridgeDays(holidays: Map<string, RawHoliday>, year: number, _hd: Hol
         date: key,
         start: bd,
         end: addDays(bd, 1),
-        name: "Bridge day",
+        name,
         type: "bridge",
         rule: "",
       });

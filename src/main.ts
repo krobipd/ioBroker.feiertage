@@ -36,6 +36,14 @@ class PublicHolidaysAdapter extends utils.Adapter {
 
   private async onReady(): Promise<void> {
     try {
+      const instanceId = `system.adapter.${this.namespace}`;
+      const obj = await this.getForeignObjectAsync(instanceId);
+      if (obj?.common && (obj.common as Record<string, unknown>).mode === "schedule") {
+        this.log.info("Migrating from schedule to daemon mode");
+        await this.extendForeignObjectAsync(instanceId, { common: { mode: "daemon", schedule: "" } });
+        return;
+      }
+
       await I18n.init(join(this.adapterDir, "admin"), this);
 
       await this.computeAndPublish();

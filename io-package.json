@@ -3,6 +3,19 @@
     "name": "public-holidays",
     "version": "0.3.0",
     "news": {
+      "NEXT": {
+        "en": "Bridge day names now shown in system language. Fixed adapter not restarting on settings change",
+        "de": "Brückentag-Namen werden jetzt in der Systemsprache angezeigt. Adapter startet bei Einstellungsänderungen jetzt korrekt neu",
+        "ru": "Названия промежуточных выходных теперь отображаются на языке системы. Исправлен перезапуск адаптера при изменении настроек",
+        "pt": "Nomes dos dias de ponte agora mostrados no idioma do sistema. Corrigido reinício do adaptador ao alterar configurações",
+        "nl": "Brugdagnamen worden nu getoond in de systeemtaal. Herstart van adapter bij instellingswijziging gerepareerd",
+        "fr": "Les noms des jours de pont sont maintenant affichés dans la langue du système. Correction du redémarrage lors des changements de paramètres",
+        "it": "I nomi dei giorni ponte sono ora mostrati nella lingua del sistema. Corretto il riavvio dell'adattatore al cambio impostazioni",
+        "es": "Los nombres de los días puente ahora se muestran en el idioma del sistema. Corregido el reinicio del adaptador al cambiar configuración",
+        "pl": "Nazwy dni pomostowych wyświetlane w języku systemu. Naprawiono restart adaptera przy zmianie ustawień",
+        "uk": "Назви неробочих днів тепер відображаються мовою системи. Виправлено перезапуск адаптера при зміні налаштувань",
+        "zh-cn": "桥接日名称现在按系统语言显示。修复了更改设置后适配器未重启的问题"
+      },
       "0.3.0": {
         "en": "Removed ID states, slimmed state tree from 17 to 12 data points. Improved stability and reduced verbose output",
         "de": "ID-Datenpunkte entfernt, State-Tree von 17 auf 12 Datenpunkte verschlankt. Verbesserte Stabilität und weniger Ausgaben",
@@ -80,19 +93,6 @@
         "pl": "Nazwy stanów zmienione przez użytkownika nie są już nadpisywane przy ponownym uruchomieniu adaptera",
         "uk": "Змінені користувачем назви станів більше не перезаписуються при перезапуску адаптера",
         "zh-cn": "用户修改的状态名称在适配器重启时不再被覆盖"
-      },
-      "0.1.1": {
-        "en": "Improved error handling and stability.",
-        "de": "Verbesserte Fehlerbehandlung und Stabilität.",
-        "ru": "Улучшена обработка ошибок и стабильность.",
-        "pt": "Melhorado o tratamento de erros e estabilidade.",
-        "nl": "Verbeterde foutafhandeling en stabiliteit.",
-        "fr": "Amélioration de la gestion des erreurs et de la stabilité.",
-        "it": "Migliorata la gestione degli errori e la stabilità.",
-        "es": "Mejora del manejo de errores y estabilidad.",
-        "pl": "Poprawiona obsługa błędów i stabilność.",
-        "uk": "Покращена обробка помилок та стабільність.",
-        "zh-cn": "改进错误处理和稳定性。"
       }
     },
     "titleLang": {
