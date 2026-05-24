@@ -6,27 +6,21 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (
-  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-    mod,
-  )
-);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var utils = __toESM(require("@iobroker/adapter-core"));
 var import_adapter_core = require("@iobroker/adapter-core");
 var import_node_path = require("node:path");
@@ -44,6 +38,15 @@ class PublicHolidaysAdapter extends utils.Adapter {
     var _a, _b;
     try {
       await import_adapter_core.I18n.init((0, import_node_path.join)(this.adapterDir, "admin"), this);
+      const raw = this.config;
+      if (!raw.country) {
+        const sysCountry = await (0, import_i18n.getSystemCountry)(this);
+        if (sysCountry) {
+          const upper = sysCountry.toUpperCase();
+          raw.country = upper;
+          this.log.info(`Using system country: ${upper}`);
+        }
+      }
       const config = this.validateConfig();
       if (!config) {
         this.log.warn("No country configured \u2014 open adapter settings");
@@ -53,17 +56,10 @@ class PublicHolidaysAdapter extends utils.Adapter {
       const systemLang = await (0, import_i18n.getSystemLanguage)(this);
       const languages = (0, import_i18n.resolveLanguages)(systemLang, config.country);
       this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
-      if (!config.state && !config.region) {
-        const sysCountry = await (0, import_i18n.getSystemCountry)(this);
-        if (sysCountry && !config.country) {
-          config.country = sysCountry.toUpperCase();
-          this.log.info(`Using system country: ${config.country}`);
-        }
-      }
       const computed = (0, import_holiday_engine.computeHolidays)(config, languages);
-      (0, import_holiday_engine.logAvailableHolidays)(config, languages, msg => this.log.info(msg));
+      (0, import_holiday_engine.logAvailableHolidays)(config, languages, (msg) => this.log.info(msg));
       this.log.info(
-        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.duration} days`,
+        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.duration} days`
       );
       await (0, import_state_publisher.ensureObjects)(this);
       await (0, import_state_publisher.publishStates)(this, computed);
@@ -101,7 +97,7 @@ class PublicHolidaysAdapter extends utils.Adapter {
       region: typeof raw.region === "string" ? raw.region.trim() : "",
       holidayTypes,
       excludeHolidays: Array.isArray(raw.excludeHolidays) ? raw.excludeHolidays : [],
-      includeBridgeDays: raw.includeBridgeDays === true,
+      includeBridgeDays: raw.includeBridgeDays === true
     };
   }
   onUnload(callback) {
@@ -109,7 +105,7 @@ class PublicHolidaysAdapter extends utils.Adapter {
   }
 }
 if (require.main !== module) {
-  module.exports = options => new PublicHolidaysAdapter(options);
+  module.exports = (options) => new PublicHolidaysAdapter(options);
 } else {
   new PublicHolidaysAdapter();
 }

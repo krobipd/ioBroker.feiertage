@@ -36,27 +36,23 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 
 ### Tab 1 — Region
 
-| Setting          | Description                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------ |
-| Country          | Select from 206 countries                                                                  |
-| State / Province | State code (e.g. `BY` for Bavaria, `ZH` for Zurich) — only shown for countries with states |
-| Region           | Region code — only shown when a state is selected                                          |
-
-Start the adapter once and check the log to see available state/region codes for your country.
+| Setting          | Description                                                       |
+| ---------------- | ----------------------------------------------------------------- |
+| Country          | Select from 206 countries                                         |
+| State / Province | Dropdown — only shown for countries with states (e.g. DE, CH, US) |
+| Region           | Dropdown — only shown when the selected state has regions         |
 
 ### Tab 2 — Holidays
 
-| Setting              | Description                                     |
-| -------------------- | ----------------------------------------------- |
-| Public holidays      | Official public/national holidays (default: on) |
-| Bank holidays        | Bank holidays                                   |
-| School holidays      | School holidays                                 |
-| Optional holidays    | Optional/discretionary holidays                 |
-| Observance days      | Observance/memorial days                        |
-| Detect bridge days   | Adds bridge days between holidays and weekends  |
-| Excluded holiday IDs | Holiday IDs to exclude from detection           |
-
-The adapter logs all available holiday IDs at startup. Use these IDs for the exclude list.
+| Setting            | Description                                     |
+| ------------------ | ----------------------------------------------- |
+| Public holidays    | Official public/national holidays (default: on) |
+| Bank holidays      | Bank holidays                                   |
+| School holidays    | School holidays                                 |
+| Optional holidays  | Optional/discretionary holidays                 |
+| Observance days    | Observance/memorial days                        |
+| Detect bridge days | Adds bridge days between holidays and weekends  |
+| Excluded holidays  | Select holidays to exclude from detection       |
 
 ## State Tree
 
@@ -65,27 +61,19 @@ public-holidays.0.
 ├── today.
 │   ├── name         string    "Karfreitag" / "Good Friday"
 │   ├── id           string    "goodFriday" (language-independent)
-│   ├── boolean      boolean   true / false
-│   ├── region       string    "DE-BY" (empty if national)
-│   └── type         string    "public" / "bank" / ...
+│   └── boolean      boolean   true / false
 ├── yesterday.
 │   ├── name         string
 │   ├── id           string
-│   ├── boolean      boolean
-│   ├── region       string
-│   └── type         string
+│   └── boolean      boolean
 ├── tomorrow.
 │   ├── name         string
 │   ├── id           string
-│   ├── boolean      boolean
-│   ├── region       string
-│   └── type         string
+│   └── boolean      boolean
 ├── dayAfterTomorrow.
 │   ├── name         string
 │   ├── id           string
-│   ├── boolean      boolean
-│   ├── region       string
-│   └── type         string
+│   └── boolean      boolean
 └── next.
     ├── name         string    next holiday name (localized)
     ├── id           string    next holiday ID
@@ -112,7 +100,7 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 **No states after first start** — Open adapter settings and select a country. The adapter terminates with error code 11 if no country is configured.
 
-**Wrong holidays / missing regional holidays** — Check that state/province code matches your location. The adapter logs all detected holidays and their IDs at startup (info level).
+**Wrong holidays / missing regional holidays** — Check that the correct state/province is selected. The adapter logs all detected holidays at startup (info level).
 
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
@@ -140,12 +128,19 @@ Bridge days appear in the state tree with `type: "bridge"` and `name: "Bridge da
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
-## Support Development
+## Support
 
-If you find this adapter useful:
+- [GitHub Issues](https://github.com/krobipd/ioBroker.public-holidays/issues) — bug reports, feature requests
+- [ioBroker Forum](https://forum.iobroker.net/) — general questions
 
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-ff5e5b?logo=ko-fi)](https://ko-fi.com/krobipd)
-[![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/krobipd)
+### Support Development
+
+This adapter is free and open source. If you find it useful, consider buying me a coffee:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-ff5e5b?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/krobipd)
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge)](https://paypal.me/krobipd)
+
+---
 
 ## License
 

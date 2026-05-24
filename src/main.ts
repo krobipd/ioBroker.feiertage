@@ -17,6 +17,17 @@ class PublicHolidaysAdapter extends utils.Adapter {
   private async onReady(): Promise<void> {
     try {
       await I18n.init(join(this.adapterDir, "admin"), this);
+
+      const raw = this.config as Record<string, unknown>;
+      if (!raw.country) {
+        const sysCountry = await getSystemCountry(this);
+        if (sysCountry) {
+          const upper = sysCountry.toUpperCase();
+          raw.country = upper;
+          this.log.info(`Using system country: ${upper}`);
+        }
+      }
+
       const config = this.validateConfig();
       if (!config) {
         this.log.warn("No country configured — open adapter settings");
@@ -27,14 +38,6 @@ class PublicHolidaysAdapter extends utils.Adapter {
       const systemLang = await getSystemLanguage(this);
       const languages = resolveLanguages(systemLang, config.country);
       this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
-
-      if (!config.state && !config.region) {
-        const sysCountry = await getSystemCountry(this);
-        if (sysCountry && !config.country) {
-          config.country = sysCountry.toUpperCase();
-          this.log.info(`Using system country: ${config.country}`);
-        }
-      }
 
       const computed = computeHolidays(config, languages);
 

@@ -60,13 +60,13 @@ describe("ensureObjects", () => {
     expect(channelIds.length).toBe(5);
   });
 
-  it("creates today states (name, id, boolean, region, type)", async () => {
+  it("creates today states (name, id, boolean)", async () => {
     await ensureObjects(adapter as any);
     expect(adapter.objects["today.name"]).toBeDefined();
     expect(adapter.objects["today.id"]).toBeDefined();
     expect(adapter.objects["today.boolean"]).toBeDefined();
-    expect(adapter.objects["today.region"]).toBeDefined();
-    expect(adapter.objects["today.type"]).toBeDefined();
+    expect(adapter.objects["today.region"]).toBeUndefined();
+    expect(adapter.objects["today.type"]).toBeUndefined();
   });
 
   it("creates next states including date and duration", async () => {
@@ -76,9 +76,9 @@ describe("ensureObjects", () => {
     expect(adapter.objects["next.duration"]).toBeDefined();
   });
 
-  it("total object count is 5 channels + 27 states = 32", async () => {
+  it("total object count is 5 channels + 19 states = 24", async () => {
     await ensureObjects(adapter as any);
-    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(32);
+    expect(adapter.extendObjectAsync).toHaveBeenCalledTimes(24);
   });
 
   it("state objects have correct common.type", async () => {
@@ -157,11 +157,6 @@ describe("publishStates", () => {
     expect(adapter.states["today.id"]).toEqual({ val: "01-01", ack: true });
   });
 
-  it("publishes today type", async () => {
-    await publishStates(adapter as any, makeComputed());
-    expect(adapter.states["today.type"]).toEqual({ val: "public", ack: true });
-  });
-
   it("publishes empty yesterday", async () => {
     await publishStates(adapter as any, makeComputed());
     expect(adapter.states["yesterday.name"]).toEqual({ val: "", ack: true });
@@ -190,13 +185,13 @@ describe("publishStates", () => {
     }
   });
 
-  it("total state count is 27", async () => {
+  it("total state count is 19", async () => {
     await publishStates(adapter as any, makeComputed());
-    expect(adapter.setStateAsync).toHaveBeenCalledTimes(27);
+    expect(adapter.setStateAsync).toHaveBeenCalledTimes(19);
   });
 
-  it("region is empty string for national holidays", async () => {
+  it("next.region is empty string for national holidays", async () => {
     await publishStates(adapter as any, makeComputed());
-    expect(adapter.states["today.region"]).toEqual({ val: "", ack: true });
+    expect(adapter.states["next.region"]).toEqual({ val: "", ack: true });
   });
 });

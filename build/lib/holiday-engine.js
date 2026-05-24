@@ -6,38 +6,33 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
-  for (var name in all) __defProp(target, name, { get: all[name], enumerable: true });
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (
-  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-    mod,
-  )
-);
-var __toCommonJS = mod => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var holiday_engine_exports = {};
 __export(holiday_engine_exports, {
   computeHolidays: () => computeHolidays,
   detectBridgeDays: () => detectBridgeDays,
   logAvailableHolidays: () => logAvailableHolidays,
   toDateKey: () => toDateKey,
-  toHolidayId: () => toHolidayId,
+  toHolidayId: () => toHolidayId
 });
 module.exports = __toCommonJS(holiday_engine_exports);
 var import_date_holidays = __toESM(require("date-holidays"));
@@ -55,13 +50,11 @@ function computeHolidays(config, languages, referenceDate) {
 }
 function logAvailableHolidays(config, languages, log) {
   const hd = createHolidaysInstance(config, languages);
-  const year = /* @__PURE__ */ new Date().getFullYear();
+  const year = (/* @__PURE__ */ new Date()).getFullYear();
   const holidays = hd.getHolidays(year);
-  const matching = holidays
-    .filter(h => config.holidayTypes.includes(h.type))
-    .map(h => `${toHolidayId(h.name, h.rule)} (${h.name}, ${h.type})`);
+  const matching = holidays.filter((h) => config.holidayTypes.includes(h.type)).map((h) => `${toHolidayId(h.name, h.rule)} (${h.name}, ${h.type})`);
   log(
-    `${config.country}${config.state ? `/${config.state}` : ""}${config.region ? `/${config.region}` : ""}: ${matching.length} holidays for ${year} \u2014 IDs: ${matching.join(", ")}`,
+    `${config.country}${config.state ? `/${config.state}` : ""}${config.region ? `/${config.region}` : ""}: ${matching.length} holidays for ${year} \u2014 IDs: ${matching.join(", ")}`
   );
 }
 function createHolidaysInstance(config, languages) {
@@ -112,7 +105,7 @@ function getDayInfo(holidays, date) {
     id: toHolidayId(h.name, h.rule),
     isHoliday: true,
     region: extractRegion(h.rule),
-    type: h.type,
+    type: h.type
   };
 }
 function getNextHoliday(holidays, referenceDate) {
@@ -142,7 +135,7 @@ function getNextHoliday(holidays, referenceDate) {
     region: extractRegion(nearest.rule),
     type: nearest.type,
     date: toDateKey(nearestDate),
-    duration,
+    duration
   };
 }
 function detectBridgeDays(holidays, year) {
@@ -181,27 +174,19 @@ function addBridgeDays(holidays, year, _hd, _config) {
         end: addDays(bd, 1),
         name: "Bridge day",
         type: "bridge",
-        rule: "",
+        rule: ""
       });
     }
   }
 }
 function toHolidayId(name, rule) {
   if (rule) {
-    const clean = rule
-      .replace(/\s+/g, "_")
-      .replace(/[^a-zA-Z0-9_-]/g, "")
-      .toLowerCase();
+    const clean = rule.replace(/\s+/g, "_").replace(/[^a-zA-Z0-9_-]/g, "").toLowerCase();
     if (clean.length > 3) {
       return clean;
     }
   }
-  return name
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-zA-Z0-9\s]/g, "")
-    .replace(/\s+/g, "_")
-    .toLowerCase();
+  return name.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-zA-Z0-9\s]/g, "").replace(/\s+/g, "_").toLowerCase();
 }
 function extractRegion(rule) {
   if (!rule) {
@@ -222,12 +207,11 @@ function addDays(date, days) {
   return result;
 }
 // Annotate the CommonJS export names for ESM import in node:
-0 &&
-  (module.exports = {
-    computeHolidays,
-    detectBridgeDays,
-    logAvailableHolidays,
-    toDateKey,
-    toHolidayId,
-  });
+0 && (module.exports = {
+  computeHolidays,
+  detectBridgeDays,
+  logAvailableHolidays,
+  toDateKey,
+  toHolidayId
+});
 //# sourceMappingURL=holiday-engine.js.map

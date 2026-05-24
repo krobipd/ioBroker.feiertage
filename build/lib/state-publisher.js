@@ -4,29 +4,27 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
-  for (var name in all) __defProp(target, name, { get: all[name], enumerable: true });
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __toCommonJS = mod => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var state_publisher_exports = {};
 __export(state_publisher_exports, {
   ensureObjects: () => ensureObjects,
-  publishStates: () => publishStates,
+  publishStates: () => publishStates
 });
 module.exports = __toCommonJS(state_publisher_exports);
 var import_i18n = require("./i18n");
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"];
-const DAY_FIELDS = ["name", "id", "boolean", "region", "type"];
+const DAY_FIELDS = ["name", "id", "boolean"];
 const NEXT_FIELDS = ["name", "id", "boolean", "region", "type", "date", "duration"];
 const FIELD_SPECS = {
   name: { type: "string", role: "text", read: true, write: false },
@@ -35,7 +33,7 @@ const FIELD_SPECS = {
   region: { type: "string", role: "text", read: true, write: false },
   type: { type: "string", role: "text", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
-  duration: { type: "number", role: "value", read: true, write: false },
+  duration: { type: "number", role: "value", read: true, write: false }
 };
 async function ensureObjects(adapter) {
   for (const ch of DAY_CHANNELS) {
@@ -55,9 +53,9 @@ async function ensureChannel(adapter, channel) {
     {
       type: "channel",
       common: { name: (0, import_i18n.tName)(channel) },
-      native: {},
+      native: {}
     },
-    { preserve: { common: ["name"] } },
+    { preserve: { common: ["name"] } }
   );
 }
 async function ensureState(adapter, channel, field) {
@@ -74,11 +72,11 @@ async function ensureState(adapter, channel, field) {
         type: spec.type,
         role: spec.role,
         read: spec.read,
-        write: spec.write,
+        write: spec.write
       },
-      native: {},
+      native: {}
     },
-    { preserve: { common: ["name"] } },
+    { preserve: { common: ["name"] } }
   );
 }
 async function publishStates(adapter, computed) {
@@ -86,15 +84,13 @@ async function publishStates(adapter, computed) {
     today: computed.today,
     yesterday: computed.yesterday,
     tomorrow: computed.tomorrow,
-    dayAfterTomorrow: computed.dayAfterTomorrow,
+    dayAfterTomorrow: computed.dayAfterTomorrow
   };
   for (const ch of DAY_CHANNELS) {
     const info = dayMap[ch];
     await adapter.setStateAsync(`${ch}.name`, info.name, true);
     await adapter.setStateAsync(`${ch}.id`, info.id, true);
     await adapter.setStateAsync(`${ch}.boolean`, info.isHoliday, true);
-    await adapter.setStateAsync(`${ch}.region`, info.region, true);
-    await adapter.setStateAsync(`${ch}.type`, info.type, true);
   }
   await publishNextHoliday(adapter, computed.next);
 }
@@ -108,9 +104,8 @@ async function publishNextHoliday(adapter, next) {
   await adapter.setStateAsync("next.duration", next.duration, true);
 }
 // Annotate the CommonJS export names for ESM import in node:
-0 &&
-  (module.exports = {
-    ensureObjects,
-    publishStates,
-  });
+0 && (module.exports = {
+  ensureObjects,
+  publishStates
+});
 //# sourceMappingURL=state-publisher.js.map

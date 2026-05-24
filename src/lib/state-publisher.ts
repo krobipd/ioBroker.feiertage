@@ -2,7 +2,7 @@ import type { ComputedHolidays, DayInfo, NextHoliday } from "./types";
 import { tName, type I18nKey } from "./i18n";
 
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"] as const;
-const DAY_FIELDS = ["name", "id", "boolean", "region", "type"] as const;
+const DAY_FIELDS = ["name", "id", "boolean"] as const;
 const NEXT_FIELDS = ["name", "id", "boolean", "region", "type", "date", "duration"] as const;
 
 interface StateSpec {
@@ -83,8 +83,6 @@ export async function publishStates(adapter: ioBroker.Adapter, computed: Compute
     await adapter.setStateAsync(`${ch}.name`, info.name, true);
     await adapter.setStateAsync(`${ch}.id`, info.id, true);
     await adapter.setStateAsync(`${ch}.boolean`, info.isHoliday, true);
-    await adapter.setStateAsync(`${ch}.region`, info.region, true);
-    await adapter.setStateAsync(`${ch}.type`, info.type, true);
   }
 
   await publishNextHoliday(adapter, computed.next);

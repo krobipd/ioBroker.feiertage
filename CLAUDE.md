@@ -27,11 +27,11 @@ src/lib/
 ├── types.ts                       → AdapterConfig, DayInfo, NextHoliday, ComputedHolidays
 └── coerce.ts                      → errText
 admin/
-├── jsonConfig.json                → 2 Tabs (Region + Holidays), 206 Country-Dropdown
-├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (32 Keys × 11 Sprachen)
+├── jsonConfig.json                → 2 Tabs (Region + Holidays), generiert durch generate-country-data.ts
+├── i18n/<lang>.json               → Single-Source-of-Truth für UI- + State-Translations (30 Keys × 11 Sprachen)
 ├── public-holidays.svg            → Icon (SVG 256×256, transparent)
 scripts/
-├── generate-country-data.ts       → Regeneriert Country-Optionen in jsonConfig aus date-holidays
+├── generate-country-data.ts       → Regeneriert jsonConfig: 206 Countries, 35 State-Panels, 29 Region-Panels, 206 Exclude-Panels
 ../scripts/sync-iopackage-from-i18n.py → regeneriert io-package.json:instanceObjects.common.name aus admin/i18n/ (zentral, source: admin-i18n)
 ```
 
@@ -39,14 +39,14 @@ scripts/
 
 1. **Schedule-Mode statt Daemon** — Feiertage ändern sich nicht untertags. `0 0 * * *` reicht.
 2. **date-holidays als einzige Engine** — 206 Länder, offline, stabile API seit 5+ Jahren, ISC-Lizenz
-3. **Keine sendTo-Dropdowns** — Schedule-Adapter läuft nicht wenn Admin offen → Country als statischer Select (206 Optionen), State/Region als Text mit Log-Hinweis
+3. **Panel-per-Country Dropdowns** — Schedule-Adapter läuft nicht wenn Admin offen → Country/State/Region/Exclude als statische Selects, per-Country Panels mit hidden-Condition
 4. **Individuelle Type-Booleans in native** statt `holidayTypes: string[]` — sauberes jsonConfig-Mapping (5 Checkboxen)
 5. **referenceDate-Parameter** in computeHolidays — deterministische Tests ohne Mocking
 6. **Brückentag nur Do→Fr und Di→Mo** — Mi→Wochenende braucht 2 Fehltage, kein Brückentag
 
 ## State Tree
 
-5 Channels × 5 States + next.date + next.duration = 27 States total. Channels: today, yesterday, tomorrow, dayAfterTomorrow, next. Fields: name (localized), id (stable), boolean, region, type.
+4 Day-Channels × 3 Fields + next × 7 Fields = 19 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, id, boolean. Next: name, id, boolean, region, type, date, duration.
 
 ## Tests (113 unit + 57 package = 170)
 
