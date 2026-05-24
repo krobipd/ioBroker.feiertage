@@ -93,19 +93,6 @@
         "pl": "Poprawiona obsługa błędów i stabilność.",
         "uk": "Покращена обробка помилок та стабільність.",
         "zh-cn": "改进错误处理和稳定性。"
-      },
-      "0.1.0": {
-        "en": "Initial release — offline holiday detection for 206 countries with bridge day support",
-        "de": "Erstveröffentlichung — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Unterstützung",
-        "ru": "Первый релиз — офлайн-определение праздников для 206 стран с поддержкой промежуточных дней",
-        "pt": "Lançamento inicial — detecção offline de feriados para 206 países com suporte a dias ponte",
-        "nl": "Eerste release — offline feestdagdetectie voor 206 landen met brugdagondersteuning",
-        "fr": "Version initiale — détection hors ligne des jours fériés pour 206 pays avec support des jours de pont",
-        "it": "Rilascio iniziale — rilevamento offline dei giorni festivi per 206 paesi con supporto giorni ponte",
-        "es": "Lanzamiento inicial — detección offline de festivos para 206 países con soporte de días puente",
-        "pl": "Pierwsze wydanie — wykrywanie świąt offline dla 206 krajów z obsługą dni pomostowych",
-        "uk": "Перший реліз — офлайн-визначення свят для 206 країн із підтримкою перехідних днів",
-        "zh-cn": "首次发布——支持206个国家的离线节假日检测及桥接日功能"
       }
     },
     "titleLang": {
