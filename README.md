@@ -98,7 +98,7 @@ Bridge days appear in the state tree with the localized name (e.g. "Brückentag"
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.5.0 (2026-05-25)
 
 - Schedule mode restored — adapter no longer runs as daemon (v0.4.0 regression)
 - Fixed timezone issue causing wrong holiday dates for non-European countries
@@ -125,10 +125,6 @@ Bridge days appear in the state tree with the localized name (e.g. "Brückentag"
 ### 0.1.5 (2026-05-23)
 
 - Changelog rewritten in user-centric style.
-
-### 0.1.4 (2026-05-23)
-
-- Fixed admin checkbox layout on small screens
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
