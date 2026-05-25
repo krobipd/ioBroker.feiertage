@@ -87,7 +87,7 @@ A bridge day is a working day (Monday–Friday) between a holiday and a weekend:
 - Holiday on **Tuesday** → Monday is a bridge day
 - Holiday on **Wednesday** → no bridge day (two days missing)
 
-Bridge days appear in the state tree with the localized name (e.g. "Brückentag" in German, "Bridge day" in English).
+Bridge days appear in the state tree with the localized name matching the system language.
 
 ## Troubleshooting
 
@@ -98,6 +98,10 @@ Bridge days appear in the state tree with the localized name (e.g. "Brückentag"
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Removed legacy changelog entries for versions never published under this package name (repochecker E2004)
+
 ### 0.5.0 (2026-05-25)
 
 - Schedule mode restored — adapter no longer runs as daemon (v0.4.0 regression)

@@ -3,6 +3,19 @@
     "name": "public-holidays",
     "version": "0.5.0",
     "news": {
+      "NEXT": {
+        "en": "Removed legacy changelog entries for versions never published under this package name",
+        "de": "Veraltete Changelog-Einträge für nie unter diesem Paketnamen veröffentlichte Versionen entfernt",
+        "ru": "Удалены устаревшие записи журнала изменений для версий, которые не публиковались под этим именем пакета",
+        "pt": "Removidas entradas de changelog antigas para versões nunca publicadas sob este nome de pacote",
+        "nl": "Verouderde changelog-vermeldingen verwijderd voor versies die nooit onder deze pakketnaam zijn gepubliceerd",
+        "fr": "Suppression des entrées de changelog obsolètes pour les versions jamais publiées sous ce nom de paquet",
+        "it": "Rimosse le voci di changelog obsolete per versioni mai pubblicate con questo nome pacchetto",
+        "es": "Eliminadas entradas de changelog antiguas para versiones nunca publicadas bajo este nombre de paquete",
+        "pl": "Usunięto przestarzałe wpisy dziennika zmian dla wersji nigdy nie opublikowanych pod tą nazwą pakietu",
+        "uk": "Видалено застарілі записи журналу змін для версій, які ніколи не публікувалися під цією назвою пакету",
+        "zh-cn": "移除了从未以此包名发布的旧版本更新日志条目"
+      },
       "0.5.0": {
         "en": "Schedule mode restored (v0.4.0 regression). Timezone fix for non-European countries. Renamed next.duration to next.daysUntil",
         "de": "Schedule-Modus wiederhergestellt (v0.4.0-Regression). Zeitzonen-Fix für nicht-europäische Länder. next.duration umbenannt in next.daysUntil",
@@ -54,45 +67,6 @@
         "pl": "Wybór stanu/regionu z list rozwijanych, wykluczanie świąt wg typu, automatyczne wykrywanie kraju, uproszczone drzewo stanów",
         "uk": "Вибір штату/регіону через випадаючі списки, виключення свят за типом, автовизначення країни, спрощене дерево станів",
         "zh-cn": "通过下拉菜单选择州/地区，按类型排除假日，自动检测国家，精简状态树"
-      },
-      "0.1.5": {
-        "en": "Changelog rewritten in user-centric style.",
-        "de": "Changelog in benutzerfreundlichem Stil umgeschrieben.",
-        "ru": "Журнал изменений переписан в пользовательском стиле.",
-        "pt": "Changelog reescrito em estilo orientado ao utilizador.",
-        "nl": "Changelog herschreven in gebruikersgerichte stijl.",
-        "fr": "Journal des modifications réécrit dans un style orienté utilisateur.",
-        "it": "Changelog riscritto in stile orientato all'utente.",
-        "es": "Registro de cambios reescrito en estilo orientado al usuario.",
-        "pl": "Dziennik zmian przepisany w stylu zorientowanym na użytkownika.",
-        "uk": "Журнал змін переписано у стилі, орієнтованому на користувача.",
-        "zh-cn": "更新日志以面向用户的风格重写。"
-      },
-      "0.1.4": {
-        "en": "Fixed admin checkbox layout on small screens",
-        "de": "Admin-Checkbox-Layout auf kleinen Bildschirmen behoben",
-        "ru": "Исправлено отображение чекбоксов в админке на маленьких экранах",
-        "pt": "Corrigido layout dos checkboxes no admin em ecrãs pequenos",
-        "nl": "Admin-checkbox layout op kleine schermen gerepareerd",
-        "fr": "Correction de l'affichage des cases à cocher admin sur petits écrans",
-        "it": "Corretto il layout dei checkbox admin su schermi piccoli",
-        "es": "Corregido el diseño de los checkboxes admin en pantallas pequeñas",
-        "pl": "Naprawiono układ checkboxów admina na małych ekranach",
-        "uk": "Виправлено відображення чекбоксів адмінки на малих екранах",
-        "zh-cn": "修复管理界面复选框在小屏幕上的布局"
-      },
-      "0.1.3": {
-        "en": "Internal cleanup. No user-facing changes.",
-        "de": "Interne Bereinigung. Keine für den Benutzer sichtbaren Änderungen.",
-        "ru": "Внутренняя очистка. Нет видимых пользователю изменений.",
-        "pt": "Limpeza interna. Sem alterações visíveis ao utilizador.",
-        "nl": "Interne opschoning. Geen zichtbare wijzigingen voor de gebruiker.",
-        "fr": "Nettoyage interne. Aucun changement visible pour l'utilisateur.",
-        "it": "Pulizia interna. Nessuna modifica visibile all'utente.",
-        "es": "Limpieza interna. Sin cambios visibles para el usuario.",
-        "pl": "Wewnętrzne porządki. Brak zmian widocznych dla użytkownika.",
-        "uk": "Внутрішнє очищення. Без видимих змін для користувача.",
-        "zh-cn": "内部清理。无用户可见的更改。"
       }
     },
     "titleLang": {
