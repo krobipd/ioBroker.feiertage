@@ -24,7 +24,7 @@
   "name": "假日名称",
   "boolean": "是假日",
   "date": "日期",
-  "duration": "距假日天数",
+  "daysUntil": "距假日天数",
   "label_excludePublic": "排除公共假日",
   "label_excludeBank": "排除银行假日",
   "label_excludeSchool": "排除学校假日",

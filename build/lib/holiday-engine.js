@@ -96,7 +96,7 @@ function getFilteredHolidays(hd, referenceDate, config, languages) {
       if (config.excludeHolidays.includes(id)) {
         continue;
       }
-      const dateKey = toDateKey(h.start);
+      const dateKey = h.date.substring(0, 10);
       if (!result.has(dateKey)) {
         result.set(dateKey, h);
       }
@@ -133,16 +133,16 @@ function getNextHoliday(holidays, referenceDate) {
     }
   }
   if (!nearest || !nearestDate) {
-    return { ...EMPTY_DAY, date: "", duration: 0 };
+    return { ...EMPTY_DAY, date: "", daysUntil: 0 };
   }
   const refMidnight = new Date(referenceDate);
   refMidnight.setHours(0, 0, 0, 0);
-  const duration = Math.round((nearestDate.getTime() - refMidnight.getTime()) / 864e5);
+  const daysUntil = Math.round((nearestDate.getTime() - refMidnight.getTime()) / 864e5);
   return {
     name: nearest.name,
     isHoliday: true,
     date: toDateKey(nearestDate),
-    duration
+    daysUntil
   };
 }
 function detectBridgeDays(holidays, year) {

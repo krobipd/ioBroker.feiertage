@@ -32,8 +32,6 @@ let processHandlersInstalled = false;
 let installedUnhandledHandler = null;
 let installedUncaughtHandler = null;
 class PublicHolidaysAdapter extends utils.Adapter {
-  midnightTimer;
-  unloaded = false;
   constructor(options = {}) {
     super({ ...options, name: "public-holidays" });
     this.on("ready", this.onReady.bind(this));
@@ -53,62 +51,48 @@ class PublicHolidaysAdapter extends utils.Adapter {
     }
   }
   async onReady() {
+    var _a, _b, _c;
     try {
-      const instanceId = `system.adapter.${this.namespace}`;
-      const obj = await this.getForeignObjectAsync(instanceId);
-      if ((obj == null ? void 0 : obj.common) && obj.common.mode === "schedule") {
-        this.log.info("Migrating from schedule to daemon mode");
-        await this.extendForeignObjectAsync(instanceId, { common: { mode: "daemon", schedule: "" } });
-        return;
+      const instanceObj = await this.getForeignObjectAsync(`system.adapter.${this.namespace}`);
+      if (((_a = instanceObj == null ? void 0 : instanceObj.common) == null ? void 0 : _a.mode) === "daemon") {
+        this.log.info("Migrating from daemon to schedule mode");
+        await this.extendForeignObjectAsync(`system.adapter.${this.namespace}`, {
+          common: { mode: "schedule", schedule: "0 0 * * *" }
+        });
       }
       await import_adapter_core.I18n.init((0, import_node_path.join)(this.adapterDir, "admin"), this);
-      await this.computeAndPublish();
-      this.scheduleMidnight();
+      this.log.debug("Computing holidays...");
+      const raw = this.config;
+      if (!raw.country) {
+        const sysCountry = await (0, import_i18n.getSystemCountry)(this);
+        if (sysCountry) {
+          const upper = sysCountry.toUpperCase();
+          raw.country = upper;
+          this.log.info(`Using system country: ${upper}`);
+        }
+      }
+      const config = this.validateConfig();
+      if (!config) {
+        this.log.warn("No country configured \u2014 open adapter settings");
+        void ((_b = this.stop) == null ? void 0 : _b.call(this));
+        return;
+      }
+      const systemLang = await (0, import_i18n.getSystemLanguage)(this);
+      const languages = (0, import_i18n.resolveLanguages)(systemLang, config.country);
+      this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
+      const computed = (0, import_holiday_engine.computeHolidays)(config, languages);
+      (0, import_holiday_engine.logAvailableHolidays)(config, languages, (msg) => this.log.debug(msg));
+      this.log.info(
+        `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.daysUntil} days`
+      );
+      await (0, import_state_publisher.cleanupDeprecatedStates)(this);
+      await (0, import_state_publisher.ensureObjects)(this);
+      await (0, import_state_publisher.publishStates)(this, computed);
+      this.log.debug("All holidays computed and published");
     } catch (err) {
       this.log.error(`onReady failed: ${(0, import_coerce.errText)(err)}`);
     }
-  }
-  async computeAndPublish() {
-    this.log.debug("Computing holidays...");
-    const raw = this.config;
-    if (!raw.country) {
-      const sysCountry = await (0, import_i18n.getSystemCountry)(this);
-      if (sysCountry) {
-        const upper = sysCountry.toUpperCase();
-        raw.country = upper;
-        this.log.info(`Using system country: ${upper}`);
-      }
-    }
-    const config = this.validateConfig();
-    if (!config) {
-      this.log.warn("No country configured \u2014 open adapter settings");
-      return;
-    }
-    const systemLang = await (0, import_i18n.getSystemLanguage)(this);
-    const languages = (0, import_i18n.resolveLanguages)(systemLang, config.country);
-    this.log.debug(`System language: ${systemLang}, holiday languages: [${languages.join(", ")}]`);
-    const computed = (0, import_holiday_engine.computeHolidays)(config, languages);
-    (0, import_holiday_engine.logAvailableHolidays)(config, languages, (msg) => this.log.debug(msg));
-    this.log.info(
-      `Today: ${computed.today.isHoliday ? computed.today.name : "no holiday"}, next: ${computed.next.name} in ${computed.next.duration} days`
-    );
-    await (0, import_state_publisher.cleanupDeprecatedStates)(this);
-    await (0, import_state_publisher.ensureObjects)(this);
-    await (0, import_state_publisher.publishStates)(this, computed);
-    this.log.debug("All holidays computed and published");
-  }
-  scheduleMidnight() {
-    if (this.unloaded) {
-      return;
-    }
-    const now = /* @__PURE__ */ new Date();
-    const next = new Date(now);
-    next.setHours(24, 0, 0, 0);
-    const ms = next.getTime() - now.getTime();
-    this.log.debug(`Next computation scheduled in ${Math.round(ms / 6e4)} minutes`);
-    this.midnightTimer = this.setTimeout(() => {
-      void this.computeAndPublish().catch((err) => this.log.error(`Midnight computation failed: ${(0, import_coerce.errText)(err)}`)).finally(() => this.scheduleMidnight());
-    }, ms);
+    void ((_c = this.stop) == null ? void 0 : _c.call(this));
   }
   validateConfig() {
     const raw = this.config;
@@ -152,13 +136,6 @@ class PublicHolidaysAdapter extends utils.Adapter {
     return Array.isArray(val) ? val : [];
   }
   onUnload(callback) {
-    this.unloaded = true;
-    try {
-      if (this.midnightTimer) {
-        this.clearTimeout(this.midnightTimer);
-      }
-    } catch {
-    }
     callback();
   }
 }

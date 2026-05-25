@@ -24,7 +24,7 @@
   "name": "Nome del giorno festivo",
   "boolean": "È un giorno festivo",
   "date": "Data",
-  "duration": "Giorni fino al giorno festivo",
+  "daysUntil": "Giorni fino al giorno festivo",
   "label_excludePublic": "Escludi festività pubbliche",
   "label_excludeBank": "Escludi festività bancarie",
   "label_excludeSchool": "Escludi vacanze scolastiche",

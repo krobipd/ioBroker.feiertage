@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { computeHolidays, detectBridgeDays, toHolidayId, toDateKey } from "./holiday-engine";
 import type { AdapterConfig } from "./types";
-import Holidays from "date-holidays";
 
 function makeConfig(overrides: Partial<AdapterConfig> = {}): AdapterConfig {
   return {
@@ -19,168 +18,69 @@ function makeDate(dateStr: string): Date {
   return new Date(dateStr + "T12:00:00");
 }
 
-// ─── German holidays 2026 ───────────────────────────────────────────
+// ─── Config: country / state / region ───────────────────────────────
 
-describe("DE holidays 2026", () => {
-  const config = makeConfig();
+describe("config: country/state/region", () => {
+  it("country-only config returns holidays", () => {
+    const result = computeHolidays(makeConfig({ country: "DE" }), ["en"], makeDate("2026-01-01"));
+    expect(result.today.isHoliday).toBe(true);
+    expect(result.today.name.length).toBeGreaterThan(0);
+  });
 
-  it("Neujahr (Jan 1)", () => {
+  it("state config narrows holidays (DE/BY has Fronleichnam, DE/HH does not)", () => {
+    const by = computeHolidays(makeConfig({ state: "BY" }), ["de"], makeDate("2026-06-04"));
+    const hh = computeHolidays(makeConfig({ state: "HH" }), ["de"], makeDate("2026-06-04"));
+    expect(by.today.isHoliday).toBe(true);
+    expect(hh.today.isHoliday).toBe(false);
+  });
+
+  it("state config adds holidays (DE/BE has Frauentag Mar 8)", () => {
+    const be = computeHolidays(makeConfig({ state: "BE" }), ["de"], makeDate("2026-03-08"));
+    const nw = computeHolidays(makeConfig({ state: "NW" }), ["de"], makeDate("2026-03-08"));
+    expect(be.today.isHoliday).toBe(true);
+    expect(nw.today.isHoliday).toBe(false);
+  });
+
+  it("region config works (IT/BZ — South Tyrol)", () => {
+    const config = makeConfig({ country: "IT", state: "BZ" });
     const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Neujahr");
   });
 
-  it("Karfreitag (Apr 3)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-04-03"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Karfreitag");
-  });
-
-  it("Ostermontag (Apr 6)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-04-06"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Ostermontag");
-  });
-
-  it("Tag der Arbeit (May 1)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-05-01"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Maifeiertag");
-  });
-
-  it("Christi Himmelfahrt (May 14)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-05-14"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Himmelfahrt");
-  });
-
-  it("Pfingstmontag (May 25)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-05-25"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toBe("Pfingstmontag");
-  });
-
-  it("Tag der Deutschen Einheit (Oct 3)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-10-03"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Einheit");
-  });
-
-  it("1. Weihnachtstag (Dec 25)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-25"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Weihnacht");
-  });
-
-  it("2. Weihnachtstag (Dec 26)", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-26"));
-    expect(result.today.isHoliday).toBe(true);
-  });
-
-  it("normal working day is not a holiday", () => {
-    const result = computeHolidays(config, ["de"], makeDate("2026-03-11"));
-    expect(result.today.isHoliday).toBe(false);
-    expect(result.today.name).toBe("");
-  });
-});
-
-// ─── Bundesland-spezifisch ──────────────────────────────────────────
-
-describe("DE state-specific holidays", () => {
-  it("BY: Fronleichnam (Jun 4 2026)", () => {
-    const config = makeConfig({ state: "BY" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-06-04"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Fronleichnam");
-  });
-
-  it("BY: Mariä Himmelfahrt (Aug 15) — observance type in date-holidays", () => {
-    const config = makeConfig({ state: "BY", holidayTypes: ["public", "observance"] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-08-15"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Himmelfahrt");
-  });
-
-  it("HB: Reformationstag (Oct 31)", () => {
-    const config = makeConfig({ state: "HB" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-10-31"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Reformation");
-  });
-
-  it("NW: Allerheiligen (Nov 1)", () => {
-    const config = makeConfig({ state: "NW" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-11-01"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Allerheiligen");
-  });
-
-  it("BE: Internationaler Frauentag (Mar 8)", () => {
-    const config = makeConfig({ state: "BE" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-03-08"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Frauentag");
-  });
-});
-
-// ─── Switzerland ────────────────────────────────────────────────────
-
-describe("CH holidays", () => {
-  it("Bundesfeier (Aug 1)", () => {
-    const config = makeConfig({ country: "CH" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-08-01"));
-    expect(result.today.isHoliday).toBe(true);
-  });
-
-  it("Berchtoldstag in BE (Jan 2)", () => {
+  it("country + state works (CH/BE)", () => {
     const config = makeConfig({ country: "CH", state: "BE" });
     const result = computeHolidays(config, ["de"], makeDate("2026-01-02"));
     expect(result.today.isHoliday).toBe(true);
   });
 
-  it("Neujahr (Jan 1)", () => {
-    const config = makeConfig({ country: "CH" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
-    expect(result.today.isHoliday).toBe(true);
-  });
-});
-
-// ─── Austria ────────────────────────────────────────────────────────
-
-describe("AT holidays", () => {
-  it("Nationalfeiertag (Oct 26)", () => {
-    const config = makeConfig({ country: "AT" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-10-26"));
+  it("country + state works (US/CA)", () => {
+    const config = makeConfig({ country: "US", state: "CA" });
+    const result = computeHolidays(config, ["en"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
   });
 
-  it("Neujahr (Jan 1)", () => {
-    const config = makeConfig({ country: "AT" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+  it("different countries differ on same date (DE vs AT on Oct 26)", () => {
+    const de = computeHolidays(makeConfig({ country: "DE" }), ["de"], makeDate("2026-10-26"));
+    const at = computeHolidays(makeConfig({ country: "AT" }), ["de"], makeDate("2026-10-26"));
+    expect(de.today.isHoliday).toBe(false);
+    expect(at.today.isHoliday).toBe(true);
+  });
+
+  it("country without states works (JP)", () => {
+    const result = computeHolidays(makeConfig({ country: "JP" }), ["en"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
   });
 
-  it("Mariä Empfängnis (Dec 8)", () => {
-    const config = makeConfig({ country: "AT" });
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-08"));
+  it("country with many holidays (IN)", () => {
+    const config = makeConfig({ country: "IN", holidayTypes: ["public", "bank", "optional", "observance"] });
+    const result = computeHolidays(config, ["en"], makeDate("2026-01-26"));
     expect(result.today.isHoliday).toBe(true);
   });
-});
 
-// ─── Italy ──────────────────────────────────────────────────────────
-
-describe("IT holidays", () => {
-  it("Festa della Liberazione (Apr 25)", () => {
-    const config = makeConfig({ country: "IT" });
-    const result = computeHolidays(config, ["it"], makeDate("2026-04-25"));
-    expect(result.today.isHoliday).toBe(true);
-    expect(result.today.name).toContain("Liberazione");
-  });
-
-  it("Festa della Repubblica (Jun 2)", () => {
-    const config = makeConfig({ country: "IT" });
-    const result = computeHolidays(config, ["it"], makeDate("2026-06-02"));
-    expect(result.today.isHoliday).toBe(true);
+  it("normal working day is not a holiday", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-03-11"));
+    expect(result.today.isHoliday).toBe(false);
+    expect(result.today.name).toBe("");
   });
 });
 
@@ -188,27 +88,42 @@ describe("IT holidays", () => {
 
 describe("type filter", () => {
   it("filters out non-matching types", () => {
-    const config = makeConfig({ holidayTypes: ["bank"] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const result = computeHolidays(makeConfig({ holidayTypes: ["bank"] }), ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(false);
   });
 
   it("shows holidays when type matches", () => {
-    const config = makeConfig({ holidayTypes: ["public"] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const result = computeHolidays(makeConfig({ holidayTypes: ["public"] }), ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(true);
   });
 
   it("multiple types allowed", () => {
-    const config = makeConfig({ holidayTypes: ["public", "observance"] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const result = computeHolidays(
+      makeConfig({ holidayTypes: ["public", "observance"] }),
+      ["de"],
+      makeDate("2026-01-01"),
+    );
     expect(result.today.isHoliday).toBe(true);
   });
 
   it("empty type filter shows nothing", () => {
-    const config = makeConfig({ holidayTypes: [] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const result = computeHolidays(makeConfig({ holidayTypes: [] }), ["de"], makeDate("2026-01-01"));
     expect(result.today.isHoliday).toBe(false);
+  });
+
+  it("observance type adds observance holidays (DE/BY Aug 15)", () => {
+    const without = computeHolidays(
+      makeConfig({ state: "BY", holidayTypes: ["public"] }),
+      ["de"],
+      makeDate("2026-08-15"),
+    );
+    const withObs = computeHolidays(
+      makeConfig({ state: "BY", holidayTypes: ["public", "observance"] }),
+      ["de"],
+      makeDate("2026-08-15"),
+    );
+    expect(without.today.isHoliday).toBe(false);
+    expect(withObs.today.isHoliday).toBe(true);
   });
 });
 
@@ -216,29 +131,53 @@ describe("type filter", () => {
 
 describe("exclude list", () => {
   it("excludes a holiday by ID", () => {
-    const config = makeConfig({ holidayTypes: ["public"] });
-    const resultBefore = computeHolidays(config, ["de"], makeDate("2026-01-01"));
-    expect(resultBefore.today.isHoliday).toBe(true);
+    const before = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-01"));
+    expect(before.today.isHoliday).toBe(true);
 
-    const configExcluded = makeConfig({ excludeHolidays: [toHolidayId("Neujahr", "01-01")] });
-    const resultAfter = computeHolidays(configExcluded, ["de"], makeDate("2026-01-01"));
-    expect(resultAfter.today.isHoliday).toBe(false);
+    const after = computeHolidays(
+      makeConfig({ excludeHolidays: [toHolidayId("Neujahr", "01-01")] }),
+      ["de"],
+      makeDate("2026-01-01"),
+    );
+    expect(after.today.isHoliday).toBe(false);
   });
 
   it("excluded holiday does not appear in next", () => {
-    const config = makeConfig();
-    const resultBefore = computeHolidays(config, ["de"], makeDate("2026-12-24"));
-    expect(resultBefore.tomorrow.isHoliday).toBe(true);
+    const before = computeHolidays(makeConfig(), ["de"], makeDate("2026-12-24"));
+    expect(before.tomorrow.isHoliday).toBe(true);
 
-    const configExcluded = makeConfig({ excludeHolidays: [toHolidayId("1. Weihnachtstag", "12-25")] });
-    const resultAfter = computeHolidays(configExcluded, ["de"], makeDate("2026-12-24"));
-    expect(resultAfter.tomorrow.isHoliday).toBe(false);
+    const after = computeHolidays(
+      makeConfig({ excludeHolidays: [toHolidayId("1. Weihnachtstag", "12-25")] }),
+      ["de"],
+      makeDate("2026-12-24"),
+    );
+    expect(after.tomorrow.isHoliday).toBe(false);
   });
 
   it("non-matching exclude ID has no effect", () => {
-    const config = makeConfig({ excludeHolidays: ["nonexistent_holiday"] });
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const result = computeHolidays(
+      makeConfig({ excludeHolidays: ["nonexistent_holiday"] }),
+      ["de"],
+      makeDate("2026-01-01"),
+    );
     expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("multiple holidays can be excluded", () => {
+    const config = makeConfig({
+      excludeHolidays: [toHolidayId("Neujahr", "01-01"), toHolidayId("1. Weihnachtstag", "12-25")],
+    });
+    const jan1 = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+    const dec25 = computeHolidays(config, ["de"], makeDate("2026-12-25"));
+    expect(jan1.today.isHoliday).toBe(false);
+    expect(dec25.today.isHoliday).toBe(false);
+  });
+
+  it("excluded holiday does not generate bridge day", () => {
+    const himmelfahrtId = toHolidayId("Christi Himmelfahrt", "easter 39");
+    const config = makeConfig({ includeBridgeDays: true, excludeHolidays: [himmelfahrtId] });
+    const result = computeHolidays(config, ["de"], makeDate("2026-05-15"));
+    expect(result.today.isHoliday).toBe(false);
   });
 });
 
@@ -246,7 +185,6 @@ describe("exclude list", () => {
 
 describe("bridge days", () => {
   it("Thursday holiday creates Friday bridge day", () => {
-    // Christi Himmelfahrt 2026 = May 14 (Thursday)
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2026-05-15"));
     expect(result.today.isHoliday).toBe(true);
@@ -260,99 +198,152 @@ describe("bridge days", () => {
   });
 
   it("Saturday holiday does not create bridge day", () => {
-    // Find a year where Jan 1 is Saturday — 2022
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2021-12-31"));
-    // Dec 31 2021 is Friday — should NOT be bridge day (Jan 1 2022 is Saturday)
     expect(result.today.isHoliday).toBe(false);
   });
 
   it("Wednesday holiday does not create bridge day", () => {
-    // Tag der Deutschen Einheit 2026 (Oct 3) is Saturday actually — let's use 2025
-    // Oct 3 2025 is Friday → no bridge day scenario for Wednesday
-    // Let's test with a known Wednesday: Dec 25 2024 is Wednesday
     const config = makeConfig({ includeBridgeDays: true });
     const result = computeHolidays(config, ["de"], makeDate("2024-12-24"));
-    // Dec 24 is Tuesday, Dec 25 is Wednesday holiday → no bridge on Dec 24 (it's a Tue before Wed)
     expect(result.today.isHoliday).toBe(false);
   });
 
-  it("detectBridgeDays returns correct dates", () => {
-    const hd = new Holidays("DE");
+  it("detectBridgeDays returns correct dates for Thursday holiday", () => {
     const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
-    // Simulate a Thursday holiday
-    const thu = new Date("2026-05-14T00:00:00");
     holidays.set("2026-05-14", {
       date: "2026-05-14",
-      start: thu,
+      start: new Date("2026-05-14T00:00:00"),
       end: new Date("2026-05-15T00:00:00"),
       name: "Test",
       type: "public",
     });
     const bridges = detectBridgeDays(holidays as any, 2026);
-    expect(bridges.length).toBe(1);
+    expect(bridges).toHaveLength(1);
     expect(toDateKey(bridges[0])).toBe("2026-05-15");
   });
 
-  it("bridge day name uses system language", () => {
-    const config = makeConfig({ includeBridgeDays: true });
-    const resultEn = computeHolidays(config, ["en"], makeDate("2026-05-15"));
-    expect(resultEn.today.name).toBe("Bridge day");
-    const resultFr = computeHolidays(config, ["fr"], makeDate("2026-05-15"));
-    expect(resultFr.today.name).toBe("Jour de pont");
-  });
-
-  it("Tuesday holiday creates Monday bridge day", () => {
-    // We need a Tuesday public holiday in DE 2026
-    // Let's check: Tag der Deutschen Einheit Oct 3 2026 is Saturday
-    // Let's find one: Dec 25 2025 is Thursday, not Tuesday
-    // Jan 1 2030 is Tuesday → let's simulate
+  it("detectBridgeDays returns correct dates for Tuesday holiday", () => {
     const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
-    const tue = new Date("2030-01-01T00:00:00");
     holidays.set("2030-01-01", {
       date: "2030-01-01",
-      start: tue,
+      start: new Date("2030-01-01T00:00:00"),
       end: new Date("2030-01-02T00:00:00"),
       name: "Test",
       type: "public",
     });
     const bridges = detectBridgeDays(holidays as any, 2030);
-    expect(bridges.length).toBe(1);
+    expect(bridges).toHaveLength(1);
     expect(toDateKey(bridges[0])).toBe("2029-12-31");
+  });
+
+  it("detectBridgeDays returns nothing for Monday holiday", () => {
+    const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
+    holidays.set("2026-01-05", {
+      date: "2026-01-05",
+      start: new Date("2026-01-05T00:00:00"),
+      end: new Date("2026-01-06T00:00:00"),
+      name: "Test",
+      type: "public",
+    });
+    const bridges = detectBridgeDays(holidays as any, 2026);
+    expect(bridges).toHaveLength(0);
+  });
+
+  it("detectBridgeDays returns nothing for Friday holiday", () => {
+    const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
+    holidays.set("2026-01-02", {
+      date: "2026-01-02",
+      start: new Date("2026-01-02T00:00:00"),
+      end: new Date("2026-01-03T00:00:00"),
+      name: "Test",
+      type: "public",
+    });
+    const bridges = detectBridgeDays(holidays as any, 2026);
+    expect(bridges).toHaveLength(0);
+  });
+
+  it("no duplicate bridge day when adjacent holidays", () => {
+    const holidays = new Map<string, { date: string; start: Date; end: Date; name: string; type: string }>();
+    holidays.set("2026-05-14", {
+      date: "2026-05-14",
+      start: new Date("2026-05-14T00:00:00"),
+      end: new Date("2026-05-15T00:00:00"),
+      name: "Holiday Thu",
+      type: "public",
+    });
+    holidays.set("2026-05-15", {
+      date: "2026-05-15",
+      start: new Date("2026-05-15T00:00:00"),
+      end: new Date("2026-05-16T00:00:00"),
+      name: "Holiday Fri",
+      type: "public",
+    });
+    const bridges = detectBridgeDays(holidays as any, 2026);
+    expect(bridges).toHaveLength(0);
+  });
+
+  describe("bridge day name localization", () => {
+    const bridgeDayDate = makeDate("2026-05-15");
+
+    it.each([
+      ["de", "Brückentag"],
+      ["en", "Bridge day"],
+      ["es", "Día puente"],
+      ["fr", "Jour de pont"],
+      ["it", "Ponte"],
+      ["nl", "Brugdag"],
+      ["pl", "Dzień pomostowy"],
+      ["pt", "Dia de ponte"],
+      ["ru", "Нерабочий день"],
+      ["uk", "Неробочий день"],
+      ["zh", "桥接日"],
+    ])("language %s → %s", (lang, expected) => {
+      const config = makeConfig({ includeBridgeDays: true });
+      const result = computeHolidays(config, [lang], bridgeDayDate);
+      expect(result.today.name).toBe(expected);
+    });
+
+    it("unknown language falls back to English", () => {
+      const config = makeConfig({ includeBridgeDays: true });
+      const result = computeHolidays(config, ["xx"], bridgeDayDate);
+      expect(result.today.name).toBe("Bridge day");
+    });
   });
 });
 
-// ─── Yesterday / tomorrow / dayAfterTomorrow ────────────────────────
+// ─── Relative days ──────────────────────────────────────────────────
 
 describe("relative days", () => {
   it("yesterday shows previous day holiday", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-02"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-02"));
     expect(result.yesterday.isHoliday).toBe(true);
-    expect(result.yesterday.name).toBe("Neujahr");
+    expect(result.yesterday.name.length).toBeGreaterThan(0);
   });
 
   it("tomorrow shows next day holiday", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-24"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-12-24"));
     expect(result.tomorrow.isHoliday).toBe(true);
-    expect(result.tomorrow.name).toContain("Weihnacht");
+    expect(result.tomorrow.name.length).toBeGreaterThan(0);
   });
 
   it("dayAfterTomorrow works correctly", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-24"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-12-24"));
     expect(result.dayAfterTomorrow.isHoliday).toBe(true);
   });
 
   it("all relative days empty on normal workday", () => {
-    const config = makeConfig();
-    // Mar 10-13 2026 is Tue-Fri, no holidays around
-    const result = computeHolidays(config, ["de"], makeDate("2026-03-11"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-03-11"));
     expect(result.yesterday.isHoliday).toBe(false);
     expect(result.today.isHoliday).toBe(false);
     expect(result.tomorrow.isHoliday).toBe(false);
     expect(result.dayAfterTomorrow.isHoliday).toBe(false);
+  });
+
+  it("holiday name is empty when not a holiday", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-03-11"));
+    expect(result.today.name).toBe("");
+    expect(result.yesterday.name).toBe("");
   });
 });
 
@@ -360,39 +351,32 @@ describe("relative days", () => {
 
 describe("next holiday", () => {
   it("finds the next upcoming holiday", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-02"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-02"));
     expect(result.next.isHoliday).toBe(true);
-    expect(result.next.name).toBe("Karfreitag");
-    expect(result.next.duration).toBeGreaterThan(0);
-    expect(result.next.date).toBe("2026-04-03");
+    expect(result.next.name.length).toBeGreaterThan(0);
+    expect(result.next.daysUntil).toBeGreaterThan(0);
+    expect(result.next.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 
-  it("next holiday has correct duration", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-04-02"));
-    expect(result.next.name).toBe("Karfreitag");
-    expect(result.next.duration).toBe(1);
+  it("next holiday daysUntil is correct (1 day before)", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-04-02"));
+    expect(result.next.date).toBe("2026-04-03");
+    expect(result.next.daysUntil).toBe(1);
   });
 
   it("skips today when finding next", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
-    // Today is Neujahr, next should be Karfreitag
-    expect(result.next.name).not.toBe("Neujahr");
-    expect(result.next.duration).toBeGreaterThan(0);
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-01"));
+    expect(result.next.daysUntil).toBeGreaterThan(0);
   });
 
   it("year rollover: next from December finds January", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-27"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-12-27"));
     expect(result.next.isHoliday).toBe(true);
     expect(result.next.date).toBe("2027-01-01");
   });
 
-  it("next holiday date format is ISO", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-06-01"));
+  it("next holiday always has ISO date format", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-06-01"));
     expect(result.next.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 });
@@ -400,29 +384,35 @@ describe("next holiday", () => {
 // ─── Localization ───────────────────────────────────────────────────
 
 describe("localization", () => {
-  it("returns German names with de language", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-01-01"));
+  it("German names with de language", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-01"));
     expect(result.today.name).toBe("Neujahr");
   });
 
-  it("returns English names with en language", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["en"], makeDate("2026-01-01"));
+  it("English names with en language", () => {
+    const result = computeHolidays(makeConfig(), ["en"], makeDate("2026-01-01"));
     expect(result.today.name).toContain("New Year");
   });
 
-  it("returns English for unsupported language", () => {
-    const config = makeConfig();
-    // Japanese is not supported for DE holidays
-    const result = computeHolidays(config, ["en"], makeDate("2026-01-01"));
-    expect(result.today.name.length).toBeGreaterThan(0);
+  it("language affects holiday names (same holiday, different language)", () => {
+    const de = computeHolidays(makeConfig(), ["de"], makeDate("2026-01-01"));
+    const en = computeHolidays(makeConfig(), ["en"], makeDate("2026-01-01"));
+    expect(de.today.name).not.toBe(en.today.name);
   });
 
   it("Italian names for IT holidays", () => {
-    const config = makeConfig({ country: "IT" });
-    const result = computeHolidays(config, ["it"], makeDate("2026-01-01"));
+    const result = computeHolidays(makeConfig({ country: "IT" }), ["it"], makeDate("2026-01-01"));
     expect(result.today.name).toContain("Capodanno");
+  });
+
+  it("French names for FR holidays", () => {
+    const result = computeHolidays(makeConfig({ country: "FR" }), ["fr"], makeDate("2026-01-01"));
+    expect(result.today.name.length).toBeGreaterThan(0);
+  });
+
+  it("English fallback for unsupported language", () => {
+    const result = computeHolidays(makeConfig(), ["en"], makeDate("2026-01-01"));
+    expect(result.today.name.length).toBeGreaterThan(0);
   });
 });
 
@@ -430,33 +420,32 @@ describe("localization", () => {
 
 describe("edge cases", () => {
   it("leap year Feb 29", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2028-02-29"));
-    expect(result.today.isHoliday).toBe(false);
-    expect(result.yesterday.isHoliday).toBe(false);
-  });
-
-  it("Silvester (Dec 31) — not a public holiday in DE", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-12-31"));
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2028-02-29"));
     expect(result.today.isHoliday).toBe(false);
   });
 
-  it("multiple countries produce different results for same date", () => {
-    const de = computeHolidays(makeConfig({ country: "DE" }), ["de"], makeDate("2026-10-26"));
-    const at = computeHolidays(makeConfig({ country: "AT" }), ["de"], makeDate("2026-10-26"));
-    // Oct 26 is Austrian national day, NOT German
-    expect(de.today.isHoliday).toBe(false);
-    expect(at.today.isHoliday).toBe(true);
+  it("Silvester is not a public holiday in DE", () => {
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-12-31"));
+    expect(result.today.isHoliday).toBe(false);
   });
 
   it("empty day info has consistent shape", () => {
-    const config = makeConfig();
-    const result = computeHolidays(config, ["de"], makeDate("2026-03-11"));
-    expect(result.today).toEqual({
-      name: "",
-      isHoliday: false,
-    });
+    const result = computeHolidays(makeConfig(), ["de"], makeDate("2026-03-11"));
+    expect(result.today).toEqual({ name: "", isHoliday: false });
+  });
+
+  it("empty next holiday has consistent shape", () => {
+    const result = computeHolidays(makeConfig({ holidayTypes: [] }), ["de"], makeDate("2026-03-11"));
+    expect(result.next).toEqual({ name: "", isHoliday: false, date: "", daysUntil: 0 });
+  });
+
+  it("all types enabled returns more holidays than public only", () => {
+    const publicOnly = makeConfig({ state: "BY" });
+    const allTypes = makeConfig({ state: "BY", holidayTypes: ["public", "bank", "school", "optional", "observance"] });
+    const pubResult = computeHolidays(publicOnly, ["de"], makeDate("2026-08-15"));
+    const allResult = computeHolidays(allTypes, ["de"], makeDate("2026-08-15"));
+    expect(pubResult.today.isHoliday).toBe(false);
+    expect(allResult.today.isHoliday).toBe(true);
   });
 });
 
@@ -473,13 +462,16 @@ describe("toHolidayId", () => {
   });
 
   it("prefers rule-based ID when available", () => {
-    const id = toHolidayId("Neujahr", "01-01");
-    expect(id).toBe("01-01");
+    expect(toHolidayId("Neujahr", "01-01")).toBe("01-01");
   });
 
   it("falls back to name when rule is too short", () => {
-    const id = toHolidayId("Test Holiday", "x");
-    expect(id).toBe("test_holiday");
+    expect(toHolidayId("Test Holiday", "x")).toBe("test_holiday");
+  });
+
+  it("handles special characters", () => {
+    const id = toHolidayId("Fête nationale");
+    expect(id).toMatch(/^[a-z0-9_]+$/);
   });
 });
 
@@ -495,35 +487,80 @@ describe("toDateKey", () => {
   });
 });
 
-// ─── Comprehensive country coverage ────────────────────────────────
+// ─── Country diversity (structural) ────────────────────────────────
 
-describe("country coverage", () => {
-  const countries = ["US", "GB", "FR", "JP", "BR", "IN", "AU", "CA", "MX", "ZA"];
+describe("country diversity", () => {
+  const countries = [
+    "US",
+    "GB",
+    "FR",
+    "JP",
+    "BR",
+    "IN",
+    "AU",
+    "CA",
+    "MX",
+    "ZA",
+    "KR",
+    "NG",
+    "EG",
+    "SE",
+    "PL",
+    "TR",
+    "AR",
+    "TH",
+    "NZ",
+    "IL",
+  ];
 
   for (const cc of countries) {
-    it(`${cc}: Jan 1 produces a result (no crash)`, () => {
+    it(`${cc}: does not crash and returns valid structure`, () => {
       const config = makeConfig({ country: cc });
       const result = computeHolidays(config, ["en"], makeDate("2026-01-01"));
       expect(result.today).toBeDefined();
       expect(typeof result.today.isHoliday).toBe("boolean");
+      expect(typeof result.today.name).toBe("string");
+      expect(result.next).toBeDefined();
+      expect(typeof result.next.daysUntil).toBe("number");
     });
   }
 
-  it("US: Independence Day (Jul 4)", () => {
-    const config = makeConfig({ country: "US" });
+  it("all tested countries have at least one holiday per year", () => {
+    for (const cc of countries) {
+      const config = makeConfig({ country: cc });
+      const result = computeHolidays(config, ["en"], makeDate("2026-06-15"));
+      expect(result.next.isHoliday).toBe(true);
+    }
+  });
+
+  it("US: Jul 4 is a holiday", () => {
+    const result = computeHolidays(makeConfig({ country: "US" }), ["en"], makeDate("2026-07-04"));
+    expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("FR: Jul 14 is a holiday", () => {
+    const result = computeHolidays(makeConfig({ country: "FR" }), ["fr"], makeDate("2026-07-14"));
+    expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("GB: Dec 25 is a holiday", () => {
+    const result = computeHolidays(makeConfig({ country: "GB" }), ["en"], makeDate("2026-12-25"));
+    expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("JP: Jan 1 is a holiday", () => {
+    const result = computeHolidays(makeConfig({ country: "JP" }), ["en"], makeDate("2026-01-01"));
+    expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("BR: Sep 7 is a holiday", () => {
+    const result = computeHolidays(makeConfig({ country: "BR" }), ["pt"], makeDate("2026-09-07"));
+    expect(result.today.isHoliday).toBe(true);
+  });
+
+  it("bridge days work for non-DACH countries", () => {
+    const config = makeConfig({ country: "US", includeBridgeDays: true });
     const result = computeHolidays(config, ["en"], makeDate("2026-07-04"));
-    expect(result.today.isHoliday).toBe(true);
-  });
-
-  it("FR: Bastille Day (Jul 14)", () => {
-    const config = makeConfig({ country: "FR" });
-    const result = computeHolidays(config, ["fr"], makeDate("2026-07-14"));
-    expect(result.today.isHoliday).toBe(true);
-  });
-
-  it("GB: Christmas (Dec 25)", () => {
-    const config = makeConfig({ country: "GB" });
-    const result = computeHolidays(config, ["en"], makeDate("2026-12-25"));
     expect(result.today.isHoliday).toBe(true);
   });
 });

@@ -14,7 +14,7 @@ export interface DayInfo {
 
 export interface NextHoliday extends DayInfo {
   date: string;
-  duration: number;
+  daysUntil: number;
 }
 
 export interface ComputedHolidays {

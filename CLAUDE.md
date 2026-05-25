@@ -4,9 +4,9 @@
 
 ## Projekt
 
-**ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Daemon-Mode mit Midnight-Timer: berechnet bei Start und danach täglich um Mitternacht.
+**ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode (`allowInit: true`): berechnet einmalig bei Start/Config-Änderung, js-controller triggert täglich um Mitternacht per Cron.
 
-- **Version:** 0.4.0 (released 2026-05-25, Bridge-Day-Lokalisierung 11 Sprachen, Schedule→Daemon-Migration). Vorgänger **0.3.0** ID-States entfernt 17→12 States, Logging info→debug, Daemon-Mode-Safety. **0.2.0** UX overhaul: dropdown selects, country auto-detect, 27→17 States. **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
+- **Version:** 0.5.0 (WIP — Schedule-Mode restored, Timezone-Fix, `next.duration→next.daysUntil` Rename, Mode-Migration v0.4.0→v0.5.0). Vorgänger **0.4.0** (released 2026-05-25) Bridge-Day-Lokalisierung 11 Sprachen. **0.3.0** ID-States entfernt 17→12 States, Logging info→debug. **0.2.0** UX overhaul: dropdown selects, country auto-detect, 27→17 States. **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
 - **GitHub:** https://github.com/krobipd/ioBroker.public-holidays
 - **npm:** `iobroker.public-holidays` — Zugang erhalten 2026-05-24
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -19,9 +19,9 @@
 src/main.ts                        → Adapter (onReady → compute → publish → terminate)
 src/lib/
 ├── holiday-engine.ts              → date-holidays Wrapper, Type-Filter, Brückentag-Algo
-├── holiday-engine.test.ts         → 73 Tests
+├── holiday-engine.test.ts         → 136 Tests
 ├── state-publisher.ts             → ComputedHolidays → ioBroker States
-├── state-publisher.test.ts        → 20 Tests
+├── state-publisher.test.ts        → 21 Tests
 ├── i18n.ts                        → tName(key) Wrapper über I18n.getTranslatedObject() + system.config.language Lookup + EN-Fallback
 ├── i18n.test.ts                   → 19 Tests (tName delegation + i18n completeness + resolveLanguages)
 ├── types.ts                       → AdapterConfig, DayInfo, NextHoliday, ComputedHolidays
@@ -37,7 +37,7 @@ scripts/
 
 ## Design-Entscheidungen
 
-1. **Daemon-Mode mit Midnight-Timer** — berechnet bei Start und danach täglich um Mitternacht. Daemon-Mode garantiert dass Settings-Änderungen sofort einen Durchlauf auslösen (Schedule-Mode restartete nicht bei Config-Save).
+1. **Schedule-Mode mit `allowInit: true`** — js-controller triggert per Cron (`0 0 * * *`) und einmalig bei Config-Änderung/Start. Adapter berechnet, publiziert, ruft `this.stop?.()` und beendet sich. Kein Daemon, kein Timer, kein Speicherverbrauch zwischen Runs.
 2. **date-holidays als einzige Engine** — 206 Länder, offline, stabile API seit 5+ Jahren, ISC-Lizenz
 3. **Panel-per-Country Dropdowns** — Country/State/Region/Exclude als statische Selects, per-Country Panels mit hidden-Condition
 4. **Individuelle Type-Booleans in native** statt `holidayTypes: string[]` — sauberes jsonConfig-Mapping (5 Checkboxen)
@@ -46,14 +46,14 @@ scripts/
 
 ## State Tree
 
-4 Day-Channels × 2 Fields + next × 4 Fields = 12 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, boolean. Next: name, boolean, date, duration.
+4 Day-Channels × 2 Fields + next × 4 Fields = 12 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, boolean. Next: name, boolean, date, daysUntil.
 
-## Tests (113 unit + 57 package = 170)
+## Tests (136 unit + 57 package = 193)
 
-Test-Breakdown: holiday-engine 73, state-publisher 21, i18n 19.
+Test-Breakdown: holiday-engine 136, state-publisher 21, i18n 19.
 
 ```
-src/lib/holiday-engine.test.ts    → 73: DE/CH/AT/IT holidays, type filter, exclude, bridge days, bridge day locale, localization
+src/lib/holiday-engine.test.ts    → 136: structural/behavioral tests (config diversity, type filter, exclude, bridge days incl 12 locale via it.each, relative days, next holiday, localization, edge cases, toHolidayId, toDateKey, 20-country crash tests)
 src/lib/state-publisher.test.ts   → 21: ensureObjects, cleanupDeprecated, publishStates, preserve option (mock adapter)
 src/lib/i18n.test.ts              → 19: tName delegation + i18n completeness (11 languages, identical keysets) + resolveLanguages
 test/package.js                   → 57: @iobroker/testing packageFiles
@@ -64,8 +64,9 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 | Version | Highlights                                                                                                                                                                                                                      |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0.4.0   | **Bridge-Day-Lokalisierung + Mode-Migration.** Brückentag-Namen in 11 Sprachen. Schedule→Daemon Auto-Migration. 1 neuer Test.                                                                                                   |
-| 0.3.0   | **Slim State Tree + Stability.** ID-States entfernt (17→12 States). Logging info→debug. Process-Handler, Daemon-Mode Race-Fix, setStateChangedAsync.                                                                           |
+| 0.5.0   | **Schedule-Revert + Rename.** Schedule-Mode restored (v0.4.0 Daemon-Regression). Timezone-Fix. `next.duration→next.daysUntil`. Mode-Migration v0.4.0→v0.5.0. Lesotho-Backslash-Fix. Tests 73→136. |
+| 0.4.0   | **Bridge-Day i18n.** Brückentag-Namen in 11 Sprachen. |
+| 0.3.0   | **Slim State Tree + Stability.** ID-States entfernt (17→12 States). Logging info→debug. Process-Handler, setStateChangedAsync.                                                                                                  |
 | 0.2.0   | **UX Overhaul.** Dropdown-Selects für State/Region/Exclude (per-type), Country auto-detect, State Tree 27→17 States. Panel-per-Country Pattern. 32 i18n Keys.                                                                  |
 | 0.1.5   | Changelog user-centric rewrite (README + io-package.json news audited against Hard-Negativ-Liste).                                                                                                                              |
 | 0.1.4   | Repochecker compliance: admin checkbox responsive sizes (E5507), next.date role (W1132), node: imports (S5043).                                                                                                                 |

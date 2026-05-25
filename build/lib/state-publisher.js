@@ -26,12 +26,12 @@ module.exports = __toCommonJS(state_publisher_exports);
 var import_i18n = require("./i18n");
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"];
 const DAY_FIELDS = ["name", "boolean"];
-const NEXT_FIELDS = ["name", "boolean", "date", "duration"];
+const NEXT_FIELDS = ["name", "boolean", "date", "daysUntil"];
 const FIELD_SPECS = {
   name: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
-  duration: { type: "number", role: "value", read: true, write: false }
+  daysUntil: { type: "number", role: "value", read: true, write: false }
 };
 const DEPRECATED_STATES = [
   "today.region",
@@ -48,7 +48,8 @@ const DEPRECATED_STATES = [
   "dayAfterTomorrow.id",
   "next.region",
   "next.type",
-  "next.id"
+  "next.id",
+  "next.duration"
 ];
 async function cleanupDeprecatedStates(adapter) {
   for (const id of DEPRECATED_STATES) {
@@ -124,7 +125,7 @@ async function publishNextHoliday(adapter, next) {
   await adapter.setStateChangedAsync("next.name", next.name, true);
   await adapter.setStateChangedAsync("next.boolean", next.isHoliday, true);
   await adapter.setStateChangedAsync("next.date", next.date, true);
-  await adapter.setStateChangedAsync("next.duration", next.duration, true);
+  await adapter.setStateChangedAsync("next.daysUntil", next.daysUntil, true);
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

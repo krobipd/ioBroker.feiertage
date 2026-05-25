@@ -24,7 +24,7 @@ Holiday data provided by [date-holidays](https://github.com/commenthol/date-holi
 - **Bridge day detection** — detects working days between holidays and weekends
 - **Exclude individual holidays** — select holidays to exclude via dropdown
 - **Localized holiday names** — follows system language with English fallback
-- **Daemon mode** — computes at startup, then daily at midnight
+- **Schedule mode** — computes once at startup and daily at midnight, no memory usage between runs
 
 ## Requirements
 
@@ -74,7 +74,7 @@ public-holidays.0.
     ├── name         string    next holiday name (localized)
     ├── boolean      boolean   always true (it's a holiday)
     ├── date         string    "2026-12-25" (ISO date)
-    └── duration     number    days until holiday
+    └── daysUntil    number    days until holiday
 ```
 
 When no holiday applies (e.g. today is not a holiday), the channel states are empty strings / false / 0.
@@ -91,13 +91,19 @@ Bridge days appear in the state tree with the localized name (e.g. "Brückentag"
 
 ## Troubleshooting
 
-**No states after first start** — Open adapter settings and select a country. The adapter terminates with error code 11 if no country is configured.
+**No states after first start** — Open adapter settings and select a country.
 
 **Wrong holidays / missing regional holidays** — Check that the correct state/province is selected. Set log level to debug to see all detected holidays.
 
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Schedule mode restored — adapter no longer runs as daemon (v0.4.0 regression)
+- Fixed timezone issue causing wrong holiday dates for non-European countries
+- Renamed `next.duration` to `next.daysUntil` for clarity (breaking: update scripts that read this state)
+
 ### 0.4.0 (2026-05-24)
 
 - Bridge day names now shown in system language (11 languages)
@@ -125,6 +131,10 @@ Bridge days appear in the state tree with the localized name (e.g. "Brückentag"
 - Fixed admin checkbox layout on small screens
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
+
+## Credits
+
+npm package originally registered by [Jey Cee](https://github.com/Jey-Cee). This adapter is a complete rewrite with no shared code.
 
 ## Support
 

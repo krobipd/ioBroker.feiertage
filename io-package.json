@@ -3,6 +3,19 @@
     "name": "public-holidays",
     "version": "0.4.0",
     "news": {
+      "NEXT": {
+        "en": "Schedule mode restored (v0.4.0 regression). Timezone fix for non-European countries. Renamed next.duration to next.daysUntil",
+        "de": "Schedule-Modus wiederhergestellt (v0.4.0-Regression). Zeitzonen-Fix für nicht-europäische Länder. next.duration umbenannt in next.daysUntil",
+        "ru": "Восстановлен режим расписания (регрессия v0.4.0). Исправлена временная зона для неевропейских стран. next.duration переименован в next.daysUntil",
+        "pt": "Modo de agendamento restaurado (regressão v0.4.0). Correção de fuso horário para países não europeus. next.duration renomeado para next.daysUntil",
+        "nl": "Planningsmodus hersteld (v0.4.0-regressie). Tijdzone-fix voor niet-Europese landen. next.duration hernoemd naar next.daysUntil",
+        "fr": "Mode planification restauré (régression v0.4.0). Correction du fuseau horaire pour les pays non européens. next.duration renommé en next.daysUntil",
+        "it": "Modalità pianificazione ripristinata (regressione v0.4.0). Correzione fuso orario per paesi non europei. next.duration rinominato in next.daysUntil",
+        "es": "Modo programado restaurado (regresión v0.4.0). Corrección de zona horaria para países no europeos. next.duration renombrado a next.daysUntil",
+        "pl": "Przywrócono tryb harmonogramu (regresja v0.4.0). Poprawka strefy czasowej dla krajów pozaeuropejskich. next.duration zmieniono na next.daysUntil",
+        "uk": "Відновлено режим розкладу (регресія v0.4.0). Виправлення часового поясу для неєвропейських країн. next.duration перейменовано на next.daysUntil",
+        "zh-cn": "恢复计划模式（v0.4.0回退）。修复非欧洲国家的时区问题。next.duration重命名为next.daysUntil"
+      },
       "0.4.0": {
         "en": "Bridge day names now shown in system language. Fixed adapter not restarting on settings change",
         "de": "Brückentag-Namen werden jetzt in der Systemsprache angezeigt. Adapter startet bei Einstellungsänderungen jetzt korrekt neu",
@@ -80,19 +93,6 @@
         "pl": "Wewnętrzne porządki. Brak zmian widocznych dla użytkownika.",
         "uk": "Внутрішнє очищення. Без видимих змін для користувача.",
         "zh-cn": "内部清理。无用户可见的更改。"
-      },
-      "0.1.2": {
-        "en": "User-modified state names are no longer overwritten on adapter restart",
-        "de": "Vom Benutzer geänderte Datenpunktnamen werden beim Adapter-Neustart nicht mehr überschrieben",
-        "ru": "Пользовательские имена состояний больше не перезаписываются при перезапуске адаптера",
-        "pt": "Nomes de estados modificados pelo utilizador já não são substituídos ao reiniciar o adaptador",
-        "nl": "Door de gebruiker gewijzigde statusnamen worden niet meer overschreven bij het herstarten van de adapter",
-        "fr": "Les noms d'états modifiés par l'utilisateur ne sont plus écrasés lors du redémarrage de l'adaptateur",
-        "it": "I nomi degli stati modificati dall'utente non vengono più sovrascritti al riavvio dell'adattatore",
-        "es": "Los nombres de estados modificados por el usuario ya no se sobrescriben al reiniciar el adaptador",
-        "pl": "Nazwy stanów zmienione przez użytkownika nie są już nadpisywane przy ponownym uruchomieniu adaptera",
-        "uk": "Змінені користувачем назви станів більше не перезаписуються при перезапуску адаптера",
-        "zh-cn": "用户修改的状态名称在适配器重启时不再被覆盖"
       }
     },
     "titleLang": {
@@ -135,7 +135,9 @@
     "enabled": true,
     "tier": 2,
     "loglevel": "info",
-    "mode": "daemon",
+    "mode": "schedule",
+    "allowInit": true,
+    "schedule": "0 0 * * *",
     "type": "date-and-time",
     "compact": true,
     "connectionType": "local",
@@ -556,7 +558,7 @@
       "native": {}
     },
     {
-      "_id": "next.duration",
+      "_id": "next.daysUntil",
       "type": "state",
       "common": {
         "name": {

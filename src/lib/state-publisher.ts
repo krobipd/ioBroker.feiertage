@@ -3,7 +3,7 @@ import { tName, type I18nKey } from "./i18n";
 
 const DAY_CHANNELS = ["today", "yesterday", "tomorrow", "dayAfterTomorrow"] as const;
 const DAY_FIELDS = ["name", "boolean"] as const;
-const NEXT_FIELDS = ["name", "boolean", "date", "duration"] as const;
+const NEXT_FIELDS = ["name", "boolean", "date", "daysUntil"] as const;
 
 interface StateSpec {
   type: ioBroker.CommonType;
@@ -16,7 +16,7 @@ const FIELD_SPECS: Record<string, StateSpec> = {
   name: { type: "string", role: "text", read: true, write: false },
   boolean: { type: "boolean", role: "indicator", read: true, write: false },
   date: { type: "string", role: "text", read: true, write: false },
-  duration: { type: "number", role: "value", read: true, write: false },
+  daysUntil: { type: "number", role: "value", read: true, write: false },
 };
 
 const DEPRECATED_STATES = [
@@ -35,6 +35,7 @@ const DEPRECATED_STATES = [
   "next.region",
   "next.type",
   "next.id",
+  "next.duration",
 ];
 
 export async function cleanupDeprecatedStates(adapter: ioBroker.Adapter): Promise<void> {
@@ -120,5 +121,5 @@ async function publishNextHoliday(adapter: ioBroker.Adapter, next: NextHoliday):
   await adapter.setStateChangedAsync("next.name", next.name, true);
   await adapter.setStateChangedAsync("next.boolean", next.isHoliday, true);
   await adapter.setStateChangedAsync("next.date", next.date, true);
-  await adapter.setStateChangedAsync("next.duration", next.duration, true);
+  await adapter.setStateChangedAsync("next.daysUntil", next.daysUntil, true);
 }

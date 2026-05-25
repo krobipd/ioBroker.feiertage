@@ -17,7 +17,7 @@ const countries = hd.getCountries();
 
 const countryOptions: SelectOption[] = [{ label: { en: "— Select country —", de: "— Land wählen —" }, value: "" }];
 for (const [code, name] of Object.entries(countries).sort((a, b) => a[1].localeCompare(b[1]))) {
-  countryOptions.push({ label: `${name} (${code})`, value: code });
+  countryOptions.push({ label: `${(name as string).replace(/\\/g, "")} (${code})`, value: code });
 }
 
 const statePanels: Items = {};
@@ -30,13 +30,13 @@ for (const cc of Object.keys(countries)) {
   const stateOptions: SelectOption[] = [{ label: { en: "— (none) —", de: "— (keines) —" }, value: "" }];
 
   for (const [code, name] of Object.entries(states).sort((a, b) => (a[1] as string).localeCompare(b[1] as string))) {
-    stateOptions.push({ label: `${name} (${code})`, value: code });
+    stateOptions.push({ label: `${(name as string).replace(/\\/g, "")} (${code})`, value: code });
 
     const regions = hd.getRegions(cc, code);
     if (regions && Object.keys(regions).length > 0) {
       const regionOptions: SelectOption[] = [{ label: { en: "— (none) —", de: "— (keine) —" }, value: "" }];
       for (const [rc, rn] of Object.entries(regions).sort((a, b) => (a[1] as string).localeCompare(b[1] as string))) {
-        regionOptions.push({ label: `${rn} (${rc})`, value: rc });
+        regionOptions.push({ label: `${(rn as string).replace(/\\/g, "")} (${rc})`, value: rc });
       }
       regionPanels[`_regionPanel_${cc}_${code}`] = {
         type: "panel",
@@ -145,7 +145,7 @@ for (const cc of Object.keys(countries)) {
     if (bucket.size === 0) continue;
     const options = Array.from(bucket.entries())
       .sort((a, b) => a[1].localeCompare(b[1]))
-      .map(([id, name]) => ({ label: `${name} (${id})`, value: id }));
+      .map(([id, name]) => ({ label: `${name.replace(/\\/g, "")} (${id})`, value: id }));
     items[TYPE_NATIVE_KEYS[t]] = {
       type: "select",
       multiple: true,

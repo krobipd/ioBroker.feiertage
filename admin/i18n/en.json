@@ -24,7 +24,7 @@
   "name": "Holiday name",
   "boolean": "Is a holiday",
   "date": "Date",
-  "duration": "Days until holiday",
+  "daysUntil": "Days until holiday",
   "label_excludePublic": "Exclude public holidays",
   "label_excludeBank": "Exclude bank holidays",
   "label_excludeSchool": "Exclude school holidays",

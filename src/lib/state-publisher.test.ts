@@ -34,7 +34,7 @@ function makeComputed(): ComputedHolidays {
       name: "Karfreitag",
       isHoliday: true,
       date: "2026-04-03",
-      duration: 92,
+      daysUntil: 92,
     },
   };
 }
@@ -66,11 +66,11 @@ describe("ensureObjects", () => {
     expect(adapter.objects["today.type"]).toBeUndefined();
   });
 
-  it("creates next states including date and duration", async () => {
+  it("creates next states including date and daysUntil", async () => {
     await ensureObjects(adapter as any);
     expect(adapter.objects["next.name"]).toBeDefined();
     expect(adapter.objects["next.date"]).toBeDefined();
-    expect(adapter.objects["next.duration"]).toBeDefined();
+    expect(adapter.objects["next.daysUntil"]).toBeDefined();
   });
 
   it("total object count is 5 channels + 12 states = 17", async () => {
@@ -84,7 +84,7 @@ describe("ensureObjects", () => {
     expect(nameObj.common.type).toBe("string");
     const boolObj = adapter.objects["today.boolean"] as any;
     expect(boolObj.common.type).toBe("boolean");
-    const durObj = adapter.objects["next.duration"] as any;
+    const durObj = adapter.objects["next.daysUntil"] as any;
     expect(durObj.common.type).toBe("number");
   });
 
@@ -193,9 +193,9 @@ describe("publishStates", () => {
     expect(adapter.states["next.date"]).toEqual({ val: "2026-04-03", ack: true });
   });
 
-  it("publishes next holiday duration", async () => {
+  it("publishes next holiday daysUntil", async () => {
     await publishStates(adapter as any, makeComputed());
-    expect(adapter.states["next.duration"]).toEqual({ val: 92, ack: true });
+    expect(adapter.states["next.daysUntil"]).toEqual({ val: 92, ack: true });
   });
 
   it("publishes next holiday name", async () => {

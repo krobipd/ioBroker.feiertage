@@ -24,7 +24,7 @@
   "name": "Naam feestdag",
   "boolean": "Is een feestdag",
   "date": "Datum",
-  "duration": "Dagen tot feestdag",
+  "daysUntil": "Dagen tot feestdag",
   "label_excludePublic": "Feestdagen uitsluiten",
   "label_excludeBank": "Bankfeestdagen uitsluiten",
   "label_excludeSchool": "Schoolvakanties uitsluiten",

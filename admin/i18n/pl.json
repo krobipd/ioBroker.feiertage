@@ -24,7 +24,7 @@
   "name": "Nazwa święta",
   "boolean": "Jest świętem",
   "date": "Data",
-  "duration": "Dni do święta",
+  "daysUntil": "Dni do święta",
   "label_excludePublic": "Wyklucz święta państwowe",
   "label_excludeBank": "Wyklucz święta bankowe",
   "label_excludeSchool": "Wyklucz ferie szkolne",
