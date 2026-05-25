@@ -6,7 +6,7 @@
 
 **ioBroker Public Holidays** — Offline-Feiertagserkennung für 206 Länder mit Brückentag-Support. Schedule-Mode (`allowInit: true`): berechnet einmalig bei Start/Config-Änderung, js-controller triggert täglich um Mitternacht per Cron.
 
-- **Version:** 0.5.0 (WIP — Schedule-Mode restored, Timezone-Fix, `next.duration→next.daysUntil` Rename, Mode-Migration v0.4.0→v0.5.0). Vorgänger **0.4.0** (released 2026-05-25) Bridge-Day-Lokalisierung 11 Sprachen. **0.3.0** ID-States entfernt 17→12 States, Logging info→debug. **0.2.0** UX overhaul: dropdown selects, country auto-detect, 27→17 States. **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
+- **Version:** 0.5.0 (released 2026-05-25 — Schedule-Mode restored, Timezone-Fix, `next.duration→next.daysUntil` Rename, Mode-Migration v0.4.0→v0.5.0, Jey-Cee Credits). Vorgänger **0.4.0** (released 2026-05-25) Bridge-Day-Lokalisierung 11 Sprachen. **0.3.0** ID-States entfernt 17→12 States, Logging info→debug. **0.2.0** UX overhaul: dropdown selects, country auto-detect, 27→17 States. **0.1.5** changelog user-centric rewrite. **0.1.4** Repochecker compliance. **0.1.3** i18n migration. **0.1.2** Preserve user-modified state names. npm-Zugang erhalten 2026-05-24.
 - **GitHub:** https://github.com/krobipd/ioBroker.public-holidays
 - **npm:** `iobroker.public-holidays` — Zugang erhalten 2026-05-24
 - **Runtime-Deps:** `@iobroker/adapter-core`, `date-holidays` (^3.30.1, ISC + CC-BY-SA-3.0)
@@ -48,12 +48,12 @@ scripts/
 
 4 Day-Channels × 2 Fields + next × 4 Fields = 12 States total. Day-Channels (today, yesterday, tomorrow, dayAfterTomorrow): name, boolean. Next: name, boolean, date, daysUntil.
 
-## Tests (136 unit + 57 package = 193)
+## Tests (136 vitest + 57 package = 193)
 
-Test-Breakdown: holiday-engine 136, state-publisher 21, i18n 19.
+Test-Breakdown: holiday-engine 96, state-publisher 21, i18n 19 = 136 vitest.
 
 ```
-src/lib/holiday-engine.test.ts    → 136: structural/behavioral tests (config diversity, type filter, exclude, bridge days incl 12 locale via it.each, relative days, next holiday, localization, edge cases, toHolidayId, toDateKey, 20-country crash tests)
+src/lib/holiday-engine.test.ts    → 96: structural/behavioral tests (config diversity, type filter, exclude, bridge days incl 12 locale via it.each, relative days, next holiday, localization, edge cases, toHolidayId, toDateKey, 20-country crash tests)
 src/lib/state-publisher.test.ts   → 21: ensureObjects, cleanupDeprecated, publishStates, preserve option (mock adapter)
 src/lib/i18n.test.ts              → 19: tName delegation + i18n completeness (11 languages, identical keysets) + resolveLanguages
 test/package.js                   → 57: @iobroker/testing packageFiles
@@ -64,7 +64,7 @@ test/integration.js               → @iobroker/testing integration (CI only)
 
 | Version | Highlights                                                                                                                                                                                                                      |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0.5.0   | **Schedule-Revert + Rename.** Schedule-Mode restored (v0.4.0 Daemon-Regression). Timezone-Fix. `next.duration→next.daysUntil`. Mode-Migration v0.4.0→v0.5.0. Lesotho-Backslash-Fix. Tests 73→136. |
+| 0.5.0   | **Schedule-Revert + Rename.** Schedule-Mode restored (v0.4.0 Daemon-Regression). Timezone-Fix. `next.duration→next.daysUntil`. Mode-Migration v0.4.0→v0.5.0. Lesotho-Backslash-Fix. Tests 73→96. Jey-Cee Credits. |
 | 0.4.0   | **Bridge-Day i18n.** Brückentag-Namen in 11 Sprachen. |
 | 0.3.0   | **Slim State Tree + Stability.** ID-States entfernt (17→12 States). Logging info→debug. Process-Handler, setStateChangedAsync.                                                                                                  |
 | 0.2.0   | **UX Overhaul.** Dropdown-Selects für State/Region/Exclude (per-type), Country auto-detect, State Tree 27→17 States. Panel-per-Country Pattern. 32 i18n Keys.                                                                  |
