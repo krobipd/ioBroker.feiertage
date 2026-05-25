@@ -98,7 +98,7 @@ Bridge days appear in the state tree with the localized name matching the system
 **Holiday not detected** — Some holidays are classified as `observance` rather than `public`. Enable the observance type in the holiday settings if needed.
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.5.1 (2026-05-25)
 
 - Removed legacy changelog entries for versions never published under this package name (repochecker E2004)
 
@@ -125,10 +125,6 @@ Bridge days appear in the state tree with the localized name matching the system
 - Exclude holidays shown per type — only visible when the corresponding type is enabled
 - Country auto-detected from ioBroker system settings when not configured
 - Slimmed state tree from 27 to 17 data points (removed redundant region/type fields)
-
-### 0.1.5 (2026-05-23)
-
-- Changelog rewritten in user-centric style.
 
 Older entries are in [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

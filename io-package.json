@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "public-holidays",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "news": {
-      "NEXT": {
+      "0.5.1": {
         "en": "Removed legacy changelog entries for versions never published under this package name",
         "de": "Veraltete Changelog-Einträge für nie unter diesem Paketnamen veröffentlichte Versionen entfernt",
         "ru": "Удалены устаревшие записи журнала изменений для версий, которые не публиковались под этим именем пакета",

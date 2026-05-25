@@ -1,6 +1,10 @@
 # Older changelog entries
 
 No older entries yet.
+## 0.1.5 (2026-05-23)
+
+- Changelog rewritten in user-centric style.
+
 ## 0.1.4 (2026-05-23)
 
 - Fixed admin checkbox layout on small screens
